@@ -12,13 +12,13 @@ namespace Projeto2LP2
             //linha de cima
             for (int i = 0; i < 35; i++) {
                 Console.SetCursorPosition(i, 0);
-                Console.WriteLine("-");
+                Console.WriteLine("_");
             }
 
             //linha de baixo
             for (int i = 0; i < 35; i++) {
                 Console.SetCursorPosition(i, 15);
-                Console.WriteLine("-");
+                Console.WriteLine("_");
             }
 
             //linha da esquerda

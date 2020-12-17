@@ -7,6 +7,13 @@ namespace Projeto2LP2
     /// </summary>
     class GameLoop
     {
+        // Recolher informação do teclado.
+        public static ConsoleKey GetKey { get; private set; }
+
+        // Recolher informação da posição da cobra.
+        public static int X { get; set; }
+        public static int Y { get; set; }
+
         // Aqui é onde é chamado tudo no jogo
         public void Game() {
            while(true) {
@@ -19,6 +26,7 @@ namespace Projeto2LP2
         private void CheckUserInput() {
             UserInput userInput = new UserInput();
             userInput.CheckUserInput();
+            GetKey = userInput.Key;
         }
 
         private void Update() {

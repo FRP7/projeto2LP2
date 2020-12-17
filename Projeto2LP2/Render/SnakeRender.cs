@@ -8,7 +8,15 @@ namespace Projeto2LP2
     class SnakeRender
     {
         public void RenderSnake() {
-
+            try {
+                if(GameLoop.X >= 0 && GameLoop.Y >= 0) {
+                    Console.Clear();
+                    Console.SetCursorPosition(GameLoop.X, GameLoop.Y);
+                    Console.Write('@');
+                }
+            }
+            catch (Exception) {
+            }
         }
     }
 }
