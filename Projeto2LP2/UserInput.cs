@@ -18,20 +18,24 @@ namespace Projeto2LP2
                         /*if (y > 0) {
                             y--;
                         }*/
+                        Console.Clear();
                         break;
                     case ConsoleKey.DownArrow:
                         //Console.WriteLine("Down");
                         //y++;
+                        Console.Clear();
                         break;
                     case ConsoleKey.LeftArrow:
                         //Console.WriteLine("Left");
                         /*if (x > 0) {
                             x--;
                         }*/
+                        Console.Clear();
                         break;
                     case ConsoleKey.RightArrow:
                         //Console.WriteLine("Right");
                         //x++;
+                        Console.Clear();
                         break;
                     default:
                         //Console.WriteLine("Nothing");

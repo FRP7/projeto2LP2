@@ -16,7 +16,7 @@ namespace Projeto2LP2
 
         // Aqui é onde é chamado tudo no jogo
         public void Game() {
-           while(true) {
+            while (true) {
                 CheckUserInput();
                 Update();
                 Render();
@@ -37,6 +37,11 @@ namespace Projeto2LP2
         private void Render() {
             RenderEngine render = new RenderEngine();
             render.Render();
+        }
+
+        public GameLoop() {
+            X = 15;
+            Y = 7;
         }
     }
 }
