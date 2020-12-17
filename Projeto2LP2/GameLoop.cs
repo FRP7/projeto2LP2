@@ -14,6 +14,8 @@ namespace Projeto2LP2
         public static int X { get; set; }
         public static int Y { get; set; }
 
+        public static Direction direction;
+
         // Aqui é onde é chamado tudo no jogo
         public void Game() {
             while (true) {
@@ -42,6 +44,8 @@ namespace Projeto2LP2
         public GameLoop() {
             X = 15;
             Y = 7;
+            direction = new Direction();
+            direction = Direction.None;
         }
     }
 }

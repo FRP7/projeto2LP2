@@ -8,25 +8,25 @@ namespace Projeto2LP2
     class SnakePosition
     {
         public void SnakePositionCheck() {
-            if(GameLoop.GetKey == ConsoleKey.UpArrow) {
+            if(GameLoop.direction == Direction.Up) {
                 if(GameLoop.Y > 0) {
                     GameLoop.Y--;
                 }
             }
-            else if(GameLoop.GetKey == ConsoleKey.DownArrow) {
+            else if(GameLoop.direction == Direction.Down) {
                 GameLoop.Y++;
             }
-            else if(GameLoop.GetKey == ConsoleKey.LeftArrow) {
+            else if(GameLoop.direction == Direction.Left) {
                 if (GameLoop.X > 0) {
                     GameLoop.X--;
                 }
             }
-            else if(GameLoop.GetKey == ConsoleKey.RightArrow) {
+            else if(GameLoop.direction == Direction.Right) {
                 GameLoop.X++;
             }
             // testar
-            Console.WriteLine(GameLoop.GetKey);
-            Console.WriteLine($"X: {GameLoop.X}. Y: {GameLoop.Y}");
+            //Console.WriteLine(GameLoop.GetKey);
+            //Console.WriteLine($"X: {GameLoop.X}. Y: {GameLoop.Y}");
         }
     }
 }

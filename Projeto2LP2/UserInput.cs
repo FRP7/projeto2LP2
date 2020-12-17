@@ -18,27 +18,32 @@ namespace Projeto2LP2
                         /*if (y > 0) {
                             y--;
                         }*/
-                        Console.Clear();
+                        //Console.Clear();
+                        GameLoop.direction = Direction.Up;
                         break;
                     case ConsoleKey.DownArrow:
                         //Console.WriteLine("Down");
                         //y++;
-                        Console.Clear();
+                        //Console.Clear();
+                        GameLoop.direction = Direction.Down;
                         break;
                     case ConsoleKey.LeftArrow:
                         //Console.WriteLine("Left");
                         /*if (x > 0) {
                             x--;
                         }*/
-                        Console.Clear();
+                        //Console.Clear();
+                        GameLoop.direction = Direction.Left;
                         break;
                     case ConsoleKey.RightArrow:
                         //Console.WriteLine("Right");
                         //x++;
-                        Console.Clear();
+                        //Console.Clear();
+                        GameLoop.direction = Direction.Right;
                         break;
                     default:
                         //Console.WriteLine("Nothing");
+                        GameLoop.direction = Direction.None;
                         break;
                 }
             }
