@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Projeto2LP2
 {
@@ -9,11 +10,27 @@ namespace Projeto2LP2
     {
         public void RenderSnake() {
             try {
-                if(GameLoop.X >= 0 && GameLoop.Y >= 0) {
+                /*if(GameLoop.X >= 0 && GameLoop.Y >= 0) {
                     //Console.Clear();
                     System.Threading.Thread.Sleep(500);
                     Console.SetCursorPosition(GameLoop.X, GameLoop.Y);
                     Console.Write('@');
+                    Console.Write(RenderEngine.count);
+                }*/
+
+                if(GameLoop.X >= 0 && GameLoop.Y >= 0) {
+                    if (RenderEngine.count < GameLoop.snakeBody.Count) {
+                        System.Threading.Thread.Sleep(500);
+                        Console.SetCursorPosition(GameLoop.X, GameLoop.Y);
+                        GameLoop.snakeBody[RenderEngine.count].CordX = GameLoop.X;
+                        GameLoop.snakeBody[RenderEngine.count].CordY = GameLoop.Y;
+                        Console.Write(GameLoop.snakeBody[RenderEngine.count].Part);
+                    }
+                    else if(RenderEngine.count > GameLoop.snakeBody.Count - 1) {
+                        System.Threading.Thread.Sleep(500);
+                        Console.SetCursorPosition(GameLoop.Tail.CordX, GameLoop.Tail.CordY);
+                        Console.Write('@');
+                    }
                 }
             }
             catch (Exception) {

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Projeto2LP2
 {
@@ -15,6 +17,10 @@ namespace Projeto2LP2
         public static int Y { get; set; }
 
         public static Direction direction;
+
+        public static List<SnakePart> snakeBody;
+        public static SnakePart Tail { get => snakeBody.First(); }
+        public static SnakePart Head { get => snakeBody.Last(); }
 
         // Aqui é onde é chamado tudo no jogo
         public void Game() {
@@ -46,6 +52,10 @@ namespace Projeto2LP2
             Y = 7;
             direction = new Direction();
             direction = Direction.None;
+            snakeBody = new List<SnakePart>();
+            snakeBody.Add(new SnakePart(X, Y, 'A'));
+            snakeBody.Add(new SnakePart(X, Y, 'B'));
+            snakeBody.Add(new SnakePart(X, Y, 'C'));
         }
     }
 }

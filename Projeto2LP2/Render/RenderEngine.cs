@@ -7,6 +7,7 @@ namespace Projeto2LP2
     /// </summary>
     class RenderEngine
     {
+        public static int count = 0;
         public void Render() {
             RenderScene();
             RenderSnake();
@@ -16,6 +17,9 @@ namespace Projeto2LP2
         private void RenderScene() {
             SceneRender sceneRander = new SceneRender();
             sceneRander.RenderScene();
+            if(GameLoop.direction != Direction.None) {
+                count++;
+            }
         }
 
         private void RenderSnake() {
