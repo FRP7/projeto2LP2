@@ -17,7 +17,8 @@ namespace Projeto2LP2
         }
 
         private void CheckUserInput() {
-
+            UserInput userInput = new UserInput();
+            userInput.CheckUserInput();
         }
 
         private void Update() {
