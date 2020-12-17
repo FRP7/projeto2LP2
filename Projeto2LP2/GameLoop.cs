@@ -53,9 +53,9 @@ namespace Projeto2LP2
             direction = new Direction();
             direction = Direction.None;
             snakeBody = new List<SnakePart>();
-            snakeBody.Add(new SnakePart(X, Y, 'A'));
-            snakeBody.Add(new SnakePart(X, Y, 'B'));
-            snakeBody.Add(new SnakePart(X, Y, 'C'));
+            snakeBody.Add(new SnakePart(X, Y, '@'));
+            snakeBody.Add(new SnakePart(X, Y, '@'));
+            snakeBody.Add(new SnakePart(X, Y, '@'));
         }
     }
 }
