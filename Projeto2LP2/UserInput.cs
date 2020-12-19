@@ -2,17 +2,24 @@
 
 namespace Projeto2LP2
 {
+    /// <summary>
+    /// Classe onde é analisado o input do jogador.
+    /// </summary>
     class UserInput
     {
+        /// Input do user.
         public ConsoleKey Key { get => getKey; }
+
+        // Input do user.
         private ConsoleKey getKey;
 
+        /// <summary>
+        /// Verificar o input do user e escolher a direção atual da cobra.
+        /// </summary>
         public void CheckUserInput() {
-            ConsoleKey key;
             if (Console.KeyAvailable) {
-                key = Console.ReadKey().Key;
-                getKey = key;
-                switch (key) {
+                getKey = Console.ReadKey().Key;
+                switch (getKey) {
                     case ConsoleKey.UpArrow:
                         if (GameLoop.direction != Direction.Down) {
                             GameLoop.direction = Direction.Up;

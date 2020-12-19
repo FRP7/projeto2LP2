@@ -3,10 +3,13 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Aqui é o "update" do jogo.
+    /// Classe onde é atualizada a lógica do jogo.
     /// </summary>
     class GameState
     {
+        /// <summary>
+        /// Verificar a lógica do jogo.
+        /// </summary>
         public void Update() {
             CollisionCheck();
             SnakePositionCheck();
@@ -14,21 +17,33 @@ namespace Projeto2LP2
             ScoreCheck();
         }
 
+        /// <summary>
+        /// Verificar colisões.
+        /// </summary>
         private void CollisionCheck() {
             Collisions collisions = new Collisions();
             collisions.CollisionCheck();
         }
 
+        /// <summary>
+        /// Verificar a posição da cobra.
+        /// </summary>
         private void SnakePositionCheck() {
             SnakePosition snakePosition = new SnakePosition();
             snakePosition.SnakePositionCheck();
         }
 
+        /// <summary>
+        /// Verificar a posição da comida.
+        /// </summary>
         private void FoodPositionCheck() {
             FoodPosition foodPosition = new FoodPosition();
             foodPosition.FoodPositionCheck();
         }
 
+        /// <summary>
+        /// Verificar a pontuação.
+        /// </summary>
         private void ScoreCheck() {
             Score score = new Score();
             score.ScoreCheck();

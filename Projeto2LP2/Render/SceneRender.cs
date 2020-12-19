@@ -2,37 +2,47 @@
 
 namespace Projeto2LP2
 {
+    /// <summary>
+    /// Classe onde é renderizada o cenário.
+    /// </summary>
     class SceneRender
     {
+        /// <summary>
+        /// Método onde é renderizado o cenário.
+        /// </summary>
         public void RenderScene() {
             RenderMainScene();
         }
 
+        /// <summary>
+        /// Método onde é renderizado o cenário.
+        /// </summary>
         private void RenderMainScene() {
-            //linha de cima
+            // Linha de cima
             for (int i = 0; i < 35; i++) {
                 Console.SetCursorPosition(i, 0);
                 Console.WriteLine("_");
             }
 
-            //linha de baixo
+            // Linha de baixo.
             for (int i = 0; i < 35; i++) {
                 Console.SetCursorPosition(i, 15);
                 Console.WriteLine("_");
             }
 
-            //linha da esquerda
+            // Linha da esquerda.
             for (int i = 0; i < 16; i++) {
                 Console.SetCursorPosition(0, i);
                 Console.WriteLine("|");
             }
 
-            //linha da direita
+            // Linha da direita.
             for (int i = 0; i < 16; i++) {
                 Console.SetCursorPosition(36, i);
                 Console.WriteLine("|");
             }
 
+            // Pontuação.
             Console.SetCursorPosition(0, 17);
             Console.WriteLine("Score: ");
             // teste, delete later

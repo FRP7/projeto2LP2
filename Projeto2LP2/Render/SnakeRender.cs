@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Linq;
 
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Desenhar a cobra.
+    /// Classe onde é renderizada a cobra.
     /// </summary>
     class SnakeRender
     {
+        /// <summary>
+        /// Renderizar a cobra.
+        /// </summary>
         public void RenderSnake() {
             try {
                 if(GameLoop.SnakeX >= 0 && GameLoop.SnakeY >= 0) {
