@@ -3,7 +3,7 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Aqui é onde é atualizado o score.
+    /// Classe onde é atualizada a pontuação.
     /// </summary>
     class Score
     {

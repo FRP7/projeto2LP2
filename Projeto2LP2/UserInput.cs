@@ -2,47 +2,45 @@
 
 namespace Projeto2LP2
 {
+    /// <summary>
+    /// Classe onde é analisado o input do jogador.
+    /// </summary>
     class UserInput
     {
+        /// Input do user.
         public ConsoleKey Key { get => getKey; }
+
+        // Input do user.
         private ConsoleKey getKey;
 
+        /// <summary>
+        /// Verificar o input do user e escolher a direção atual da cobra.
+        /// </summary>
         public void CheckUserInput() {
-            ConsoleKey key;
             if (Console.KeyAvailable) {
-                key = Console.ReadKey().Key;
-                getKey = key;
-                switch (key) {
+                getKey = Console.ReadKey().Key;
+                switch (getKey) {
                     case ConsoleKey.UpArrow:
-                        //Console.WriteLine("Up");
-                        /*if (y > 0) {
-                            y--;
-                        }*/
-                        //Console.Clear();
-                        GameLoop.direction = Direction.Up;
+                        if (GameLoop.direction != Direction.Down) {
+                            GameLoop.direction = Direction.Up;
+                        }
                         break;
                     case ConsoleKey.DownArrow:
-                        //Console.WriteLine("Down");
-                        //y++;
-                        //Console.Clear();
-                        GameLoop.direction = Direction.Down;
+                        if (GameLoop.direction != Direction.Up) {
+                            GameLoop.direction = Direction.Down;
+                        }
                         break;
                     case ConsoleKey.LeftArrow:
-                        //Console.WriteLine("Left");
-                        /*if (x > 0) {
-                            x--;
-                        }*/
-                        //Console.Clear();
-                        GameLoop.direction = Direction.Left;
+                        if (GameLoop.direction != Direction.Right) {
+                            GameLoop.direction = Direction.Left;
+                        }
                         break;
                     case ConsoleKey.RightArrow:
-                        //Console.WriteLine("Right");
-                        //x++;
-                        //Console.Clear();
-                        GameLoop.direction = Direction.Right;
+                        if (GameLoop.direction != Direction.Left) {
+                            GameLoop.direction = Direction.Right;
+                        }
                         break;
                     default:
-                        //Console.WriteLine("Nothing");
                         GameLoop.direction = Direction.None;
                         break;
                 }
