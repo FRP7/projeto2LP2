@@ -3,7 +3,7 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Aqui são analisadas as colisões do jogo.
+    /// Classe de verificação das colisões do jogo.
     /// </summary>
     class Collisions
     {

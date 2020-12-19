@@ -1,0 +1,13 @@
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\bin\Debug\netcoreapp3.1\Projeto2LP2.exe
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\bin\Debug\netcoreapp3.1\Projeto2LP2.deps.json
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\bin\Debug\netcoreapp3.1\Projeto2LP2.runtimeconfig.json
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\bin\Debug\netcoreapp3.1\Projeto2LP2.runtimeconfig.dev.json
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\bin\Debug\netcoreapp3.1\Projeto2LP2.dll
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\bin\Debug\netcoreapp3.1\Projeto2LP2.pdb
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\obj\Debug\netcoreapp3.1\Projeto2LP2.csprojAssemblyReference.cache
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\obj\Debug\netcoreapp3.1\Projeto2LP2.AssemblyInfoInputs.cache
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\obj\Debug\netcoreapp3.1\Projeto2LP2.AssemblyInfo.cs
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\obj\Debug\netcoreapp3.1\Projeto2LP2.csproj.CoreCompileInputs.cache
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\obj\Debug\netcoreapp3.1\Projeto2LP2.dll
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\obj\Debug\netcoreapp3.1\Projeto2LP2.pdb
+C:\Users\Francisco\Documents\GitHub\projeto2LP2\Projeto2LP2\obj\Debug\netcoreapp3.1\Projeto2LP2.genruntimeconfig.cache

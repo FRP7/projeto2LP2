@@ -1,33 +1,81 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Aqui é o ciclo de jogo. 
+    /// Classe do ciclo de jogo. 
+    /// Funciona como um Facade também.
     /// </summary>
     class GameLoop
     {
-        // Aqui é onde é chamado tudo no jogo
+        // Recolher informação do teclado definida no UserInput.
+        public static ConsoleKey GetKey { get; private set; }
+
+        // Recolher informação da posição da cobra.
+        public static int SnakeX { get; set; }
+        public static int SnakeY { get; set; }
+
+        // Verificar qual a direção atual da cobra.
+        public static Direction direction;
+
+        // Corpo da cobra.
+        public static List<SnakePart> snakeBody;
+        public static SnakePart Tail { get => snakeBody.First(); }
+        public static SnakePart Head { get => snakeBody.Last(); }
+
+        /// <summary>
+        /// Ciclo de jogo.
+        /// </summary>
         public void Game() {
-           while(true) {
+            while (true) {
                 CheckUserInput();
                 Update();
                 Render();
             }
         }
 
+        /// <summary>
+        /// Input do jogador.
+        /// </summary>
         private void CheckUserInput() {
-
+            UserInput userInput = new UserInput();
+            userInput.CheckUserInput();
+            GetKey = userInput.Key;
         }
 
+        /// <summary>
+        /// Update do estado lógico do jogo.
+        /// </summary>
         private void Update() {
             GameState gameState = new GameState();
             gameState.Update();
         }
 
+        /// <summary>
+        /// Renderizar o visual do jogo.
+        /// </summary>
         private void Render() {
             RenderEngine render = new RenderEngine();
             render.Render();
+        }
+
+        /// <summary>
+        /// Inicializar as variáveis.
+        /// </summary>
+        public GameLoop() {
+            SnakeX = 15;
+            SnakeY = 7;
+            direction = new Direction();
+            direction = Direction.None;
+            snakeBody = new List<SnakePart>();
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
         }
     }
 }
