@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Projeto2LP2
 {
@@ -25,6 +26,9 @@ namespace Projeto2LP2
         public static SnakePart Tail { get => snakeBody.First(); }
         public static SnakePart Head { get => snakeBody.Last(); }
 
+        // Thread do user input.
+        Thread inputThread;
+
         /// <summary>
         /// Ciclo de jogo.
         /// </summary>
@@ -41,8 +45,10 @@ namespace Projeto2LP2
         /// </summary>
         private void CheckUserInput() {
             UserInput userInput = new UserInput();
-            userInput.CheckUserInput();
+            inputThread = new Thread(userInput.CheckUserInput);
+            inputThread.Start();
             GetKey = userInput.Key;
+            inputThread.Join();
         }
 
         /// <summary>

@@ -13,6 +13,7 @@ namespace Projeto2LP2
             //Menu menu = new Menu();
             //Console.WriteLine("Entrar na solução.");
             //menu.MainMenu();
+
             // testar cenas
             GameLoop loop = new GameLoop();
             loop.Game();
