@@ -5,4 +5,4 @@ Projeto 2 da disciplina LP2
 
 
 
-![title](Images/P2_LP2_UML.jpg)
+![image](/Images/P2_LP2_UML.jpg)
