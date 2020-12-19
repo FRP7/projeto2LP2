@@ -13,8 +13,8 @@ namespace Projeto2LP2
         public static ConsoleKey GetKey { get; private set; }
 
         // Recolher informação da posição da cobra.
-        public static int X { get; set; }
-        public static int Y { get; set; }
+        public static int SnakeX { get; set; }
+        public static int SnakeY { get; set; }
 
         public static Direction direction;
 
@@ -48,17 +48,17 @@ namespace Projeto2LP2
         }
 
         public GameLoop() {
-            X = 15;
-            Y = 7;
+            SnakeX = 15;
+            SnakeY = 7;
             direction = new Direction();
             direction = Direction.None;
             snakeBody = new List<SnakePart>();
-            snakeBody.Add(new SnakePart(X, Y, '@'));
-            snakeBody.Add(new SnakePart(X, Y, '@'));
-            snakeBody.Add(new SnakePart(X, Y, '@'));
-            snakeBody.Add(new SnakePart(X, Y, '@'));
-            snakeBody.Add(new SnakePart(X, Y, '@'));
-            snakeBody.Add(new SnakePart(X, Y, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
         }
     }
 }

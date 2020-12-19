@@ -9,24 +9,21 @@ namespace Projeto2LP2
     {
         public void SnakePositionCheck() {
             if(GameLoop.direction == Direction.Up) {
-                if(GameLoop.Y > 0) {
-                    GameLoop.Y--;
+                if(GameLoop.SnakeY > 0) {
+                    GameLoop.SnakeY--;
                 }
             }
             else if(GameLoop.direction == Direction.Down) {
-                GameLoop.Y++;
+                GameLoop.SnakeY++;
             }
             else if(GameLoop.direction == Direction.Left) {
-                if (GameLoop.X > 0) {
-                    GameLoop.X--;
+                if (GameLoop.SnakeX > 0) {
+                    GameLoop.SnakeX--;
                 }
             }
             else if(GameLoop.direction == Direction.Right) {
-                GameLoop.X++;
+                GameLoop.SnakeX++;
             }
-            // testar
-            //Console.WriteLine(GameLoop.GetKey);
-            //Console.WriteLine($"X: {GameLoop.X}. Y: {GameLoop.Y}");
         }
     }
 }
