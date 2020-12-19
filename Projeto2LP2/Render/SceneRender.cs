@@ -35,6 +35,8 @@ namespace Projeto2LP2
 
             Console.SetCursorPosition(0, 17);
             Console.WriteLine("Score: ");
+            // teste, delete later
+            Console.WriteLine($"X: {GameLoop.X}.  Y: {GameLoop.Y}");
         }
     }
 }
