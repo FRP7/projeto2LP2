@@ -9,14 +9,10 @@ namespace Projeto2LP2
     /// </summary>
     class Program
     {
+        // Começar o jogo.
         static void Main(string[] args) {
-            //Menu menu = new Menu();
-            //Console.WriteLine("Entrar na solução.");
-            //menu.MainMenu();
-
-            // testar cenas
-            GameLoop loop = new GameLoop();
-            loop.Game();
+            Menu menu = new Menu();
+            menu.MainMenu();
         }
     }
 }

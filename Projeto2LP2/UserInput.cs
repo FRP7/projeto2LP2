@@ -40,6 +40,10 @@ namespace Projeto2LP2
                             GameLoop.direction = Direction.Right;
                         }
                         break;
+                    case ConsoleKey.Escape:
+                        Menu menu = new Menu();
+                        menu.MainMenu();
+                        break;
                     default:
                         GameLoop.direction = Direction.None;
                         break;
