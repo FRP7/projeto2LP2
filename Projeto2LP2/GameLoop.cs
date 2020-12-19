@@ -56,6 +56,9 @@ namespace Projeto2LP2
             snakeBody.Add(new SnakePart(X, Y, '@'));
             snakeBody.Add(new SnakePart(X, Y, '@'));
             snakeBody.Add(new SnakePart(X, Y, '@'));
+            snakeBody.Add(new SnakePart(X, Y, '@'));
+            snakeBody.Add(new SnakePart(X, Y, '@'));
+            snakeBody.Add(new SnakePart(X, Y, '@'));
         }
     }
 }

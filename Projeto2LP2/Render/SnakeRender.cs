@@ -20,7 +20,7 @@ namespace Projeto2LP2
 
                 if(GameLoop.X >= 0 && GameLoop.Y >= 0) {
                     if (RenderEngine.count < GameLoop.snakeBody.Count) {
-                        System.Threading.Thread.Sleep(500);
+                        System.Threading.Thread.Sleep(100);
                         Console.SetCursorPosition(GameLoop.X, GameLoop.Y);
                         GameLoop.snakeBody[RenderEngine.count].CordX = GameLoop.X;
                         GameLoop.snakeBody[RenderEngine.count].CordY = GameLoop.Y;
