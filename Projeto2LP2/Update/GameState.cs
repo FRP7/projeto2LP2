@@ -7,6 +7,29 @@ namespace Projeto2LP2
     /// </summary>
     class GameState
     {
+        // Aceder à coordenada X da cobra no GameLoop.
+        public static int GetCordSnakeX {
+            get {
+                return GameLoop.SnakeX;
+            }
+            set {
+                GameLoop.SnakeX = value;
+            }
+        }
+
+        // Aceder à coordenada Y da cobra no GameLoop.
+        public static int GetCordSnakeY {
+            get {
+                return GameLoop.SnakeY;
+            }
+            set {
+                GameLoop.SnakeY = value;
+            }
+        }
+
+        // Aceder à direção da cobra no GameLoop.
+        public static Direction GetDirection { get => GameLoop.direction; }
+
         /// <summary>
         /// Verificar a lógica do jogo.
         /// </summary>

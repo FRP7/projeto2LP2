@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Projeto2LP2
 {
@@ -12,21 +13,21 @@ namespace Projeto2LP2
         /// </summary>
         public void RenderSnake() {
             try {
-                if(GameLoop.SnakeX >= 0 && GameLoop.SnakeY >= 0) {
-                    if (RenderEngine.count < GameLoop.snakeBody.Count) {
-                        System.Threading.Thread.Sleep(100);
-                        Console.SetCursorPosition(GameLoop.SnakeX, GameLoop.SnakeY);
-                        GameLoop.snakeBody[RenderEngine.count].CordX = GameLoop.SnakeX;
-                        GameLoop.snakeBody[RenderEngine.count].CordY = GameLoop.SnakeY;
-                        Console.Write(GameLoop.snakeBody[RenderEngine.count].Part);
+                if(RenderEngine.GetSnakeX >= 0 && RenderEngine.GetSnakeY >= 0) {
+                    if (RenderEngine.count < RenderEngine.SnakeBody.Count) {
+                        Thread.Sleep(100);
+                        Console.SetCursorPosition(RenderEngine.GetSnakeX, RenderEngine.GetSnakeY);
+                        RenderEngine.SnakeBody[RenderEngine.count].CordX = RenderEngine.GetSnakeX;
+                        RenderEngine.SnakeBody[RenderEngine.count].CordY = RenderEngine.GetSnakeY;
+                        Console.Write(RenderEngine.SnakeBody[RenderEngine.count].Part);
                     }
-                    else if(RenderEngine.count > GameLoop.snakeBody.Count - 1) {
-                        System.Threading.Thread.Sleep(500);
-                        Console.SetCursorPosition(GameLoop.Tail.CordX, GameLoop.Tail.CordY);
+                    else if(RenderEngine.count > RenderEngine.SnakeBody.Count - 1) {
+                        Thread.Sleep(500);
+                        Console.SetCursorPosition(RenderEngine.Tail.CordX, RenderEngine.Tail.CordY);
                         Console.Write(' ');
-                        GameLoop.snakeBody.RemoveAt(0);
-                        GameLoop.snakeBody.Add(new SnakePart(GameLoop.SnakeX, 
-                            GameLoop.SnakeY, '@'));
+                        RenderEngine.SnakeBody.RemoveAt(0);
+                        RenderEngine.SnakeBody.Add(new SnakePart(RenderEngine.GetSnakeX, 
+                            RenderEngine.GetSnakeY, '@'));
                         RenderEngine.count -= 2;
                     }
                 }

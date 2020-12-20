@@ -11,21 +11,21 @@ namespace Projeto2LP2
         /// Verificar e atualizar a posição da cobra de acordo com a direção.
         /// </summary>
         public void SnakePositionCheck() {
-            if(GameLoop.direction == Direction.Up) {
-                if(GameLoop.SnakeY > 0) {
-                    GameLoop.SnakeY--;
+            if(GameState.GetDirection == Direction.Up) {
+                if(GameState.GetCordSnakeY > 0) {
+                    GameState.GetCordSnakeY--;
                 }
             }
-            else if(GameLoop.direction == Direction.Down) {
-                GameLoop.SnakeY++;
+            else if(GameState.GetDirection == Direction.Down) {
+                GameState.GetCordSnakeY++;
             }
-            else if(GameLoop.direction == Direction.Left) {
-                if (GameLoop.SnakeX > 0) {
-                    GameLoop.SnakeX--;
+            else if(GameState.GetDirection == Direction.Left) {
+                if (GameState.GetCordSnakeX > 0) {
+                    GameState.GetCordSnakeX--;
                 }
             }
-            else if(GameLoop.direction == Direction.Right) {
-                GameLoop.SnakeX++;
+            else if(GameState.GetDirection == Direction.Right) {
+                GameState.GetCordSnakeX++;
             }
         }
     }
