@@ -11,46 +11,15 @@ namespace Projeto2LP2
         // Contar o tamanho da cobra.
         public static int count = 0;
 
-        public static int GetSnakeX {
-            get {
-                return GameLoop.SnakeX;
-            }
-            set {
-            }
-        }
+        public static int GetSnakeX { get => GameLoop.SnakeX; }
 
-        public static int GetSnakeY {
-            get {
-                return GameLoop.SnakeY;
-            }
-            set {
-            }
-        }
+        public static int GetSnakeY { get => GameLoop.SnakeY; }
 
-        public static List<SnakePart> SnakeBody {
-            get {
-                return GameLoop.snakeBody;
-            }
-            set {
-            }
-        }
+        public static List<SnakePart> SnakeBody { get => GameLoop.snakeBody; }
 
-        public static SnakePart Head {
-            get {
-                return GameLoop.Head;
-            }
-            set {
+        public static SnakePart Head { get => GameLoop.Head; }
 
-            }
-        }
-
-        public static SnakePart Tail {
-            get {
-                return GameLoop.Tail;
-            }
-            set {
-            }
-        }
+        public static SnakePart Tail { get => GameLoop.Tail; }
 
         /// <summary>
         /// Renderizar.
