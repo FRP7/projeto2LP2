@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Projeto2LP2
 {
@@ -9,6 +10,47 @@ namespace Projeto2LP2
     {
         // Contar o tamanho da cobra.
         public static int count = 0;
+
+        public static int GetSnakeX {
+            get {
+                return GameLoop.SnakeX;
+            }
+            set {
+            }
+        }
+
+        public static int GetSnakeY {
+            get {
+                return GameLoop.SnakeY;
+            }
+            set {
+            }
+        }
+
+        public static List<SnakePart> SnakeBody {
+            get {
+                return GameLoop.snakeBody;
+            }
+            set {
+            }
+        }
+
+        public static SnakePart Head {
+            get {
+                return GameLoop.Head;
+            }
+            set {
+
+            }
+        }
+
+        public static SnakePart Tail {
+            get {
+                return GameLoop.Tail;
+            }
+            set {
+            }
+        }
 
         /// <summary>
         /// Renderizar.
