@@ -7,6 +7,27 @@ namespace Projeto2LP2
     /// </summary>
     class GameState
     {
+
+        public static int GetCordSnakeX {
+            get {
+                return GameLoop.SnakeX;
+            }
+            set {
+                GameLoop.SnakeX = value;
+            }
+        }
+
+        public static int GetCordSnakeY {
+            get {
+                return GameLoop.SnakeY;
+            }
+            set {
+                GameLoop.SnakeY = value;
+            }
+        }
+
+        public static Direction GetDirection { get => GameLoop.direction; }
+
         /// <summary>
         /// Verificar a lógica do jogo.
         /// </summary>
