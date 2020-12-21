@@ -40,6 +40,18 @@ namespace Projeto2LP2
             }
         }
 
+        public static SnakePart GetHead {
+            get {
+                return GameLoop.Head;
+            }
+        }
+
+        public static SnakePart GetTail {
+            get {
+                return GameLoop.Tail;
+            }
+        }
+
         // Aceder à direção da cobra no GameLoop.
         public static Direction GetDirection { get => GameLoop.direction; }
 
