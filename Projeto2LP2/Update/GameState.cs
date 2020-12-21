@@ -13,6 +13,10 @@ namespace Projeto2LP2
             {
                 return GameLoop.snakeBody;
             }
+            set 
+            {
+                GameLoop.snakeBody = value;
+            }
         }
         // Aceder à coordenada X da cobra no GameLoop.
         public static int GetCordSnakeX
@@ -55,6 +59,28 @@ namespace Projeto2LP2
         // Aceder à direção da cobra no GameLoop.
         public static Direction GetDirection { get => GameLoop.direction; }
 
+        public static int GetCordFoodX
+        {
+            get
+            {
+                return GameLoop.FoodX;
+            }
+            set
+            {
+                GameLoop.FoodX = value;
+            }
+        }
+        public static int GetCordFoodY
+        {
+            get
+            {
+                return GameLoop.FoodY;
+            }
+            set
+            {
+                GameLoop.FoodY = value;
+            }
+        }
         /// <summary>
         /// Verificar a lógica do jogo.
         /// </summary>

@@ -10,8 +10,11 @@ namespace Projeto2LP2
         /// <summary>
         /// Renderizar a comida.
         /// </summary>
-        public void RenderFood() {
-
+        public void RenderFood()
+        {
+            Console.SetCursorPosition(RenderEngine.GetFoodX, RenderEngine.GetFoodY);
+            Food food = new Food(RenderEngine.GetFoodX, RenderEngine.GetFoodY, '$');
+            Console.Write(food.FoodChar);
         }
     }
-}
+ }

@@ -18,6 +18,9 @@ namespace Projeto2LP2
         public static int SnakeX { get; set; }
         public static int SnakeY { get; set; }
 
+        public static int FoodX { get; set; }
+        public static int FoodY { get; set; }
+
         // Verificar qual a direção atual da cobra.
         public static Direction direction;
 
@@ -77,11 +80,11 @@ namespace Projeto2LP2
             direction = Direction.None;
             snakeBody = new List<SnakePart>();
             snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
         }
     }
 }
