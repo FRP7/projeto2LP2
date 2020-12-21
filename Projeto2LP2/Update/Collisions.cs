@@ -10,24 +10,24 @@ namespace Projeto2LP2
         public void CollisionCheck()
         {
 
-            testParedes();
+            CheckWallks();
         }
-        private void testParedes()
+        private void CheckWallks()
         {
 
-            if (RenderEngine.GetSnakeX == 0)
+            if (GameState.GetCordSnakeX == 0)
             {
                 Environment.Exit(0);
             }
-            if (RenderEngine.GetSnakeX == 36)
+            if (GameState.GetCordSnakeX == 36)
             {
                 Environment.Exit(0);
             }
-            if (RenderEngine.GetSnakeY == 0)
+            if (GameState.GetCordSnakeY == 0)
             {
                 Environment.Exit(0);
             }
-            if (RenderEngine.GetSnakeY == 15)
+            if (GameState.GetCordSnakeY == 15)
             {
                 Environment.Exit(0);
             }
