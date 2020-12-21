@@ -54,6 +54,8 @@ namespace Projeto2LP2
             if (GameState.GetHead.CordX == GameState.GetCordFoodX)
             {
                 GameState.GetSnakeBody.Add(new SnakePart(GameState.GetCordSnakeX, GameState.GetCordSnakeY, '@'));
+                Console.SetCursorPosition(GameState.GetCordFoodX, GameState.GetCordFoodY);
+                Console.Write(' ');
             }
         }
     }
