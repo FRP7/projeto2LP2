@@ -58,8 +58,10 @@ namespace Projeto2LP2
                 Console.Write(' ');
                 FoodPosition foodPosition = new FoodPosition();
                 foodPosition.FoodPositionCheck();
+                GameState.GetScore++;
             }
             
         }
+
     }
 }

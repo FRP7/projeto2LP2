@@ -44,7 +44,7 @@ namespace Projeto2LP2
 
             // Pontuação.
             Console.SetCursorPosition(0, 17);
-            Console.WriteLine("Score: ");
+            Console.WriteLine("Score: " + RenderEngine.GetScore);
             // teste, delete later
             Console.WriteLine($"SnakeX: {RenderEngine.GetSnakeX}.  SnakeY: {RenderEngine.GetSnakeY}");
         }

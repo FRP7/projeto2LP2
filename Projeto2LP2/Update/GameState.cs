@@ -81,6 +81,17 @@ namespace Projeto2LP2
                 GameLoop.FoodY = value;
             }
         }
+        public static int GetScore 
+        {
+            get
+            {
+                return GameLoop.ScoreValue;
+            }
+            set 
+            {
+                GameLoop.ScoreValue = value;
+            }
+        }
         /// <summary>
         /// Verificar a lógica do jogo.
         /// </summary>

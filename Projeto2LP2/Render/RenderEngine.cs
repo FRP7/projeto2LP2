@@ -30,6 +30,8 @@ namespace Projeto2LP2
 
         public static int GetFoodY { get => GameLoop.FoodY; }
 
+        public static int GetScore { get => GameLoop.ScoreValue; }
+
         /// <summary>
         /// Renderizar.
         /// </summary>

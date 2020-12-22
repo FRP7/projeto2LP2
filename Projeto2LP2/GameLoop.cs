@@ -29,6 +29,9 @@ namespace Projeto2LP2
         public static SnakePart Tail { get => snakeBody.First(); }
         public static SnakePart Head { get => snakeBody.Last(); }
 
+        //SCORE.
+        public static int ScoreValue;
+
         //public static bool CanSpawnFood.
         //public static bool CanSpawnFood;
 
@@ -45,6 +48,7 @@ namespace Projeto2LP2
             foodPosition.FoodPositionCheck();
             FoodRender foodRender = new FoodRender();
             foodRender.RenderFood();
+            ScoreValue = 0;
             //UPDATE
             while (true) {
                 CheckUserInput();
