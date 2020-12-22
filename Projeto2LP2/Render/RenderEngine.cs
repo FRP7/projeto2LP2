@@ -26,14 +26,17 @@ namespace Projeto2LP2
         // Aceder à cauda da cobra no GameLoop.
         public static SnakePart Tail { get => GameLoop.Tail; }
 
+        // Aceder à coordenada X da comida no GameLoop.
         public static int GetFoodX { get => GameLoop.FoodX; }
 
+        // Aceder à coordenada Y da comida no GameLoop.
         public static int GetFoodY { get => GameLoop.FoodY; }
 
+        // Aceder à pontuação no GameLoop.
         public static int GetScore { get => GameLoop.ScoreValue; }
 
         /// <summary>
-        /// Renderizar.
+        /// Renderizar o jogo.
         /// </summary>
         public void Render() {
             RenderScene();

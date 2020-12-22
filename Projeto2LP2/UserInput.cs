@@ -7,19 +7,16 @@ namespace Projeto2LP2
     /// </summary>
     class UserInput
     {
-        /// Input do user.
-        public ConsoleKey Key { get => getKey; }
-
         // Input do user.
-        private ConsoleKey getKey;
+        public ConsoleKey inputKey;
 
         /// <summary>
         /// Verificar o input do user e escolher a direção atual da cobra.
         /// </summary>
         public void CheckUserInput() {
             if (Console.KeyAvailable) {
-                getKey = Console.ReadKey().Key;
-                switch (getKey) {
+                inputKey = Console.ReadKey().Key;
+                switch (inputKey) {
                     case ConsoleKey.UpArrow:
                         if (GameLoop.direction != Direction.Down) {
                             GameLoop.direction = Direction.Up;

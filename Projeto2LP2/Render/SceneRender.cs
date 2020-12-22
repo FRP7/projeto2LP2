@@ -8,7 +8,7 @@ namespace Projeto2LP2
     class SceneRender
     {
         /// <summary>
-        /// Método onde é renderizado o cenário.
+        /// Método onde é chamado o renderizador do cenário.
         /// </summary>
         public void RenderScene() {
             RenderMainScene();
@@ -18,6 +18,7 @@ namespace Projeto2LP2
         /// Método onde é renderizado o cenário.
         /// </summary>
         private void RenderMainScene() {
+
             // Linha de cima
             for (int i = 0; i < 35; i++) {
                 Console.SetCursorPosition(i, 0);
@@ -45,8 +46,6 @@ namespace Projeto2LP2
             // Pontuação.
             Console.SetCursorPosition(0, 17);
             Console.WriteLine("Score: " + RenderEngine.GetScore);
-            // teste, delete later
-            Console.WriteLine($"SnakeX: {RenderEngine.GetSnakeX}.  SnakeY: {RenderEngine.GetSnakeY}");
         }
     }
 }

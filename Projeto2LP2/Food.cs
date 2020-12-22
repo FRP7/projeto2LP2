@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Projeto2LP2
 {
@@ -9,15 +7,15 @@ namespace Projeto2LP2
         // Coordenadas.
         public int CordX { get; set; }
         public int CordY { get; set; }
-        // Caracter da parte.
+        // Caracter da comida..
         public char FoodChar { get; set; }
 
         /// <summary>
-        /// Inicializar propriedades e variáveis.
+        /// Inicializar propiedades e variáveis.
         /// </summary>
-        /// <param name="x"> Coordenada X.</param>
-        /// <param name="y"> Coordenada Y.</param>
-        /// <param name="food"> Caracter da parte.</param>
+        /// <param name="x"> Coordenada X da comida. </param>
+        /// <param name="y"> Coordenada Y da comida. </param>
+        /// <param name="food"> Caracter da comida. </param>
         public Food(int x, int y, char food)
         {
             CordX = x;
