@@ -110,7 +110,7 @@ namespace Projeto2LP2
             // Começar thread para o input do jogador.
             inputThread = new Thread(userInput.CheckUserInput);
             inputThread.Start();
-            GetKey = userInput.inputKey;
+            GetKey = userInput.Key;
             // Fechar a thread.
             inputThread.Join();
         }
