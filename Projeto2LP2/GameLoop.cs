@@ -29,6 +29,10 @@ namespace Projeto2LP2
         public static SnakePart Tail { get => snakeBody.First(); }
         public static SnakePart Head { get => snakeBody.Last(); }
 
+        //public static bool CanSpawnFood.
+        //public static bool CanSpawnFood;
+
+
         // Thread do user input.
         Thread inputThread;
 
@@ -36,6 +40,12 @@ namespace Projeto2LP2
         /// Ciclo de jogo.
         /// </summary>
         public void Game() {
+            //START
+            FoodPosition foodPosition = new FoodPosition();
+            foodPosition.FoodPositionCheck();
+            FoodRender foodRender = new FoodRender();
+            foodRender.RenderFood();
+            //UPDATE
             while (true) {
                 CheckUserInput();
                 Update();

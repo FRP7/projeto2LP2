@@ -88,7 +88,7 @@ namespace Projeto2LP2
         {
             CollisionCheck();
             SnakePositionCheck();
-            FoodPositionCheck();
+            //FoodPositionCheck();
             ScoreCheck();
         }
 

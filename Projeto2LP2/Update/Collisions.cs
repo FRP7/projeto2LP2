@@ -51,12 +51,15 @@ namespace Projeto2LP2
         }
         private void CheckFood()
         {
-            if (GameState.GetHead.CordX == GameState.GetCordFoodX)
+            if (GameState.GetHead.CordX == GameState.GetCordFoodX && GameState.GetHead.CordY == GameState.GetCordFoodY)
             {
                 GameState.GetSnakeBody.Add(new SnakePart(GameState.GetCordSnakeX, GameState.GetCordSnakeY, '@'));
                 Console.SetCursorPosition(GameState.GetCordFoodX, GameState.GetCordFoodY);
                 Console.Write(' ');
+                FoodPosition foodPosition = new FoodPosition();
+                foodPosition.FoodPositionCheck();
             }
+            
         }
     }
 }
