@@ -20,31 +20,31 @@ namespace Projeto2LP2
         private void RenderMainScene() {
 
             // Linha de cima
-            for (int i = 0; i < 35; i++) {
+            for (int i = 0; i < RenderEngine.GetSceneX; i++) {
                 Console.SetCursorPosition(i, 0);
                 Console.WriteLine("_");
             }
 
             // Linha de baixo.
-            for (int i = 0; i < 35; i++) {
-                Console.SetCursorPosition(i, 15);
+            for (int i = 0; i < RenderEngine.GetSceneX; i++) {
+                Console.SetCursorPosition(i, RenderEngine.GetSceneY - 1);
                 Console.WriteLine("_");
             }
 
             // Linha da esquerda.
-            for (int i = 0; i < 16; i++) {
+            for (int i = 0; i < RenderEngine.GetSceneY; i++) {
                 Console.SetCursorPosition(0, i);
                 Console.WriteLine("|");
             }
 
             // Linha da direita.
-            for (int i = 0; i < 16; i++) {
-                Console.SetCursorPosition(36, i);
+            for (int i = 0; i < RenderEngine.GetSceneY; i++) {
+                Console.SetCursorPosition(RenderEngine.GetSceneX, i);
                 Console.WriteLine("|");
             }
 
             // Pontuação.
-            Console.SetCursorPosition(0, 17);
+            Console.SetCursorPosition(0, RenderEngine.GetSceneY + 1);
             Console.WriteLine("Score: " + RenderEngine.GetScore);
         }
     }

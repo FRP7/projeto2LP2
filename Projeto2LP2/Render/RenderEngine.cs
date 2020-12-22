@@ -11,6 +11,12 @@ namespace Projeto2LP2
         // Contar o tamanho da cobra.
         public static int count = 0;
 
+        // Aceder à coordenada X do cenário no GameLoop.
+        public static int GetSceneX { get => GameLoop.SceneX; }
+
+        // Aceder à coordenada Y do cenário no GameLoop.
+        public static int GetSceneY { get => GameLoop.SceneY; }
+
         // Aceder à coordenada X da cobra no GameLoop.
         public static int GetSnakeX { get => GameLoop.SnakeX; }
 

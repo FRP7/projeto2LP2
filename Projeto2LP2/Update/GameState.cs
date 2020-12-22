@@ -7,6 +7,12 @@ namespace Projeto2LP2
     /// </summary>
     class GameState
     {
+        // Aceder à coordenada X do cenário no GameLoop.
+        public static int GetSceneX { get => GameLoop.SceneX; }
+
+        // Aceder à coordenada Y do cenário no GameLoop.
+        public static int GetSceneY { get => GameLoop.SceneY; }
+
         // Aceder ao corpo da cobra no GameLoop.
         public static List<SnakePart> GetSnakeBody
         {

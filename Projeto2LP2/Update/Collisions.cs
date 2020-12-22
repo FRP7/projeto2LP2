@@ -48,7 +48,7 @@ namespace Projeto2LP2
             {
                 GameLoop.isGameOver = true;
             }
-            if (GameState.GetCordSnakeX == 36)
+            if (GameState.GetCordSnakeX == GameState.GetSceneX - 1)
             {
                 GameLoop.isGameOver = true;
             }
@@ -56,7 +56,7 @@ namespace Projeto2LP2
             {
                 GameLoop.isGameOver = true;
             }
-            if (GameState.GetCordSnakeY == 15)
+            if (GameState.GetCordSnakeY == GameState.GetSceneY - 1)
             {
                 GameLoop.isGameOver = true;
             }

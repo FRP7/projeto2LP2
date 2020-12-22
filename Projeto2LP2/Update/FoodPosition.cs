@@ -23,8 +23,9 @@ namespace Projeto2LP2
         private void GenerateFood()
         {
             random = new Random();
-            GameState.GetCordFoodX = random.Next(2, 33);
-            GameState.GetCordFoodY = random.Next(2, 14);
+
+            GameState.GetCordFoodX = random.Next(2, GameState.GetSceneX - 2);
+            GameState.GetCordFoodY = random.Next(2, GameState.GetSceneY - 2);
         }
 
     }

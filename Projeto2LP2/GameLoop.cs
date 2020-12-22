@@ -14,6 +14,10 @@ namespace Projeto2LP2
         // Recolher informação do teclado definida no UserInput.
         public static ConsoleKey GetKey { get; private set; }
 
+        // Definir o tamanho do cenário.
+        public static int SceneX = 35;
+        public static int SceneY = 16;
+
         // Recolher informação da posição da cobra.
         public static int SnakeX { get; set; }
         public static int SnakeY { get; set; }
@@ -63,8 +67,8 @@ namespace Projeto2LP2
             isGameOver = false;
 
             // Definir a posição inicial da cobra.
-            SnakeX = 15;
-            SnakeY = 7;
+            SnakeX = SceneX / 2;
+            SnakeY = SceneY / 2;
 
             // Definir a direção inicial.
             direction = new Direction();
@@ -75,10 +79,14 @@ namespace Projeto2LP2
             snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
 
             // Definir a posição da comida inicial.
-            FoodX = 10;
-            FoodY = 10;
+            FoodX = (SceneX / 2) - 5;
+            FoodY = (SceneY / 2) - 5;
+
             // Definir o score inicial.
             ScoreValue = 0;
+
+            // Colocar o contador a zero.
+            RenderEngine.count = 0;
         }
 
         // Método que corre todos os frames.
