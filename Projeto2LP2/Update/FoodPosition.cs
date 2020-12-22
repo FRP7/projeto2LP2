@@ -3,33 +3,30 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe onde é definida a posição da comida.
+    /// Classe onde é atualizada a posição da comida.
     /// </summary>
     class FoodPosition
     {
+        private Random random;
+
         /// <summary>
-        /// Definir a posição da comida.
+        /// Atualizar a posição da comida.
         /// </summary>
         public void FoodPositionCheck()
         {
-            RandomPosition();
+            GenerateFood();
         }
-        private void GenerateFood(int x, int y)
-        { 
-            GameState.GetCordFoodX = x;
-            GameState.GetCordFoodY = y;
-        }
-        private void RandomPosition()
+      
+        /// <summary>
+        /// Definir aleatoriamente as coordenadas da comida.
+        /// </summary>
+        private void GenerateFood()
         {
-            int x;
-            int y;
-
-            Random random = new Random();
-            x = random.Next(1, 10);
-            y = random.Next(1, 10);
-
-            GenerateFood(x, y);
+            random = new Random();
+            GameState.GetCordFoodX = random.Next(2, 33);
+            GameState.GetCordFoodY = random.Next(2, 14);
         }
+
     }
 }
 

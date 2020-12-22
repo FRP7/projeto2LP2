@@ -7,6 +7,7 @@ namespace Projeto2LP2
     /// </summary>
     class GameState
     {
+        // Aceder ao corpo da cobra no GameLoop.
         public static List<SnakePart> GetSnakeBody
         {
             get
@@ -18,6 +19,7 @@ namespace Projeto2LP2
                 GameLoop.snakeBody = value;
             }
         }
+
         // Aceder à coordenada X da cobra no GameLoop.
         public static int GetCordSnakeX
         {
@@ -44,12 +46,14 @@ namespace Projeto2LP2
             }
         }
 
+        // Aceder à cabeça da cobra no GameLoop.
         public static SnakePart GetHead {
             get {
                 return GameLoop.Head;
             }
         }
 
+        // Aceder à cauda da cobra no GameLoop.
         public static SnakePart GetTail {
             get {
                 return GameLoop.Tail;
@@ -59,6 +63,7 @@ namespace Projeto2LP2
         // Aceder à direção da cobra no GameLoop.
         public static Direction GetDirection { get => GameLoop.direction; }
 
+        // Aceder à coordenada X da comida no GameLoop.
         public static int GetCordFoodX
         {
             get
@@ -70,6 +75,8 @@ namespace Projeto2LP2
                 GameLoop.FoodX = value;
             }
         }
+
+        // Aceder à coordenada Y da comida no GameLoop.
         public static int GetCordFoodY
         {
             get
@@ -81,6 +88,8 @@ namespace Projeto2LP2
                 GameLoop.FoodY = value;
             }
         }
+
+        // Aceder à pontuação no GameLoop.
         public static int GetScore 
         {
             get
@@ -92,6 +101,7 @@ namespace Projeto2LP2
                 GameLoop.ScoreValue = value;
             }
         }
+
         /// <summary>
         /// Verificar a lógica do jogo.
         /// </summary>
@@ -99,8 +109,6 @@ namespace Projeto2LP2
         {
             CollisionCheck();
             SnakePositionCheck();
-            //FoodPositionCheck();
-            ScoreCheck();
         }
 
         /// <summary>
@@ -119,24 +127,6 @@ namespace Projeto2LP2
         {
             SnakePosition snakePosition = new SnakePosition();
             snakePosition.SnakePositionCheck();
-        }
-
-        /// <summary>
-        /// Verificar a posição da comida.
-        /// </summary>
-        private void FoodPositionCheck()
-        {
-            FoodPosition foodPosition = new FoodPosition();
-            foodPosition.FoodPositionCheck();
-        }
-
-        /// <summary>
-        /// Verificar a pontuação.
-        /// </summary>
-        private void ScoreCheck()
-        {
-            Score score = new Score();
-            score.ScoreCheck();
         }
     }
 }

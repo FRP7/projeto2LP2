@@ -18,6 +18,7 @@ namespace Projeto2LP2
         public static int SnakeX { get; set; }
         public static int SnakeY { get; set; }
 
+        // Recolher informação da posição da comida.
         public static int FoodX { get; set; }
         public static int FoodY { get; set; }
 
@@ -29,30 +30,50 @@ namespace Projeto2LP2
         public static SnakePart Tail { get => snakeBody.First(); }
         public static SnakePart Head { get => snakeBody.Last(); }
 
-        //SCORE.
+        // Pontuação.
         public static int ScoreValue;
 
-        //public static bool CanSpawnFood.
-        //public static bool CanSpawnFood;
-
-
         // Thread do user input.
-        Thread inputThread;
+        private Thread inputThread;
 
         /// <summary>
         /// Ciclo de jogo.
         /// </summary>
         public void Game() {
-            //START
-            FoodPosition foodPosition = new FoodPosition();
-            foodPosition.FoodPositionCheck();
-            FoodRender foodRender = new FoodRender();
-            foodRender.RenderFood();
+            // Chamado no início do jogo.
+            Start();
+            // Chamado em todos os frames.
+            Update();
+        }
+
+        // Método de início do jogo.
+        private void Start() {
+
+            // Definir a posição inicial da cobra.
+            SnakeX = 15;
+            SnakeY = 7;
+            direction = new Direction();
+            // Definir a direção inicial.
+            direction = Direction.None;
+            snakeBody = new List<SnakePart>();
+            // Definir o tamanho da cobra.
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+
+            // Definir a posição da comida inicial.
+            FoodX = 10;
+            FoodY = 10;
+            // Definir o score inicial.
             ScoreValue = 0;
-            //UPDATE
+        }
+
+        // Método que corre todos os frames.
+        private void Update() {
             while (true) {
+                // Verificar o input do jogador.
                 CheckUserInput();
-                Update();
+                // Atualizar o estado do jogo.
+                GameState();
+                // Desenhar o jogo.
                 Render();
             }
         }
@@ -62,16 +83,18 @@ namespace Projeto2LP2
         /// </summary>
         private void CheckUserInput() {
             UserInput userInput = new UserInput();
+            // Começar thread para o input do jogador.
             inputThread = new Thread(userInput.CheckUserInput);
             inputThread.Start();
             GetKey = userInput.Key;
+            // Fechar a thread.
             inputThread.Join();
         }
 
         /// <summary>
         /// Update do estado lógico do jogo.
         /// </summary>
-        private void Update() {
+        private void GameState() {
             GameState gameState = new GameState();
             gameState.Update();
         }
@@ -82,23 +105,6 @@ namespace Projeto2LP2
         private void Render() {
             RenderEngine render = new RenderEngine();
             render.Render();
-        }
-
-        /// <summary>
-        /// Inicializar as variáveis.
-        /// </summary>
-        public GameLoop() {
-            SnakeX = 15;
-            SnakeY = 7;
-            direction = new Direction();
-            direction = Direction.None;
-            snakeBody = new List<SnakePart>();
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
         }
     }
 }

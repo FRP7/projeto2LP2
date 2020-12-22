@@ -39,8 +39,6 @@ namespace Projeto2LP2
             RenderScene();
             RenderSnake();
             RenderFood();
-            
-            
         }
 
         /// <summary>
