@@ -18,7 +18,7 @@ namespace Projeto2LP2
         /// </summary>
         public void CheckUserInput() {
             if (Console.KeyAvailable) {
-                getKey = Console.ReadKey().Key;
+                getKey = Console.ReadKey(true).Key;
                 switch (getKey) {
                     case ConsoleKey.UpArrow:
                         if (GameLoop.direction != Direction.Down) {
