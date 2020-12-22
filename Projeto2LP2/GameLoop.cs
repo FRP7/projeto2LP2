@@ -18,6 +18,9 @@ namespace Projeto2LP2
         public static int SnakeX { get; set; }
         public static int SnakeY { get; set; }
 
+        public static int FoodX { get; set; }
+        public static int FoodY { get; set; }
+
         // Verificar qual a direção atual da cobra.
         public static Direction direction;
 
@@ -26,6 +29,13 @@ namespace Projeto2LP2
         public static SnakePart Tail { get => snakeBody.First(); }
         public static SnakePart Head { get => snakeBody.Last(); }
 
+        //SCORE.
+        public static int ScoreValue;
+
+        //public static bool CanSpawnFood.
+        //public static bool CanSpawnFood;
+
+
         // Thread do user input.
         Thread inputThread;
 
@@ -33,6 +43,13 @@ namespace Projeto2LP2
         /// Ciclo de jogo.
         /// </summary>
         public void Game() {
+            //START
+            FoodPosition foodPosition = new FoodPosition();
+            foodPosition.FoodPositionCheck();
+            FoodRender foodRender = new FoodRender();
+            foodRender.RenderFood();
+            ScoreValue = 0;
+            //UPDATE
             while (true) {
                 CheckUserInput();
                 Update();
@@ -79,9 +96,9 @@ namespace Projeto2LP2
             snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
             snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
             snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            //snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
         }
     }
 }

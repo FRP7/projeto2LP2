@@ -26,6 +26,12 @@ namespace Projeto2LP2
         // Aceder à cauda da cobra no GameLoop.
         public static SnakePart Tail { get => GameLoop.Tail; }
 
+        public static int GetFoodX { get => GameLoop.FoodX; }
+
+        public static int GetFoodY { get => GameLoop.FoodY; }
+
+        public static int GetScore { get => GameLoop.ScoreValue; }
+
         /// <summary>
         /// Renderizar.
         /// </summary>
@@ -33,6 +39,8 @@ namespace Projeto2LP2
             RenderScene();
             RenderSnake();
             RenderFood();
+            
+            
         }
 
         /// <summary>
