@@ -36,10 +36,17 @@ namespace Projeto2LP2
         // Thread do user input.
         private Thread inputThread;
 
+        // Menu de game over.
+        private GameOver gameOver;
+
+        // Indicar se o jogo acabou.
+        public static bool isGameOver;
+
         /// <summary>
         /// Ciclo de jogo.
         /// </summary>
         public void Game() {
+
             // Chamado no início do jogo.
             Start();
             // Chamado em todos os frames.
@@ -49,14 +56,22 @@ namespace Projeto2LP2
         // Método de início do jogo.
         private void Start() {
 
+            // Inicializar o GameOver.
+            gameOver = new GameOver();
+
+            // Inicializar bool.
+            isGameOver = false;
+
             // Definir a posição inicial da cobra.
             SnakeX = 15;
             SnakeY = 7;
-            direction = new Direction();
+
             // Definir a direção inicial.
+            direction = new Direction();
             direction = Direction.None;
-            snakeBody = new List<SnakePart>();
+
             // Definir o tamanho da cobra.
+            snakeBody = new List<SnakePart>();
             snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
 
             // Definir a posição da comida inicial.
@@ -68,7 +83,7 @@ namespace Projeto2LP2
 
         // Método que corre todos os frames.
         private void Update() {
-            while (true) {
+            while (isGameOver == false) {
                 // Verificar o input do jogador.
                 CheckUserInput();
                 // Atualizar o estado do jogo.
@@ -76,6 +91,7 @@ namespace Projeto2LP2
                 // Desenhar o jogo.
                 Render();
             }
+            gameOver.GameOverMenu();
         }
 
         /// <summary>

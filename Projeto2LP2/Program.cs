@@ -11,8 +11,8 @@ namespace Projeto2LP2
     {
         // Começar o jogo.
         static void Main(string[] args) {
-            Menu menu = new Menu();
-            menu.MainMenu();
+            Intro intro = new Intro();
+            intro.StartIntro();
         }
     }
 }

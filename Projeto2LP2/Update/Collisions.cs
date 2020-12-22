@@ -35,7 +35,7 @@ namespace Projeto2LP2
         private void CheckSnakeTouch() {
             for (int i = 3; i < GameState.GetSnakeBody.Count; i++) {
                 if (GameState.GetSnakeBody[0].CordX == GameState.GetSnakeBody[i].CordX && GameState.GetSnakeBody[0].CordY == GameState.GetSnakeBody[i].CordY) {
-                    Environment.Exit(0);
+                    GameLoop.isGameOver = true;
                 }
             }
 
@@ -46,19 +46,19 @@ namespace Projeto2LP2
         {
             if (GameState.GetCordSnakeX == 0)
             {
-                Environment.Exit(0);
+                GameLoop.isGameOver = true;
             }
             if (GameState.GetCordSnakeX == 36)
             {
-                Environment.Exit(0);
+                GameLoop.isGameOver = true;
             }
             if (GameState.GetCordSnakeY == 0)
             {
-                Environment.Exit(0);
+                GameLoop.isGameOver = true;
             }
             if (GameState.GetCordSnakeY == 15)
             {
-                Environment.Exit(0);
+                GameLoop.isGameOver = true;
             }
         }
     }
