@@ -11,6 +11,12 @@ namespace Projeto2LP2
         // Contar o tamanho da cobra.
         public static int count = 0;
 
+        // Aceder à coordenada X do cenário no GameLoop.
+        public static int GetSceneX { get => GameLoop.SceneX; }
+
+        // Aceder à coordenada Y do cenário no GameLoop.
+        public static int GetSceneY { get => GameLoop.SceneY; }
+
         // Aceder à coordenada X da cobra no GameLoop.
         public static int GetSnakeX { get => GameLoop.SnakeX; }
 
@@ -26,8 +32,17 @@ namespace Projeto2LP2
         // Aceder à cauda da cobra no GameLoop.
         public static SnakePart Tail { get => GameLoop.Tail; }
 
+        // Aceder à coordenada X da comida no GameLoop.
+        public static int GetFoodX { get => GameLoop.FoodX; }
+
+        // Aceder à coordenada Y da comida no GameLoop.
+        public static int GetFoodY { get => GameLoop.FoodY; }
+
+        // Aceder à pontuação no GameLoop.
+        public static int GetScore { get => GameLoop.ScoreValue; }
+
         /// <summary>
-        /// Renderizar.
+        /// Renderizar o jogo.
         /// </summary>
         public void Render() {
             RenderScene();

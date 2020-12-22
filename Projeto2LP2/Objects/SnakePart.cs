@@ -10,6 +10,7 @@ namespace Projeto2LP2
         // Coordenadas.
         public int CordX { get; set; }
         public int CordY { get; set; }
+
         // Caracter da parte.
         public char Part { get; set; }
 

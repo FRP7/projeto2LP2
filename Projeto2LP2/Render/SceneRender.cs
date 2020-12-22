@@ -8,7 +8,7 @@ namespace Projeto2LP2
     class SceneRender
     {
         /// <summary>
-        /// Método onde é renderizado o cenário.
+        /// Método onde é chamado o renderizador do cenário.
         /// </summary>
         public void RenderScene() {
             RenderMainScene();
@@ -18,35 +18,34 @@ namespace Projeto2LP2
         /// Método onde é renderizado o cenário.
         /// </summary>
         private void RenderMainScene() {
+
             // Linha de cima
-            for (int i = 0; i < 35; i++) {
+            for (int i = 0; i < RenderEngine.GetSceneX; i++) {
                 Console.SetCursorPosition(i, 0);
                 Console.WriteLine("_");
             }
 
             // Linha de baixo.
-            for (int i = 0; i < 35; i++) {
-                Console.SetCursorPosition(i, 15);
+            for (int i = 0; i < RenderEngine.GetSceneX; i++) {
+                Console.SetCursorPosition(i, RenderEngine.GetSceneY - 1);
                 Console.WriteLine("_");
             }
 
             // Linha da esquerda.
-            for (int i = 0; i < 16; i++) {
+            for (int i = 0; i < RenderEngine.GetSceneY; i++) {
                 Console.SetCursorPosition(0, i);
                 Console.WriteLine("|");
             }
 
             // Linha da direita.
-            for (int i = 0; i < 16; i++) {
-                Console.SetCursorPosition(36, i);
+            for (int i = 0; i < RenderEngine.GetSceneY; i++) {
+                Console.SetCursorPosition(RenderEngine.GetSceneX, i);
                 Console.WriteLine("|");
             }
 
             // Pontuação.
-            Console.SetCursorPosition(0, 17);
-            Console.WriteLine("Score: ");
-            // teste, delete later
-            Console.WriteLine($"SnakeX: {RenderEngine.GetSnakeX}.  SnakeY: {RenderEngine.GetSnakeY}");
+            Console.SetCursorPosition(0, RenderEngine.GetSceneY + 1);
+            Console.WriteLine("Score: " + RenderEngine.GetScore);
         }
     }
 }

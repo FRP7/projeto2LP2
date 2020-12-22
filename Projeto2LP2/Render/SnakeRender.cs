@@ -12,7 +12,6 @@ namespace Projeto2LP2
         /// Renderizar a cobra.
         /// </summary>
         public void RenderSnake() {
-            try {
                 if(RenderEngine.GetSnakeX >= 0 && RenderEngine.GetSnakeY >= 0) {
                     if (RenderEngine.count < RenderEngine.SnakeBody.Count) {
                         Thread.Sleep(100);
@@ -32,8 +31,5 @@ namespace Projeto2LP2
                     }
                 }
             }
-            catch (Exception) {
-            }
         }
     }
-}

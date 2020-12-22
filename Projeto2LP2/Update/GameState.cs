@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace Projeto2LP2
 {
     /// <summary>
@@ -7,43 +7,121 @@ namespace Projeto2LP2
     /// </summary>
     class GameState
     {
+        // Aceder à coordenada X do cenário no GameLoop.
+        public static int GetSceneX { get => GameLoop.SceneX; }
+
+        // Aceder à coordenada Y do cenário no GameLoop.
+        public static int GetSceneY { get => GameLoop.SceneY; }
+
+        // Aceder ao corpo da cobra no GameLoop.
+        public static List<SnakePart> GetSnakeBody
+        {
+            get
+            {
+                return GameLoop.snakeBody;
+            }
+            set 
+            {
+                GameLoop.snakeBody = value;
+            }
+        }
+
         // Aceder à coordenada X da cobra no GameLoop.
-        public static int GetCordSnakeX {
-            get {
+        public static int GetCordSnakeX
+        {
+            get
+            {
                 return GameLoop.SnakeX;
             }
-            set {
+            set
+            {
                 GameLoop.SnakeX = value;
             }
         }
 
         // Aceder à coordenada Y da cobra no GameLoop.
-        public static int GetCordSnakeY {
-            get {
+        public static int GetCordSnakeY
+        {
+            get
+            {
                 return GameLoop.SnakeY;
             }
-            set {
+            set
+            {
                 GameLoop.SnakeY = value;
+            }
+        }
+
+        // Aceder à cabeça da cobra no GameLoop.
+        public static SnakePart GetHead {
+            get {
+                return GameLoop.Head;
+            }
+        }
+
+        // Aceder à cauda da cobra no GameLoop.
+        public static SnakePart GetTail {
+            get {
+                return GameLoop.Tail;
             }
         }
 
         // Aceder à direção da cobra no GameLoop.
         public static Direction GetDirection { get => GameLoop.direction; }
 
+        // Aceder à coordenada X da comida no GameLoop.
+        public static int GetCordFoodX
+        {
+            get
+            {
+                return GameLoop.FoodX;
+            }
+            set
+            {
+                GameLoop.FoodX = value;
+            }
+        }
+
+        // Aceder à coordenada Y da comida no GameLoop.
+        public static int GetCordFoodY
+        {
+            get
+            {
+                return GameLoop.FoodY;
+            }
+            set
+            {
+                GameLoop.FoodY = value;
+            }
+        }
+
+        // Aceder à pontuação no GameLoop.
+        public static int GetScore 
+        {
+            get
+            {
+                return GameLoop.ScoreValue;
+            }
+            set 
+            {
+                GameLoop.ScoreValue = value;
+            }
+        }
+
         /// <summary>
         /// Verificar a lógica do jogo.
         /// </summary>
-        public void Update() {
+        public void Update()
+        {
             CollisionCheck();
             SnakePositionCheck();
-            FoodPositionCheck();
-            ScoreCheck();
         }
 
         /// <summary>
         /// Verificar colisões.
         /// </summary>
-        private void CollisionCheck() {
+        private void CollisionCheck()
+        {
             Collisions collisions = new Collisions();
             collisions.CollisionCheck();
         }
@@ -51,25 +129,10 @@ namespace Projeto2LP2
         /// <summary>
         /// Verificar a posição da cobra.
         /// </summary>
-        private void SnakePositionCheck() {
+        private void SnakePositionCheck()
+        {
             SnakePosition snakePosition = new SnakePosition();
             snakePosition.SnakePositionCheck();
-        }
-
-        /// <summary>
-        /// Verificar a posição da comida.
-        /// </summary>
-        private void FoodPositionCheck() {
-            FoodPosition foodPosition = new FoodPosition();
-            foodPosition.FoodPositionCheck();
-        }
-
-        /// <summary>
-        /// Verificar a pontuação.
-        /// </summary>
-        private void ScoreCheck() {
-            Score score = new Score();
-            score.ScoreCheck();
         }
     }
 }
