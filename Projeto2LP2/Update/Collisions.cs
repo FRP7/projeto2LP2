@@ -36,17 +36,13 @@ namespace Projeto2LP2
         }
         private void CheckSnakeTouch()
         {
-            /*for (int i = 1; i < GameState.GetSnakeBody.Count; i++)
+            for (int i = 3; i < GameState.GetSnakeBody.Count; i++)
             {
-                if (GameState.GetSnakeBody[0].CordX > GameState.GetSnakeBody[i].CordX + (i * 64) || (GameState.GetSnakeBody[0].CordX + (i * 64)) < GameState.GetSnakeBody[i].CordX || GameState.GetSnakeBody[0].CordY > (GameState.GetSnakeBody[i].CordY + (i * 64)) || (GameState.GetSnakeBody[0].CordY + (i * 64)) < GameState.GetSnakeBody[i].CordY)
+                if (GameState.GetSnakeBody[0].CordX == GameState.GetSnakeBody[i].CordX && GameState.GetSnakeBody[0].CordY == GameState.GetSnakeBody[i].CordY)
                 {
-                    Environment.Exit(0);
+                    Environment.Exit(0); 
                 }
-                else
-                {
-                    Environment.Exit(0);
-                }
-            }*/
+            }
 
         }
         private void CheckFood()
