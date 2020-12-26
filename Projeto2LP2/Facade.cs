@@ -92,6 +92,12 @@ namespace Projeto2LP2
             }
         }
 
+        public static int GetScore {
+            get {
+                return RenderEngine.GetScore;
+            }
+        }
+
         // Array de GameObjects.
         public GameObject[] gameObjects = {
             new FoodObject(),
