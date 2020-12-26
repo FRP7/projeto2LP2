@@ -6,7 +6,8 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe que tenta tornar o código menos esparguete.
     /// </summary>
-    class Facade {
+    sealed class Facade
+    {
         // Aceder à coordenada X do cenário no GameLoop.
         public static int GetSceneX { get => SceneObject.SceneX; }
 

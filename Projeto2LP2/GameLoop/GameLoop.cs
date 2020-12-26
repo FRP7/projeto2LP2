@@ -7,7 +7,7 @@ namespace Projeto2LP2
     /// Classe do ciclo de jogo. 
     /// Funciona como um Facade também.
     /// </summary>
-    class GameLoop
+    sealed class GameLoop
     {
         // Recolher informação do teclado definida no UserInput.
         public static ConsoleKey GetKey { get; private set; }

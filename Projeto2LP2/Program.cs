@@ -7,7 +7,7 @@ namespace Projeto2LP2
     /// Podem utilizar pa testar os métodos do jogo enquanto o menu não estiver
     /// terminado, só peço que não façam add ás alterações desta classe no git.
     /// </summary>
-    class Program
+    sealed class Program
     {
         /// <summary>
         /// Começar o jogo.

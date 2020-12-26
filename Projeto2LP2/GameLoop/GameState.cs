@@ -5,7 +5,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe onde é atualizada a lógica do jogo.
     /// </summary>
-    class GameState
+    sealed class GameState
     {
         // Aceder à coordenada X do cenário no GameLoop.
         public static int GetSceneX { get => Facade.GetSceneX; }
