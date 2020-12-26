@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 
 namespace Projeto2LP2
@@ -13,10 +11,6 @@ namespace Projeto2LP2
     {
         // Recolher informação do teclado definida no UserInput.
         public static ConsoleKey GetKey { get; private set; }
-
-        // Definir o tamanho do cenário.
-        public const int SceneX = 35;
-        public const int SceneY = 16;
 
         // Pontuação.
         public static int ScoreValue;
@@ -41,7 +35,9 @@ namespace Projeto2LP2
             Update();
         }
 
-        // Método de início do jogo.
+        /// <summary>
+        /// Método de início do jogo.
+        /// </summary>
         private void Start() {
 
             // Inicializar o GameOver.
@@ -50,10 +46,15 @@ namespace Projeto2LP2
             // Inicializar bool.
             isGameOver = false;
 
-            GameObject snakeObject = new SnakeObject();
+            // Start do cenário.
+            GameObject sceneObject = new SceneObject();
+            sceneObject.Start();
 
+            // Start da cobra.
+            GameObject snakeObject = new SnakeObject();
             snakeObject.Start();
 
+            // Star da comida.
             GameObject foodObject = new FoodObject();
             foodObject.Start();
 
@@ -64,7 +65,9 @@ namespace Projeto2LP2
             RenderEngine.count = 0;
         }
 
-        // Método que corre todos os frames.
+        /// <summary>
+        ///  Método que corre todos os frames.
+        /// </summary>
         private void Update() {
             while (isGameOver == false) {
                 // Verificar o input do jogador.
@@ -74,6 +77,7 @@ namespace Projeto2LP2
                 // Desenhar o jogo.
                 Render();
             }
+            // Mostrar o menu de game over caso perca.
             gameOver.GameOverMenu();
         }
 

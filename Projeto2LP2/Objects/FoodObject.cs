@@ -12,8 +12,8 @@ namespace Projeto2LP2
 
         public override void Start() {
             // Definir a posição da comida inicial.
-            FoodX = (GameLoop.SceneX / 2) - 5;
-            FoodY = (GameLoop.SceneY / 2) - 5;
+            FoodX = (SceneObject.SceneX / 2) - 5;
+            FoodY = (SceneObject.SceneY / 2) - 5;
         }
 
         public override void Update() {

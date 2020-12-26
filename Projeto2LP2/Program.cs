@@ -9,7 +9,10 @@ namespace Projeto2LP2
     /// </summary>
     class Program
     {
-        // Começar o jogo.
+        /// <summary>
+        /// Começar o jogo.
+        /// </summary>
+        /// <param name="args"> Argumentos. </param>
         static void Main(string[] args) {
             Intro intro = new Intro();
             intro.StartIntro();

@@ -12,10 +12,10 @@ namespace Projeto2LP2
         public static int count = 0;
 
         // Aceder à coordenada X do cenário no GameLoop.
-        public static int GetSceneX { get => GameLoop.SceneX; }
+        public static int GetSceneX { get => SceneObject.SceneX; }
 
         // Aceder à coordenada Y do cenário no GameLoop.
-        public static int GetSceneY { get => GameLoop.SceneY; }
+        public static int GetSceneY { get => SceneObject.SceneY; }
 
         // Aceder à coordenada X da cobra no GameLoop.
         public static int GetSnakeX { get => SnakeObject.SnakeX; }
@@ -54,8 +54,8 @@ namespace Projeto2LP2
         /// Renderizar o cenário.
         /// </summary>
         private void RenderScene() {
-            SceneRender sceneRander = new SceneRender();
-            sceneRander.RenderScene();
+            GameObject sceneObject = new SceneObject();
+            sceneObject.Render();
             if(SnakeObject.direction != Direction.None) {
                 count++;
             }

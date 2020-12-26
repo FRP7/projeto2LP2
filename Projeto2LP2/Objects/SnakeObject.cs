@@ -21,8 +21,8 @@ namespace Projeto2LP2
 
         public override void Start() {
             // Definir a posição inicial da cobra.
-            SnakeX = GameLoop.SceneX / 2;
-            SnakeObject.SnakeY = GameLoop.SceneY / 2;
+            SnakeX = SceneObject.SceneX / 2;
+            SnakeObject.SnakeY = SceneObject.SceneY / 2;
 
             // Definir a direção inicial.
             SnakeObject.direction = new Direction();
