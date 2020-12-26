@@ -39,7 +39,7 @@ namespace Projeto2LP2
         public static int GetFoodY { get => Facade.GetCordFoodY; }
 
         // Aceder à pontuação no GameLoop.
-        public static int GetScore { get => Facade.GetScore; }
+        public static int GetScore { get => GameLoop.ScoreValue; }
 
         Facade facade;
 

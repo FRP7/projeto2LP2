@@ -83,16 +83,6 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à pontuação no GameLoop.
-        public static int GetScore {
-            get {
-                return GameLoop.ScoreValue;
-            }
-            set {
-                GameLoop.ScoreValue = value;
-            }
-        }
-
         // Array de GameObjects.
         public GameObject[] gameObjects = {
             new FoodObject(),

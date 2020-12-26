@@ -101,11 +101,11 @@ namespace Projeto2LP2
         {
             get
             {
-                return Facade.GetScore;
+                return GameLoop.ScoreValue;
             }
             set 
             {
-                Facade.GetScore = value;
+                GameLoop.ScoreValue = value;
             }
         }
 
