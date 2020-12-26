@@ -92,5 +92,13 @@ namespace Projeto2LP2
                 GameLoop.ScoreValue = value;
             }
         }
+
+        // Array de GameObjects.
+        public GameObject[] gameObjects = {
+            new FoodObject(),
+            new SceneObject(),
+            new SnakeObject(),
+    };
+
     }
 }

@@ -12,48 +12,42 @@ namespace Projeto2LP2
         public static int count = 0;
 
         // Aceder à coordenada X do cenário no GameLoop.
-        public static int GetSceneX { get => SceneObject.SceneX; }
+        public static int GetSceneX { get => Facade.GetSceneX; }
 
         // Aceder à coordenada Y do cenário no GameLoop.
-        public static int GetSceneY { get => SceneObject.SceneY; }
+        public static int GetSceneY { get => Facade.GetSceneY; }
 
         // Aceder à coordenada X da cobra no GameLoop.
-        public static int GetSnakeX { get => SnakeObject.SnakeX; }
+        public static int GetSnakeX { get => Facade.GetCordSnakeX; }
 
         // Aceder à coordenada Y da cobra no GameLoop.
-        public static int GetSnakeY { get => SnakeObject.SnakeY; }
+        public static int GetSnakeY { get => Facade.GetCordSnakeY; }
 
         // Aceder ao corpo da cobra no GameLoop.
-        public static List<SnakePart> SnakeBody { get => SnakeObject.snakeBody; }
+        public static List<SnakePart> SnakeBody { get => Facade.GetSnakeBody; }
 
         // Aceder à cabeça da cobra no GameLoop.
-        public static SnakePart Head { get => SnakeObject.Head; }
+        public static SnakePart Head { get => Facade.GetHead; }
 
         // Aceder à cauda da cobra no GameLoop.
-        public static SnakePart Tail { get => SnakeObject.Tail; }
+        public static SnakePart Tail { get => Facade.GetTail; }
 
         // Aceder à coordenada X da comida no GameLoop.
-        public static int GetFoodX { get => FoodObject.FoodX; }
+        public static int GetFoodX { get => Facade.GetCordFoodX; }
 
         // Aceder à coordenada Y da comida no GameLoop.
-        public static int GetFoodY { get => FoodObject.FoodY; }
+        public static int GetFoodY { get => Facade.GetCordFoodY; }
 
         // Aceder à pontuação no GameLoop.
-        public static int GetScore { get => GameLoop.ScoreValue; }
+        public static int GetScore { get => Facade.GetScore; }
 
-        // Array de GameObjects.
-        private GameObject[] gameObjects;
+        Facade facade;
 
         /// <summary>
         /// Renderizar o jogo.
         /// </summary>
         public void Render() {
-
-            gameObjects = new GameObject[3];
-            gameObjects[0] = new FoodObject();
-            gameObjects[1] = new SceneObject();
-            gameObjects[2] = new SnakeObject();
-
+            facade = new Facade();
             RenderScene();
             RenderSnake();
             RenderFood();
@@ -63,8 +57,8 @@ namespace Projeto2LP2
         /// Renderizar o cenário.
         /// </summary>
         private void RenderScene() {
-            gameObjects[1].Render();
-            if(SnakeObject.direction != Direction.None) {
+            facade.gameObjects[1].Render();
+            if(Facade.GetDirection != Direction.None) {
                 count++;
             }
         }
@@ -73,14 +67,14 @@ namespace Projeto2LP2
         /// Renderizar a cobra.
         /// </summary>
         private void RenderSnake() {
-            gameObjects[2].Render();
+            facade.gameObjects[2].Render();
         }
 
         /// <summary>
         /// Renderizar a comida.
         /// </summary>
         private void RenderFood() {
-            gameObjects[0].Render();
+            facade.gameObjects[0].Render();
         }
     }
 }

@@ -122,8 +122,8 @@ namespace Projeto2LP2
         /// </summary>
         private void SnakeUpdate()
         {
-            GameObject snakeObject = new SnakeObject();
-            snakeObject.Update();
+            Facade facade = new Facade();
+            facade.gameObjects[2].Update();
         }
     }
 }
