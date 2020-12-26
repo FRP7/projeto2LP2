@@ -91,7 +91,7 @@ namespace Projeto2LP2
                 Console.Write(' ');
                 GameObject foodObject = new FoodObject();
                 foodObject.Update();
-                GameState.GetScore++;
+                Facade.GetScore++;
             }
 
         }

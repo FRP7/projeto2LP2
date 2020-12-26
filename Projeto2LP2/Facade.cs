@@ -6,8 +6,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe que tenta tornar o código menos esparguete.
     /// </summary>
-    class Facade
-    {
+    class Facade {
         // Aceder à coordenada X do cenário no GameLoop.
         public static int GetSceneX { get => SceneObject.SceneX; }
 
@@ -60,7 +59,7 @@ namespace Projeto2LP2
         }
 
         // Aceder à direção da cobra no GameLoop.
-        public static Direction GetDirection { get => SnakeObject.direction; }
+        public static Direction GetDirection { get => SnakeObject.direction; set => SnakeObject.direction = value; }
 
 
         // Aceder à coordenada X da comida no GameLoop.
@@ -94,8 +93,31 @@ namespace Projeto2LP2
 
         public static int GetScore {
             get {
-                return RenderEngine.GetScore;
+                return GameLoop.ScoreValue;
             }
+            set {
+                GameLoop.ScoreValue = value;
+            }
+        }
+
+        private UserInput userInput;
+
+        private GameState gameState;
+
+        private RenderEngine renderEngine;
+
+        public ConsoleKey consoleKey { get => userInput.Key; }
+
+        public void CheckUserInput() {
+            userInput.CheckUserInput();
+        }
+
+        public void Update() {
+            gameState.Update();
+        }
+
+        public void Render() {
+            renderEngine.Render();
         }
 
         // Array de GameObjects.
@@ -105,5 +127,10 @@ namespace Projeto2LP2
             new SnakeObject(),
     };
 
+        public Facade() {
+            userInput = new UserInput();
+            gameState = new GameState();
+            renderEngine = new RenderEngine();
+        }
     }
 }
