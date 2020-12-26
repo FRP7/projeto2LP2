@@ -83,6 +83,15 @@ namespace Projeto2LP2
             }
         }
 
+        public static int GetCount {
+            get {
+                return RenderEngine.count;
+            }
+            set {
+                RenderEngine.count = value;
+            }
+        }
+
         // Array de GameObjects.
         public GameObject[] gameObjects = {
             new FoodObject(),
