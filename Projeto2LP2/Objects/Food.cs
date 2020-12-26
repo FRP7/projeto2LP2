@@ -2,7 +2,7 @@
 
 namespace Projeto2LP2
 {
-    class Food
+    struct Food
     {
         // Coordenadas.
         public int CordX { get; set; }
