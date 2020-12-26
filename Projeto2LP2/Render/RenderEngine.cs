@@ -65,8 +65,6 @@ namespace Projeto2LP2
         /// Renderizar a cobra.
         /// </summary>
         private void RenderSnake() {
-            //SnakeRender snakeRender = new SnakeRender();
-            //snakeRender.RenderSnake();
             GameObject snakeObject = new SnakeObject();
             snakeObject.Render();
         }
@@ -75,8 +73,6 @@ namespace Projeto2LP2
         /// Renderizar a comida.
         /// </summary>
         private void RenderFood() {
-            //FoodRender foodRender = new FoodRender();
-            //foodRender.RenderFood();
             GameObject foodObject = new FoodObject();
             foodObject.Render();
         }

@@ -121,8 +121,6 @@ namespace Projeto2LP2
         /// </summary>
         private void SnakeUpdate()
         {
-            //Collisions collisions = new Collisions();
-            //collisions.CollisionCheck();
             GameObject snakeObject = new SnakeObject();
             snakeObject.Update();
         }
