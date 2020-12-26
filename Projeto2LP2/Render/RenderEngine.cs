@@ -18,25 +18,25 @@ namespace Projeto2LP2
         public static int GetSceneY { get => GameLoop.SceneY; }
 
         // Aceder à coordenada X da cobra no GameLoop.
-        public static int GetSnakeX { get => GameLoop.SnakeX; }
+        public static int GetSnakeX { get => SnakeObject.SnakeX; }
 
         // Aceder à coordenada Y da cobra no GameLoop.
-        public static int GetSnakeY { get => GameLoop.SnakeY; }
+        public static int GetSnakeY { get => SnakeObject.SnakeY; }
 
         // Aceder ao corpo da cobra no GameLoop.
-        public static List<SnakePart> SnakeBody { get => GameLoop.snakeBody; }
+        public static List<SnakePart> SnakeBody { get => SnakeObject.snakeBody; }
 
         // Aceder à cabeça da cobra no GameLoop.
-        public static SnakePart Head { get => GameLoop.Head; }
+        public static SnakePart Head { get => SnakeObject.Head; }
 
         // Aceder à cauda da cobra no GameLoop.
-        public static SnakePart Tail { get => GameLoop.Tail; }
+        public static SnakePart Tail { get => SnakeObject.Tail; }
 
         // Aceder à coordenada X da comida no GameLoop.
-        public static int GetFoodX { get => GameLoop.FoodX; }
+        public static int GetFoodX { get => FoodObject.FoodX; }
 
         // Aceder à coordenada Y da comida no GameLoop.
-        public static int GetFoodY { get => GameLoop.FoodY; }
+        public static int GetFoodY { get => FoodObject.FoodY; }
 
         // Aceder à pontuação no GameLoop.
         public static int GetScore { get => GameLoop.ScoreValue; }
@@ -56,7 +56,7 @@ namespace Projeto2LP2
         private void RenderScene() {
             SceneRender sceneRander = new SceneRender();
             sceneRander.RenderScene();
-            if(GameLoop.direction != Direction.None) {
+            if(SnakeObject.direction != Direction.None) {
                 count++;
             }
         }

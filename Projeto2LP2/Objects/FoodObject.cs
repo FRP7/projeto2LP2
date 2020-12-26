@@ -6,6 +6,16 @@ namespace Projeto2LP2
     {
         private Random random;
 
+        // Recolher informação da posição da comida.
+        public static int FoodX { get; set; }
+        public static int FoodY { get; set; }
+
+        public override void Start() {
+            // Definir a posição da comida inicial.
+            FoodX = (GameLoop.SceneX / 2) - 5;
+            FoodY = (GameLoop.SceneY / 2) - 5;
+        }
+
         public override void Update() {
             random = new Random();
 

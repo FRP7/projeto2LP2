@@ -18,22 +18,6 @@ namespace Projeto2LP2
         public const int SceneX = 35;
         public const int SceneY = 16;
 
-        // Recolher informação da posição da cobra.
-        public static int SnakeX { get; set; }
-        public static int SnakeY { get; set; }
-
-        // Recolher informação da posição da comida.
-        public static int FoodX { get; set; }
-        public static int FoodY { get; set; }
-
-        // Verificar qual a direção atual da cobra.
-        public static Direction direction;
-
-        // Corpo da cobra.
-        public static List<SnakePart> snakeBody;
-        public static SnakePart Tail { get => snakeBody.First(); }
-        public static SnakePart Head { get => snakeBody.Last(); }
-
         // Pontuação.
         public static int ScoreValue;
 
@@ -66,21 +50,12 @@ namespace Projeto2LP2
             // Inicializar bool.
             isGameOver = false;
 
-            // Definir a posição inicial da cobra.
-            SnakeX = SceneX / 2;
-            SnakeY = SceneY / 2;
+            GameObject snakeObject = new SnakeObject();
 
-            // Definir a direção inicial.
-            direction = new Direction();
-            direction = Direction.None;
+            snakeObject.Start();
 
-            // Definir o tamanho da cobra.
-            snakeBody = new List<SnakePart>();
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
-
-            // Definir a posição da comida inicial.
-            FoodX = (SceneX / 2) - 5;
-            FoodY = (SceneY / 2) - 5;
+            GameObject foodObject = new FoodObject();
+            foodObject.Start();
 
             // Definir o score inicial.
             ScoreValue = 0;

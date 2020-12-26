@@ -18,11 +18,11 @@ namespace Projeto2LP2
         {
             get
             {
-                return GameLoop.snakeBody;
+                return SnakeObject.snakeBody;
             }
             set 
             {
-                GameLoop.snakeBody = value;
+                SnakeObject.snakeBody = value;
             }
         }
 
@@ -31,11 +31,11 @@ namespace Projeto2LP2
         {
             get
             {
-                return GameLoop.SnakeX;
+                return SnakeObject.SnakeX;
             }
             set
             {
-                GameLoop.SnakeX = value;
+                SnakeObject.SnakeX = value;
             }
         }
 
@@ -44,41 +44,41 @@ namespace Projeto2LP2
         {
             get
             {
-                return GameLoop.SnakeY;
+                return SnakeObject.SnakeY;
             }
             set
             {
-                GameLoop.SnakeY = value;
+                SnakeObject.SnakeY = value;
             }
         }
 
         // Aceder à cabeça da cobra no GameLoop.
         public static SnakePart GetHead {
             get {
-                return GameLoop.Head;
+                return SnakeObject.Head;
             }
         }
 
         // Aceder à cauda da cobra no GameLoop.
         public static SnakePart GetTail {
             get {
-                return GameLoop.Tail;
+                return SnakeObject.Tail;
             }
         }
 
         // Aceder à direção da cobra no GameLoop.
-        public static Direction GetDirection { get => GameLoop.direction; }
+        public static Direction GetDirection { get => SnakeObject.direction; }
 
         // Aceder à coordenada X da comida no GameLoop.
         public static int GetCordFoodX
         {
             get
             {
-                return GameLoop.FoodX;
+                return FoodObject.FoodX;
             }
             set
             {
-                GameLoop.FoodX = value;
+                FoodObject.FoodX = value;
             }
         }
 
@@ -87,11 +87,11 @@ namespace Projeto2LP2
         {
             get
             {
-                return GameLoop.FoodY;
+                return FoodObject.FoodY;
             }
             set
             {
-                GameLoop.FoodY = value;
+                FoodObject.FoodY = value;
             }
         }
 

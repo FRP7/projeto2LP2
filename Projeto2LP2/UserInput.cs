@@ -21,23 +21,23 @@ namespace Projeto2LP2
                 getKey = Console.ReadKey(true).Key;
                 switch (getKey) {
                     case ConsoleKey.UpArrow:
-                        if (GameLoop.direction != Direction.Down) {
-                            GameLoop.direction = Direction.Up;
+                        if (SnakeObject.direction != Direction.Down) {
+                            SnakeObject.direction = Direction.Up;
                         }
                         break;
                     case ConsoleKey.DownArrow:
-                        if (GameLoop.direction != Direction.Up) {
-                            GameLoop.direction = Direction.Down;
+                        if (SnakeObject.direction != Direction.Up) {
+                            SnakeObject.direction = Direction.Down;
                         }
                         break;
                     case ConsoleKey.LeftArrow:
-                        if (GameLoop.direction != Direction.Right) {
-                            GameLoop.direction = Direction.Left;
+                        if (SnakeObject.direction != Direction.Right) {
+                            SnakeObject.direction = Direction.Left;
                         }
                         break;
                     case ConsoleKey.RightArrow:
-                        if (GameLoop.direction != Direction.Left) {
-                            GameLoop.direction = Direction.Right;
+                        if (SnakeObject.direction != Direction.Left) {
+                            SnakeObject.direction = Direction.Right;
                         }
                         break;
                     case ConsoleKey.Escape:
@@ -45,7 +45,7 @@ namespace Projeto2LP2
                         menu.MainMenu();
                         break;
                     default:
-                        GameLoop.direction = Direction.None;
+                        SnakeObject.direction = Direction.None;
                         break;
                 }
             }

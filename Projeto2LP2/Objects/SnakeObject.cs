@@ -1,10 +1,38 @@
 ﻿using System;
 using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Projeto2LP2
 {
     class SnakeObject : GameObject
     {
+        // Corpo da cobra.
+        public static List<SnakePart> snakeBody;
+        public static SnakePart Tail { get => snakeBody.First(); }
+        public static SnakePart Head { get => snakeBody.Last(); }
+
+        // Verificar qual a direção atual da cobra.
+        public static Direction direction;
+
+        // Recolher informação da posição da cobra.
+        public static int SnakeX { get; set; }
+        public static int SnakeY { get; set; }
+
+        public override void Start() {
+            // Definir a posição inicial da cobra.
+            SnakeX = GameLoop.SceneX / 2;
+            SnakeObject.SnakeY = GameLoop.SceneY / 2;
+
+            // Definir a direção inicial.
+            SnakeObject.direction = new Direction();
+            SnakeObject.direction = Direction.None;
+
+            // Definir o tamanho da cobra.
+            SnakeObject.snakeBody = new List<SnakePart>();
+            SnakeObject.snakeBody.Add(new SnakePart(SnakeObject.SnakeX, SnakeObject.SnakeY, '@'));
+        }
+
         public override void Update() {
             // Verificar a posição da cobra.
             SnakePositionCheck();
