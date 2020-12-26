@@ -7,7 +7,8 @@ namespace Projeto2LP2
         // Coordenadas.
         public int CordX { get; set; }
         public int CordY { get; set; }
-        // Caracter da comida..
+
+        // Caracter da comida.
         public char FoodChar { get; set; }
 
         /// <summary>
