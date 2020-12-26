@@ -24,6 +24,9 @@ namespace Projeto2LP2
         // Indicar se o jogo acabou.
         public static bool isGameOver;
 
+        //Facade
+        Facade facade;
+
         /// <summary>
         /// Ciclo de jogo.
         /// </summary>
@@ -40,6 +43,8 @@ namespace Projeto2LP2
         /// </summary>
         private void Start() {
 
+            facade = new Facade();
+
             // Inicializar o GameOver.
             gameOver = new GameOver();
 
@@ -47,22 +52,19 @@ namespace Projeto2LP2
             isGameOver = false;
 
             // Start do cenário.
-            GameObject sceneObject = new SceneObject();
-            sceneObject.Start();
+            facade.gameObjects[1].Start();
 
             // Start da cobra.
-            GameObject snakeObject = new SnakeObject();
-            snakeObject.Start();
+            facade.gameObjects[2].Start();
 
             // Star da comida.
-            GameObject foodObject = new FoodObject();
-            foodObject.Start();
+            facade.gameObjects[0].Start();
 
             // Definir o score inicial.
             ScoreValue = 0;
 
             // Colocar o contador a zero.
-            RenderEngine.count = 0;
+            Facade.GetCount = 0;
         }
 
         /// <summary>
@@ -78,18 +80,17 @@ namespace Projeto2LP2
                 Render();
             }
             // Mostrar o menu de game over caso perca.
-            gameOver.GameOverMenu();
+            facade.GameOver();
         }
 
         /// <summary>
         /// Input do jogador.
         /// </summary>
         private void CheckUserInput() {
-            UserInput userInput = new UserInput();
             // Começar thread para o input do jogador.
-            inputThread = new Thread(userInput.CheckUserInput);
+            inputThread = new Thread(facade.CheckUserInput);
             inputThread.Start();
-            GetKey = userInput.Key;
+            GetKey = facade.consoleKey;
             // Fechar a thread.
             inputThread.Join();
         }
@@ -98,16 +99,14 @@ namespace Projeto2LP2
         /// Update do estado lógico do jogo.
         /// </summary>
         private void GameState() {
-            GameState gameState = new GameState();
-            gameState.Update();
+            facade.Update();
         }
 
         /// <summary>
         /// Renderizar o visual do jogo.
         /// </summary>
         private void Render() {
-            RenderEngine render = new RenderEngine();
-            render.Render();
+            facade.Render();
         }
     }
 }

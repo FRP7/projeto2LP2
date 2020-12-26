@@ -22,15 +22,15 @@ namespace Projeto2LP2
         public override void Start() {
             // Definir a posição inicial da cobra.
             SnakeX = SceneObject.SceneX / 2;
-            SnakeObject.SnakeY = SceneObject.SceneY / 2;
+            SnakeY = SceneObject.SceneY / 2;
 
             // Definir a direção inicial.
-            SnakeObject.direction = new Direction();
-            SnakeObject.direction = Direction.None;
+            direction = new Direction();
+            direction = Direction.None;
 
             // Definir o tamanho da cobra.
-            SnakeObject.snakeBody = new List<SnakePart>();
-            SnakeObject.snakeBody.Add(new SnakePart(SnakeObject.SnakeX, SnakeObject.SnakeY, '@'));
+            snakeBody = new List<SnakePart>();
+            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
         }
 
         public override void Update() {
@@ -45,21 +45,21 @@ namespace Projeto2LP2
         }
 
         public override void Render() {
-            if (RenderEngine.GetSnakeX >= 0 && RenderEngine.GetSnakeY >= 0) {
-                if (RenderEngine.count < RenderEngine.SnakeBody.Count) {
+            if (Facade.GetCordSnakeX >= 0 && Facade.GetCordSnakeY >= 0) {
+                if (Facade.GetCount < Facade.GetSnakeBody.Count) {
                     Thread.Sleep(100);
-                    Console.SetCursorPosition(RenderEngine.GetSnakeX, RenderEngine.GetSnakeY);
-                    RenderEngine.SnakeBody[RenderEngine.count].CordX = RenderEngine.GetSnakeX;
-                    RenderEngine.SnakeBody[RenderEngine.count].CordY = RenderEngine.GetSnakeY;
-                    Console.Write(RenderEngine.SnakeBody[RenderEngine.count].Part);
-                } else if (RenderEngine.count > RenderEngine.SnakeBody.Count - 1) {
+                    Console.SetCursorPosition(Facade.GetCordSnakeX, Facade.GetCordSnakeY);
+                    Facade.GetSnakeBody[Facade.GetCount].CordX = Facade.GetCordSnakeX;
+                    Facade.GetSnakeBody[Facade.GetCount].CordY = Facade.GetCordSnakeY;
+                    Console.Write(Facade.GetSnakeBody[Facade.GetCount].Part);
+                } else if (Facade.GetCount > Facade.GetSnakeBody.Count - 1) {
                     Thread.Sleep(500);
-                    Console.SetCursorPosition(RenderEngine.Tail.CordX, RenderEngine.Tail.CordY);
+                    Console.SetCursorPosition(Facade.GetTail.CordX, Facade.GetTail.CordY);
                     Console.Write(' ');
-                    RenderEngine.SnakeBody.RemoveAt(0);
-                    RenderEngine.SnakeBody.Add(new SnakePart(RenderEngine.GetSnakeX,
-                        RenderEngine.GetSnakeY, '@'));
-                    RenderEngine.count -= 2;
+                    Facade.GetSnakeBody.RemoveAt(0);
+                    Facade.GetSnakeBody.Add(new SnakePart(Facade.GetCordSnakeX,
+                        Facade.GetCordSnakeY, '@'));
+                    Facade.GetCount -= 2;
                 }
             }
         }
@@ -91,7 +91,7 @@ namespace Projeto2LP2
                 Console.Write(' ');
                 GameObject foodObject = new FoodObject();
                 foodObject.Update();
-                GameState.GetScore++;
+                Facade.GetScore++;
             }
 
         }
