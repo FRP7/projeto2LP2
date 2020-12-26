@@ -113,26 +113,18 @@ namespace Projeto2LP2
         /// </summary>
         public void Update()
         {
-            CollisionCheck();
-            SnakePositionCheck();
+            SnakeUpdate();
         }
 
         /// <summary>
-        /// Verificar colisões.
+        /// Verificar posição e colisões da cobra.
         /// </summary>
-        private void CollisionCheck()
+        private void SnakeUpdate()
         {
-            Collisions collisions = new Collisions();
-            collisions.CollisionCheck();
-        }
-
-        /// <summary>
-        /// Verificar a posição da cobra.
-        /// </summary>
-        private void SnakePositionCheck()
-        {
-            SnakePosition snakePosition = new SnakePosition();
-            snakePosition.SnakePositionCheck();
+            //Collisions collisions = new Collisions();
+            //collisions.CollisionCheck();
+            GameObject snakeObject = new SnakeObject();
+            snakeObject.Update();
         }
     }
 }
