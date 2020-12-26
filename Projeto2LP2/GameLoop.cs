@@ -15,8 +15,8 @@ namespace Projeto2LP2
         public static ConsoleKey GetKey { get; private set; }
 
         // Definir o tamanho do cenário.
-        public static int SceneX = 35;
-        public static int SceneY = 16;
+        public const int SceneX = 35;
+        public const int SceneY = 16;
 
         // Recolher informação da posição da cobra.
         public static int SnakeX { get; set; }
