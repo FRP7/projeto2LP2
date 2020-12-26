@@ -41,10 +41,19 @@ namespace Projeto2LP2
         // Aceder à pontuação no GameLoop.
         public static int GetScore { get => GameLoop.ScoreValue; }
 
+        // Array de GameObjects.
+        private GameObject[] gameObjects;
+
         /// <summary>
         /// Renderizar o jogo.
         /// </summary>
         public void Render() {
+
+            gameObjects = new GameObject[3];
+            gameObjects[0] = new FoodObject();
+            gameObjects[1] = new SceneObject();
+            gameObjects[2] = new SnakeObject();
+
             RenderScene();
             RenderSnake();
             RenderFood();
@@ -54,8 +63,7 @@ namespace Projeto2LP2
         /// Renderizar o cenário.
         /// </summary>
         private void RenderScene() {
-            GameObject sceneObject = new SceneObject();
-            sceneObject.Render();
+            gameObjects[1].Render();
             if(SnakeObject.direction != Direction.None) {
                 count++;
             }
@@ -65,16 +73,14 @@ namespace Projeto2LP2
         /// Renderizar a cobra.
         /// </summary>
         private void RenderSnake() {
-            GameObject snakeObject = new SnakeObject();
-            snakeObject.Render();
+            gameObjects[2].Render();
         }
 
         /// <summary>
         /// Renderizar a comida.
         /// </summary>
         private void RenderFood() {
-            GameObject foodObject = new FoodObject();
-            foodObject.Render();
+            gameObjects[0].Render();
         }
     }
 }

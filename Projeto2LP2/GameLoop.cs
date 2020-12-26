@@ -24,6 +24,9 @@ namespace Projeto2LP2
         // Indicar se o jogo acabou.
         public static bool isGameOver;
 
+        // Array de GameObjects.
+        private GameObject[] gameObjects;
+
         /// <summary>
         /// Ciclo de jogo.
         /// </summary>
@@ -40,6 +43,11 @@ namespace Projeto2LP2
         /// </summary>
         private void Start() {
 
+            gameObjects = new GameObject[3];
+            gameObjects[0] = new FoodObject();
+            gameObjects[1] = new SceneObject();
+            gameObjects[2] = new SnakeObject();
+
             // Inicializar o GameOver.
             gameOver = new GameOver();
 
@@ -47,16 +55,13 @@ namespace Projeto2LP2
             isGameOver = false;
 
             // Start do cenário.
-            GameObject sceneObject = new SceneObject();
-            sceneObject.Start();
+            gameObjects[1].Start();
 
             // Start da cobra.
-            GameObject snakeObject = new SnakeObject();
-            snakeObject.Start();
+            gameObjects[2].Start();
 
             // Star da comida.
-            GameObject foodObject = new FoodObject();
-            foodObject.Start();
+            gameObjects[0].Start();
 
             // Definir o score inicial.
             ScoreValue = 0;
