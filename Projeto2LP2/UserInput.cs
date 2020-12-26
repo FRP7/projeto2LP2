@@ -17,6 +17,7 @@ namespace Projeto2LP2
         /// Verificar o input do user e escolher a direção atual da cobra.
         /// </summary>
         public void CheckUserInput() {
+            Facade facade = new Facade();
             if (Console.KeyAvailable) {
                 getKey = Console.ReadKey(true).Key;
                 switch (getKey) {
@@ -41,8 +42,7 @@ namespace Projeto2LP2
                         }
                         break;
                     case ConsoleKey.Escape:
-                        Menu menu = new Menu();
-                        menu.MainMenu();
+                        facade.Menu();
                         break;
                     default:
                         Facade.GetDirection = Direction.None;

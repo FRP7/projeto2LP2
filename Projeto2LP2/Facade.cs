@@ -120,6 +120,16 @@ namespace Projeto2LP2
             renderEngine.Render();
         }
 
+        public void Menu() {
+            Menu menu = new Menu();
+            menu.MainMenu();
+        }
+
+        public void GameOver() {
+            GameOver gameOver = new GameOver();
+            gameOver.GameOverMenu();
+        }
+
         // Array de GameObjects.
         public GameObject[] gameObjects = {
             new FoodObject(),

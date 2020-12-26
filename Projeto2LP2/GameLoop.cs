@@ -80,7 +80,7 @@ namespace Projeto2LP2
                 Render();
             }
             // Mostrar o menu de game over caso perca.
-            gameOver.GameOverMenu();
+            facade.GameOver();
         }
 
         /// <summary>
