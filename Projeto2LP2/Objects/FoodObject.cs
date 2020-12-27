@@ -34,8 +34,10 @@ namespace Projeto2LP2
         /// Método de renderização.
         /// </summary>
         public override void Render() {
-            Console.SetCursorPosition(Facade.GetCordFoodX, Facade.GetCordFoodY);
-            Food food = new Food(Facade.GetCordFoodX, Facade.GetCordFoodY, '$');
+            Console.SetCursorPosition(Facade.GetCordFoodX, 
+                Facade.GetCordFoodY);
+            Food food = new Food(Facade.GetCordFoodX, Facade.GetCordFoodY,
+                '$');
             Console.Write(food.FoodChar);
         }
     }

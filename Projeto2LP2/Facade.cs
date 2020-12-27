@@ -119,7 +119,7 @@ namespace Projeto2LP2
         private RenderEngine renderEngine;
 
         // Aceder ao input do jogador no UserInput.
-        public ConsoleKey consoleKey { get => userInput.Key; }
+        public ConsoleKey consoleKey { get => userInput.GetKey; }
 
         /// <summary>
         /// / Chamar o método CheckUserInput no User Input.
@@ -165,7 +165,9 @@ namespace Projeto2LP2
             new SnakeObject(),
         };
 
-        // Inicializar as variáveis.
+        /// <summary>
+        /// Inicializar as variáveis.
+        /// </summary>
         public Facade() {
             userInput = new UserInput();
             gameState = new GameState();

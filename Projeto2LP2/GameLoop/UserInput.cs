@@ -8,10 +8,7 @@ namespace Projeto2LP2
     sealed class UserInput
     {
         /// Input do user.
-        public ConsoleKey Key { get => getKey; }
-
-        // Input do user.
-        private ConsoleKey getKey;
+        public ConsoleKey GetKey { get; private set; }
 
         /// <summary>
         /// Verificar o input do user e escolher a direção atual da cobra.
@@ -19,8 +16,8 @@ namespace Projeto2LP2
         public void CheckUserInput() {
             Facade facade = new Facade();
             if (Console.KeyAvailable) {
-                getKey = Console.ReadKey(true).Key;
-                switch (getKey) {
+                GetKey = Console.ReadKey(true).Key;
+                switch (GetKey) {
                     case ConsoleKey.UpArrow:
                         if (Facade.GetDirection != Direction.Down) {
                             Facade.GetDirection = Direction.Up;

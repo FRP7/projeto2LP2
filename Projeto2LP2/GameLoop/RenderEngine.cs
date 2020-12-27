@@ -41,7 +41,7 @@ namespace Projeto2LP2
         // Aceder à pontuação no GameLoop.
         public static int GetScore { get => Facade.GetScore; }
 
-        Facade facade;
+        private Facade facade;
 
         /// <summary>
         /// Renderizar o jogo.

@@ -18,14 +18,11 @@ namespace Projeto2LP2
         // Thread do user input.
         private Thread inputThread;
 
-        // Menu de game over.
-        private GameOver gameOver;
-
         // Indicar se o jogo acabou.
         public static bool isGameOver;
 
         //Facade
-        Facade facade;
+        private Facade facade;
 
         /// <summary>
         /// Ciclo de jogo.
@@ -44,9 +41,6 @@ namespace Projeto2LP2
         private void Start() {
 
             facade = new Facade();
-
-            // Inicializar o GameOver.
-            gameOver = new GameOver();
 
             // Inicializar bool.
             isGameOver = false;
@@ -72,13 +66,17 @@ namespace Projeto2LP2
         /// </summary>
         private void Update() {
             while (isGameOver == false) {
+
                 // Verificar o input do jogador.
                 CheckUserInput();
+
                 // Atualizar o estado do jogo.
                 GameState();
+
                 // Desenhar o jogo.
                 Render();
             }
+
             // Mostrar o menu de game over caso perca.
             facade.GameOver();
         }

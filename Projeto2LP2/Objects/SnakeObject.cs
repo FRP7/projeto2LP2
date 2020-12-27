@@ -69,13 +69,17 @@ namespace Projeto2LP2
             if (Facade.GetCordSnakeX >= 0 && Facade.GetCordSnakeY >= 0) {
                 if (Facade.GetCount < Facade.GetSnakeBody.Count) {
                     Thread.Sleep(100);
-                    Console.SetCursorPosition(Facade.GetCordSnakeX, Facade.GetCordSnakeY);
-                    Facade.GetSnakeBody[Facade.GetCount].CordX = Facade.GetCordSnakeX;
-                    Facade.GetSnakeBody[Facade.GetCount].CordY = Facade.GetCordSnakeY;
+                    Console.SetCursorPosition(Facade.GetCordSnakeX, 
+                        Facade.GetCordSnakeY);
+                    Facade.GetSnakeBody[Facade.GetCount].CordX = 
+                        Facade.GetCordSnakeX;
+                    Facade.GetSnakeBody[Facade.GetCount].CordY = 
+                        Facade.GetCordSnakeY;
                     Console.Write(Facade.GetSnakeBody[Facade.GetCount].Part);
                 } else if (Facade.GetCount > Facade.GetSnakeBody.Count - 1) {
                     Thread.Sleep(500);
-                    Console.SetCursorPosition(Facade.GetTail.CordX, Facade.GetTail.CordY);
+                    Console.SetCursorPosition(Facade.GetTail.CordX, 
+                        Facade.GetTail.CordY);
                     Console.Write(' ');
                     Facade.GetSnakeBody.RemoveAt(0);
                     Facade.GetSnakeBody.Add(new SnakePart(Facade.GetCordSnakeX,
@@ -108,9 +112,12 @@ namespace Projeto2LP2
         /// Verificar se a cobra colidiu com a comida.
         /// </summary>
         private void CheckFood() {
-            if (GameState.GetHead.CordX == GameState.GetCordFoodX && GameState.GetHead.CordY == GameState.GetCordFoodY) {
-                GameState.GetSnakeBody.Add(new SnakePart(GameState.GetCordSnakeX, GameState.GetCordSnakeY, '@'));
-                Console.SetCursorPosition(GameState.GetCordFoodX, GameState.GetCordFoodY);
+            if (GameState.GetHead.CordX == GameState.GetCordFoodX && 
+                GameState.GetHead.CordY == GameState.GetCordFoodY) {
+                GameState.GetSnakeBody.Add(new SnakePart(
+                    GameState.GetCordSnakeX, GameState.GetCordSnakeY, '@'));
+                Console.SetCursorPosition(GameState.GetCordFoodX, 
+                    GameState.GetCordFoodY);
                 Console.Write(' ');
                 GameObject foodObject = new FoodObject();
                 foodObject.Update();
@@ -124,7 +131,10 @@ namespace Projeto2LP2
         /// </summary>
         private void CheckSnakeTouch() {
             for (int i = 3; i < GameState.GetSnakeBody.Count; i++) {
-                if (GameState.GetSnakeBody[0].CordX == GameState.GetSnakeBody[i].CordX && GameState.GetSnakeBody[0].CordY == GameState.GetSnakeBody[i].CordY) {
+                if (GameState.GetSnakeBody[0].CordX == 
+                    GameState.GetSnakeBody[i].CordX && 
+                    GameState.GetSnakeBody[0].CordY ==
+                    GameState.GetSnakeBody[i].CordY) {
                     GameLoop.isGameOver = true;
                 }
             }

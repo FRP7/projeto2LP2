@@ -23,29 +23,56 @@
 
 **Descrição breve da solução:**
 
-Esta solução tem como objetivo replicar o jogo clássico *Snake*, utilizando boas práticas de programação orientadas a objetos com base na matéria que aprendemos em LP2. 
+Esta solução tem como objetivo replicar o jogo clássico *Snake*, utilizando
+boas práticas de programação orientadas a objetos com base na matéria que
+aprendemos em LP2. 
 
 **Organização:**
 
 A solução foi feita tentando sempre que possível respeitar os princípios 
-*SOLID* (especialmente o *Single-responsibility principle*), e para isso utlizámos como *Design Pattern* o *GameLoop pattern,* o *Update pattern*, o *Component pattern* e o *Facade pattern*. 
-Os três primeiros *patterns* foram utilizados para manter o código do jogo organizado, compreensível e profissional, e o último, foi utilizado para manter o código menos *esparguete*, visto que existem muitas interações entre ficheiros. 
-O projeto foi organizado de forma que seja parecido com o *Unity* para facilitar a sua compreensão e trabalho.
+*SOLID* (especialmente o *Single-responsibility principle*), e para isso 
+utlizámos como *Design Pattern* o *GameLoop pattern,* o *Update pattern*,
+o *Component pattern* e o *Facade pattern*. 
+Os três primeiros *patterns* foram utilizados para manter o código do jogo
+organizado, compreensível e profissional, e o último, foi utilizado para manter
+o código menos *esparguete*, visto que existem muitas interações entre
+ficheiros. 
+O projeto foi organizado de forma que seja parecido com o *Unity* para 
+facilitar a sua compreensão e trabalho.
 
 **A cobra.**
 
-Para  criar a cobra, criei um *GameObject* dela e uma classe que representa uma parte dela (como se a cobra fosse feita de *Lego* e a parte fosse uma das suas peças), e nela contêm as suas coordenadas e o seu *sprite*.  Depois criei uma Coleção (neste caso uma *List*) de partes da cobra para representar o seu corpo. Também criei uma variável que aponta para a cabeça e outra para a cauda da cobra (através do `LINQ`).
-Para criar o movimento, criei um `enum` para indicar as direções possíveis (visto que segundo as regra do jogo original, a cobra não pode mover na direção oposta a que anda) e as coordenadas da cobra são modificadas ao longo do jogo de acordo com o `enum` escolhido (que é escolhido através do *input* do jogador). Para o aspeto do movimento parecer de uma cobra, sempre que ela move, vai removendo peças da Coleção peças e depois volta a meter.
-A cobra colide comparado as suas coordenadas atuais com as dos objetos que queremos que haja colisão, e caso coma a comida, é acrescentado mais uma peça à sua Coleção de forma a aumentar o tamanho do corpo.
+Para  criar a cobra, criei um *GameObject* dela e uma classe que representa uma
+parte dela (como se a cobra fosse feita de *Lego* e a parte fosse uma das suas 
+peças), e nela contêm as suas coordenadas e o seu *sprite*.  Depois criei uma
+Coleção (neste caso uma *List*) de partes da cobra para representar o seu 
+corpo. Também criei uma variável que aponta para a cabeça e outra para a cauda
+da cobra (através do `LINQ`).
+Para criar o movimento, criei um `enum` para indicar as direções possíveis 
+(visto que segundo as regra do jogo original, a cobra não pode mover na direção
+oposta a que anda) e as coordenadas da cobra são modificadas ao longo do jogo
+de acordo com o `enum` escolhido (que é escolhido através do *input* do 
+jogador). Para o aspeto do movimento parecer de uma cobra, sempre que ela move,
+vai removendo peças da Coleção peças e depois volta a meter.
+A cobra colide comparado as suas coordenadas atuais com as dos objetos que
+queremos que haja colisão, e caso coma a comida, é acrescentado mais uma peça à
+sua Coleção de forma a aumentar o tamanho do corpo.
 
 **A comida.**
 
-A comida tal como a cobra, aparece num sítio fixo no início do jogo, e depois ao longo do jogo, sempre que é comida pela cobra, nasce num sítio aleatório. O sistema de *spawn*, está preparado de forma que gere a comida em sítios legais do jogo (ou seja, não em cima dos muros) e de forma dinâmica (caso queiramos mudar o tamanho do cenário).
+A comida tal como a cobra, aparece num sítio fixo no início do jogo, e depois
+ao longo do jogo, sempre que é comida pela cobra, nasce num sítio aleatório. O
+sistema de *spawn*, está preparado de forma que gere a comida em sítios legais
+do jogo (ou seja, não em cima dos muros) e de forma dinâmica (caso queiramos 
+mudar o tamanho do cenário).
 
 **O cenário.**
 
-O cenário tal como a comida e a cobra, é um *GameObject* e é dinâmico ou seja, podemos mudar o tamanho dele sem sofrer problemas no jogo (que na qual o outros *GameObject* estão preparados para isso também).
-O cenário é estático mas, tem que ser atualizado em todos os *frames* de forma a manter o movimento da cobra na forma que nós queremos.
+O cenário tal como a comida e a cobra, é um *GameObject* e é dinâmico ou seja,
+podemos mudar o tamanho dele sem sofrer problemas no jogo (que na qual o outros
+*GameObject* estão preparados para isso também).
+O cenário é estático mas, tem que ser atualizado em todos os *frames* de forma 
+a manter o movimento da cobra na forma que nós queremos.
 
 
 **UML:**
@@ -134,7 +161,8 @@ public class Program
 }
 ```
 
-Para detetar a colisão da cobra consigo mesma, eu e o André inspirámos nesta solução no *StackOverflow*:
+Para detetar a colisão da cobra consigo mesma, eu e o André inspirámos nesta
+solução no *StackOverflow*:
 https://stackoverflow.com/questions/21203601/collision-detection-simple-snake-game
 ```
 // line 32
@@ -166,5 +194,6 @@ Snake.prototype.collision = function () {
     return false;
 };
 ```
-Para o Nuno criar o texto da *intro* facilmente, ele utilizou este website para gerar o texto nesse estilo:
+Para o Nuno criar o texto da *intro* facilmente, ele utilizou este website para
+gerar o texto nesse estilo:
 https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
