@@ -60,7 +60,7 @@ namespace Projeto2LP2
                 if (key == ConsoleKey.Escape)
                 {
                     Console.Clear();
-                    menu.MainMenu(false);
+                    menu.MainMenu(false, false);
                     retry = false;
                 }
                 else

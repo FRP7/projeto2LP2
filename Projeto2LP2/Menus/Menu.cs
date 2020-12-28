@@ -11,7 +11,7 @@ namespace Projeto2LP2
         /// <summary>
         /// Método onde é exposto o menu principal.
         /// </summary>
-        public void MainMenu(bool introPlay)
+        public void MainMenu(bool introPlay, bool splashPlay)
         {
             Intro intro = new Intro();
             SplashScreen splash = new SplashScreen();
@@ -22,7 +22,7 @@ namespace Projeto2LP2
 
             if (introPlay) intro.IntroMenu();
 
-            splash.SplashScreenMenu(key, retry);
+            if (splashPlay) splash.SplashScreenMenu(key, retry);
 
             do
             {
@@ -110,7 +110,7 @@ namespace Projeto2LP2
                 if (key == ConsoleKey.Escape)
                 {
                     Console.Clear();
-                    MainMenu(false);
+                    MainMenu(false, false);
                     retry = false;
                 }
                 else
@@ -145,7 +145,7 @@ namespace Projeto2LP2
                 if (key == ConsoleKey.Escape)
                 {
                     Console.Clear();
-                    MainMenu(false);
+                    MainMenu(false, false);
                     retry = false;
                 }
                 else
@@ -189,7 +189,7 @@ namespace Projeto2LP2
                 if (key == ConsoleKey.Escape)
                 {
                     Console.Clear();
-                    MainMenu(false);
+                    MainMenu(false, false);
                     retry = false;
                 }
                 else

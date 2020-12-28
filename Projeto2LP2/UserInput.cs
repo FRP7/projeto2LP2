@@ -42,7 +42,7 @@ namespace Projeto2LP2
                         break;
                     case ConsoleKey.Escape:
                         Menu menu = new Menu();
-                        menu.MainMenu(false);
+                        menu.MainMenu(false, false);
                         break;
                     default:
                         GameLoop.direction = Direction.None;
