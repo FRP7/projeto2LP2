@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.IO;
 
 namespace Projeto2LP2
 {
@@ -16,6 +17,11 @@ namespace Projeto2LP2
             Intro intro = new Intro();
             SplashScreen splash = new SplashScreen();
             GameLoop game = new GameLoop();
+
+            // Criar ficheiro caso não exista
+            string path = (Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Score.txt");
+            StreamWriter sw = new StreamWriter(path, true);
+            sw.Close();
 
             bool retry = false;
             ConsoleKey key = ConsoleKey.Backspace;
@@ -126,7 +132,7 @@ namespace Projeto2LP2
                 Console.Clear();
 
                 AlignText("");
-                AlignText("Not yet implemented! :(");
+                ScoreReader();
                 AlignText("");
                 while (!Console.KeyAvailable)
                 {
@@ -203,6 +209,17 @@ namespace Projeto2LP2
         private void Exit()
         {
             Environment.Exit(0);
+        }
+
+        private void ScoreReader()
+        {
+            string path = (Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Score.txt");
+
+            string[] lines = File.ReadAllLines(path);
+            foreach (string line in lines)
+            {
+                Console.WriteLine("\t" + line);
+            }
         }
 
         public void AlignText(string text)

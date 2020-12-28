@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Threading;
+using System.IO;
 
 namespace Projeto2LP2
 {
     class GameOver
     {
+
         public void GameOverMenu(ConsoleKey key, bool retry)
         {
             Menu menu = new Menu();
+
+            string path = (Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Score.txt");
 
             do
             {
@@ -18,6 +22,10 @@ namespace Projeto2LP2
                 menu.AlignText("");
                 menu.AlignText("Final score: " + GameLoop.ScoreValue);
                 menu.AlignText("");
+
+                StreamWriter sw = new StreamWriter(path, true);
+                sw.WriteLineAsync($"{DateTime.Now} - {GameLoop.ScoreValue}.");
+                sw.Close();
                 if (GameLoop.ScoreValue < 0)
                 {
                     menu.AlignText("How did you get this score!? Cheater!");
