@@ -41,7 +41,7 @@ namespace Projeto2LP2
         private Thread inputThread;
 
         // Menu de game over.
-        private GameOver gameOver;
+        private Menu menu;
 
         // Indicar se o jogo acabou.
         public static bool isGameOver;
@@ -61,7 +61,7 @@ namespace Projeto2LP2
         private void Start() {
 
             // Inicializar o GameOver.
-            gameOver = new GameOver();
+            menu = new Menu();
 
             // Inicializar bool.
             isGameOver = false;
@@ -99,7 +99,7 @@ namespace Projeto2LP2
                 // Desenhar o jogo.
                 Render();
             }
-            gameOver.GameOverMenu();
+            menu.GameOver();
         }
 
         /// <summary>
