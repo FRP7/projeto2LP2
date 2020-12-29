@@ -19,7 +19,7 @@
  - Colisões e comida (feito em equipa com o Francisco via *Discord*).
  
  **Repositório**: https://github.com/FRP7/projeto2LP2
-# Arquitectura da solução
+# Arquitetura da solução
 
 **Descrição breve da solução:**
 
@@ -53,8 +53,8 @@ Para criar o movimento, criei um `enum` para indicar as direções possíveis
 oposta a que anda) e as coordenadas da cobra são modificadas ao longo do jogo
 de acordo com o `enum` escolhido (que é escolhido através do *input* do 
 jogador). Para o aspeto do movimento parecer de uma cobra, sempre que ela move,
-vai removendo peças da Coleção peças e depois volta a meter.
-A cobra colide comparado as suas coordenadas atuais com as dos objetos que
+vai removendo peças da Coleção e depois volta a meter.
+A cobra colide comparando as suas coordenadas atuais com as dos objetos que
 queremos que haja colisão, e caso coma a comida, é acrescentado mais uma peça à
 sua Coleção de forma a aumentar o tamanho do corpo.
 
@@ -69,7 +69,7 @@ mudar o tamanho do cenário).
 **O cenário.**
 
 O cenário tal como a comida e a cobra, é um *GameObject* e é dinâmico ou seja,
-podemos mudar o tamanho dele sem sofrer problemas no jogo (que na qual o outros
+podemos mudar o tamanho dele sem sofrer problemas no jogo (no qual os outros
 *GameObject* estão preparados para isso também).
 O cenário é estático mas, tem que ser atualizado em todos os *frames* de forma 
 a manter o movimento da cobra na forma que nós queremos.
@@ -92,7 +92,7 @@ a manter o movimento da cobra na forma que nós queremos.
 
 ## Referências
 
-Para criar o movimento da cobra, inspirei-me neste solução no *StackOverflow*: 
+Para criar o movimento da cobra, inspirei-me nesta solução no *StackOverflow*: 
 https://stackoverflow.com/questions/33924505/c-sharp-console-application-moving-a-character
 
 ```
@@ -161,7 +161,7 @@ public class Program
 }
 ```
 
-Para detetar a colisão da cobra consigo mesma, eu e o André inspirámos nesta
+Para detetar a colisão da cobra consigo mesma, eu e o André inspirámo-nos nesta
 solução no *StackOverflow*:
 https://stackoverflow.com/questions/21203601/collision-detection-simple-snake-game
 ```
