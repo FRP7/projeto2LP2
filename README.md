@@ -86,7 +86,7 @@ a manter o movimento da cobra na forma que nós queremos.
 
 
 
-![image](inserirflowchart.jpg)
+![image](P2_LP2_FLOW.jpg)
 
 
 
