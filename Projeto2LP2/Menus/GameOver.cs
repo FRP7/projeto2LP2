@@ -25,8 +25,18 @@ namespace Projeto2LP2
             {
                 Console.Clear();
                 // Escrever no ficheiro o score adquirido
-                File.AppendAllText(fileName, Environment.NewLine + 
-                    $"Date: {DateTime.Now.ToString()} | Score: {GameLoop.ScoreValue}");
+                if(File.Exists(fileName)) {
+                    File.AppendAllText(fileName, Environment.NewLine +
+                   $"Date: {DateTime.Now.ToString()} | Score: " +
+                   $"{GameLoop.ScoreValue}");
+                }
+                else {
+                    using(StreamWriter sr = new StreamWriter(fileName, true)) {
+                        sr.WriteLine(Environment.NewLine + $"Date:" +
+                            $" {DateTime.Now.ToString()} " +
+                            $"| Score: " + $"{GameLoop.ScoreValue}");
+                    }
+                }
                 Console.WriteLine("\n\tYou have met an unfortunate end.");
                 Console.WriteLine("\n\t\tFinal score: " + GameLoop.ScoreValue);
 

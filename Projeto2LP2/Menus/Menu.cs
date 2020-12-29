@@ -224,11 +224,17 @@ namespace Projeto2LP2
         {
             // Variável que contém o ficheiro do score
             string fileName = "Score.txt";
-            // Ler as linhas do ficheiro
-            string[] lines = File.ReadAllLines(fileName);
-            // Imprimir as linhas do ficheiro
-            foreach (string line in lines)
-                Console.WriteLine("\t" + line);
+            if (File.Exists(fileName)) {
+                // Ler as linhas do ficheiro
+                string[] lines = File.ReadAllLines(fileName);
+                // Imprimir as linhas do ficheiro
+                foreach (string line in lines) {
+                    Console.WriteLine("\t" + line);
+                }
+            }
+            else {
+                Console.WriteLine("Not available");
+            }
         }
     }
 }
