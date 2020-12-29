@@ -95,7 +95,7 @@ a manter o movimento da cobra na forma que nós queremos.
 Para criar o movimento da cobra, inspirei-me nesta solução no *StackOverflow*: 
 https://stackoverflow.com/questions/33924505/c-sharp-console-application-moving-a-character
 
-```
+```cs
 public class Program
 {
     public static void Main(string[] args)
@@ -164,7 +164,7 @@ public class Program
 Para detetar a colisão da cobra consigo mesma, eu e o André inspirámo-nos nesta
 solução no *StackOverflow*:
 https://stackoverflow.com/questions/21203601/collision-detection-simple-snake-game
-```
+```cs
 // line 32
 if (game.snakes.length !== 0) {
     for (i = 0; i < game.snakes.length; i++) {
@@ -179,7 +179,7 @@ if (game.snakes.length !== 0) {
     }
 }
 ```
-```
+```cs
 Snake.prototype.collision = function () {
     // Loop the snake pieces from the 4th one.
     for(var i = 3; i < this.length; i++){
