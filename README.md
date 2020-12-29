@@ -79,14 +79,14 @@ a manter o movimento da cobra na forma que nós queremos.
 
 
 
-![image](P2_LP2_UML.jpg)
+![image](P2_LP2_UML.JPG)
 
 
 **Flowchart:**
 
 
 
-![image](P2_LP2_FLOW.jpg)
+![image](P2_LP2_FLOW.JPG)
 
 
 
