@@ -4,9 +4,16 @@ using System.IO;
 
 namespace Projeto2LP2
 {
+    /// <summary>
+    /// Classe de GameOver.
+    /// </summary>
     class GameOver
     {
-
+        /// <summary>
+        /// Página do GameOver.
+        /// </summary>
+        /// <param name="key"> Input do jogador. </param>
+        /// <param name="retry"> Indicar se pode sair da página. </param>
         public void GameOverMenu(ConsoleKey key, bool retry)
         {
             Menu menu = new Menu();

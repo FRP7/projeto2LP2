@@ -5,6 +5,11 @@ namespace Projeto2LP2
 {
     class SplashScreen
     {
+        /// <summary>
+        /// Método da página que aparece antes de entrar para o menu.
+        /// </summary>
+        /// <param name="key"> User input. </param>
+        /// <param name="retry"> Indicar se a intro pode ser mostrada. </param>
         public void SplashScreenMenu(ConsoleKey key, bool retry)
         {
             Menu menu = new Menu();
@@ -14,13 +19,20 @@ namespace Projeto2LP2
                 Console.Clear();
 
                 menu.AlignText("");
-                menu.AlignText("   _________   ____ __  _   ___      ___ ___  ____ ____  ____  ____    __ ");
-                menu.AlignText("  / ___/    \\ /    |  |/ ] /  _]    |   |   |/    |    \\|    |/    |  /  ]");
-                menu.AlignText(" (   \\_|  _  |  o  |  ' / /  [_     | _   _ |  o  |  _  ||  ||  o  | /  / ");
-                menu.AlignText("  \\__  |  |  |     |    \\|    _]    |  \\_/  |     |  |  ||  ||     |/  /  ");
-                menu.AlignText("  /  \\ |  |  |  _  |     |   [_     |   |   |  _  |  |  ||  ||  _  /   \\_ ");
-                menu.AlignText("   \\    |  |  |  |  |  .  |     |    |   |   |  |  |  |  ||  ||  |  \\     | ");
-                menu.AlignText("    \\___|__|__|__|__|__|\\_|_____|    |___|___|__|__|__|__|____|__|__|\\____| ");
+                menu.AlignText("   _________   ____ __  _   ___      ___" +
+                    " ___  ____ ____  ____  ____    __ ");
+                menu.AlignText("  / ___/    \\ /    |  |/ ] /  _]    |   |" +
+                    "   |/    |    \\|    |/    |  /  ]");
+                menu.AlignText(" (   \\_|  _  |  o  |  ' / /  [_     | _  " +
+                    " _ |  o  |  _  ||  ||  o  | /  / ");
+                menu.AlignText("  \\__  |  |  |     |    \\|    _]    |" +
+                    "  \\_/  |     |  |  ||  ||     |/  /  ");
+                menu.AlignText("  /  \\ |  |  |  _  |     |   [_     | " +
+                    "  |   |  _  |  |  ||  ||  _  /   \\_ ");
+                menu.AlignText("   \\    |  |  |  |  |  .  |     |    | " +
+                    "  |   |  |  |  |  ||  ||  |  \\     | ");
+                menu.AlignText("    \\___|__|__|__|__|__|\\_|_____| " +
+                    "   |___|___|__|__|__|__|____|__|__|\\____| ");
                 menu.AlignText("");
                 menu.AlignText("");
 
