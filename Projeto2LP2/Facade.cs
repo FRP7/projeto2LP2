@@ -153,9 +153,9 @@ namespace Projeto2LP2
         /// <summary>
         /// Chamar o método GameOverMenu no GameOver.
         /// </summary>
-        public void GameOver(ConsoleKey x, bool y) {
+        public void GameOver() {
             GameOver gameOver = new GameOver();
-            gameOver.GameOverMenu(x, y);
+            gameOver.GameOverMenu();
         }
 
         // Array de GameObjects.

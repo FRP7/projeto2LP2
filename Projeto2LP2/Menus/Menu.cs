@@ -15,7 +15,9 @@ namespace Projeto2LP2
         /// <param name="introPlay"> Indicar se pode correr a intro. </param>
         /// <param name="splashPlay"> Indicar se pode correr o splashscreen. 
         /// </param>
-        public void MainMenu(bool introPlay, bool splashPlay) {
+        public void MainMenu(bool introPlay, bool splashPlay)
+        {
+            // Inicializações necessárias
             Intro intro = new Intro();
             SplashScreen splash = new SplashScreen();
             GameLoop game = new GameLoop();
@@ -23,61 +25,54 @@ namespace Projeto2LP2
             bool retry = false;
             ConsoleKey key = ConsoleKey.Backspace;
 
+            // Mostrar a introdução do jogo
             if (introPlay) intro.IntroMenu();
-
-            if (splashPlay) splash.SplashScreenMenu(key, retry);
-
-            do {
+            // Mostrar o splash do jopo
+            if (splashPlay) splash.SplashScreenMenu();
+            // Mostrar o menu principal
+            do
+            {
                 Console.Clear();
 
-                AlignText("");
-                AlignText("   _________   ____ __  _   ___      ___ ___ " +
-                    " ____ ____  ____  ____    __ ");
-                AlignText("  / ___/    \\ /    |  |/ ] /  _]    |   |" +
-                    "   |/    |    \\|    |/    |  /  ]");
-                AlignText(" (   \\_|  _  |  o  |  ' / /  [_     | _   _" +
-                    " |  o  |  _  ||  ||  o  | /  / ");
-                AlignText("  \\__  |  |  |     |    \\|    _]    |  \\_/ " +
-                    " |     |  |  ||  ||     |/  /  ");
-                AlignText("  /  \\ |  |  |  _  |     |   [_     |   |   |" +
-                    "  _  |  |  ||  ||  _  /   \\_ ");
-                AlignText("   \\    |  |  |  |  |  .  |     |    |   |   " +
-                    "|  |  |  |  ||  ||  |  \\     | ");
-                AlignText("    \\___|__|__|__|__|__|\\_|_____|    |___|__" +
-                    "_|__|__|__|__|____|__|__|\\____| ");
-                AlignText("");
-                AlignText("");
-                AlignText("(P)LAY");
-                AlignText("");
-                AlignText("(I)NSTRUTIONS");
-                AlignText("");
-                AlignText("(S)CORES");
-                AlignText("");
-                AlignText("(C)REDITS");
-                AlignText("");
-                AlignText("(E)XIT");
+                Console.WriteLine("\n\t\t\t   _________   ____ __  _   ___" +
+                    "      ___ ___  ____ ____  ____  ____    __ ");
+                Console.WriteLine("\t\t\t  / ___/    \\ /    |  |/ ] /  _]" +
+                    "    |   |   |/    |    \\|    |/    |  /  ]");
+                Console.WriteLine("\t\t\t (   \\_|  _  |  o  |  ' / /  [_" +
+                    "     | _   _ |  o  |  _  ||  ||  o  | /  / ");
+                Console.WriteLine("\t\t\t  \\__  |  |  |     |    \\|    _]" +
+                    "    |  \\_/  |     |  |  ||  ||     |/  /  ");
+                Console.WriteLine("\t\t\t  /  \\ |  |  |  _  |     |   [_" +
+                    "     |   |   |  _  |  |  ||  ||  _  /   \\_ ");
+                Console.WriteLine("\t\t\t  \\    |  |  |  |  |  .  |     |" +
+                    "    |   |   |  |  |  |  ||  ||  |  \\     | ");
+                Console.WriteLine("\t\t\t   \\___|__|__|__|__|__|\\_|_____|" +
+                    "    |___|___|__|__|__|__|____|__|__|\\____| ");
 
+                Console.WriteLine("\n\n\t\t\t\t\t\t       (P)LAY");
+                Console.WriteLine("\n\t\t\t\t\t\t    (I)NSTRUTIONS");
+                Console.WriteLine("\n\t\t\t\t\t\t      (S)CORES");
+                Console.WriteLine("\n\t\t\t\t\t\t      (C)REDITS");
+                Console.WriteLine("\n\t\t\t\t\t\t       (E)XIT");
+                // Variável que contem a opção do jogador
                 key = Console.ReadKey(true).Key;
-
-                switch (key) {
+                // Switch para verificar qual opção foi escolhida
+                switch (key)
+                {
                     case ConsoleKey.P:
                         Console.Clear();
                         game.Game();
                         break;
                     case ConsoleKey.I:
-                        Console.Clear();
                         Instructions(key, retry);
                         break;
                     case ConsoleKey.S:
-                        Console.Clear();
                         Score(key, retry);
                         break;
                     case ConsoleKey.C:
-                        Console.Clear();
                         Credits(key, retry);
                         break;
                     case ConsoleKey.E:
-                        Console.Clear();
                         Exit();
                         break;
                     default:
@@ -92,40 +87,43 @@ namespace Projeto2LP2
         /// </summary>
         /// <param name="key"> Input do jogador. </param>
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
-        private void Instructions(ConsoleKey key, bool retry) {
-            do {
+        private void Instructions(ConsoleKey key, bool retry)
+        {
+            do
+            {
                 Console.Clear();
 
-                AlignText("");
-                AlignText("You are the snake (@).");
-                AlignText("Use the Arrow keys to move the snake around.");
-                AlignText("Eat has many apples ($) has you can.");
-                AlignText("Avoid hitting the wall has these will kill you.");
-                AlignText("Also avoid hitting yourself, so you dont eat " +
-                    "yourself and die dummy.");
-                AlignText("Good Luck!");
-                AlignText("");
-                while (!Console.KeyAvailable) {
-                    AlignText("Press ESQ to retreat to the menu.");
-                    Thread.Sleep(500);
+                Console.WriteLine("\n\t        You are the snake (@).");
+                Console.WriteLine("\t  Use the Arrow keys to move around.");
+                Console.WriteLine("\t Eat has many apples ($) has you can.");
+                Console.WriteLine("\tAvoid hitting the walls, they kill you.");
+                Console.WriteLine("    Avoid eating yourself, that might kill you too.");
+                Console.WriteLine("\t\t   Good Luck!\n");
+                // Enquanto o jogador não clicar
+                while (!Console.KeyAvailable)
+                {
+                    Console.WriteLine("\tPress ESQ to retreat to the menu.");
+                    Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    ClearCurrentConsoleLine();
-                    AlignText("Press     to retreat to the menu.");
-                    Thread.Sleep(500);
+                    // Apagar a linha anterior
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+                    Console.WriteLine("\tPress     to retreat to the menu.");
+                    Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    ClearCurrentConsoleLine();
+                    // Apagar a linha anterior
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
-
+                // Variável que contem a opção do jogador
                 key = Console.ReadKey(true).Key;
 
-                if (key == ConsoleKey.Escape) {
-                    Console.Clear();
-                    MainMenu(false, false);
-                    retry = false;
-                } else {
-                    retry = true;
-                }
-            } while (retry == true);
+                if (key == ConsoleKey.Escape) MainMenu(false, false);
+                else retry = true;
+            }
+            while (retry == true);
         }
 
         /// <summary>
@@ -133,34 +131,40 @@ namespace Projeto2LP2
         /// </summary>
         /// <param name="key"> Input do jogador. </param>
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
-        private void Score(ConsoleKey key, bool retry) {
-            do {
+        private void Score(ConsoleKey key, bool retry)
+        {
+            do
+            {
                 Console.Clear();
 
-                AlignText("");
+                Console.WriteLine("");
                 ScoreReader();
-                AlignText("");
-                while (!Console.KeyAvailable) {
-                    AlignText("Press ESQ to retreat to the menu.");
-                    Thread.Sleep(500);
+                Console.WriteLine("");
+                // Enquanto o jogador não clicar
+                while (!Console.KeyAvailable)
+                {
+                    Console.WriteLine("\tPress ESQ to retreat to the menu.");
+                    Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    ClearCurrentConsoleLine();
-                    AlignText("Press     to retreat to the menu.");
-                    Thread.Sleep(500);
+                    // Apagar a linha anterior
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+                    Console.WriteLine("\tPress     to retreat to the menu.");
+                    Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    ClearCurrentConsoleLine();
+                    // Apagar a linha anterior
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
-
+                // Variável que contem a opção do jogador
                 key = Console.ReadKey(true).Key;
 
-                if (key == ConsoleKey.Escape) {
-                    Console.Clear();
-                    MainMenu(false, false);
-                    retry = false;
-                } else {
-                    retry = true;
-                }
-            } while (retry == true);
+                if (key == ConsoleKey.Escape) MainMenu(false, false);
+                else retry = true;
+            }
+            while (retry == true);
         }
 
         /// <summary>
@@ -168,82 +172,69 @@ namespace Projeto2LP2
         /// </summary>
         /// <param name="key"> Input do jogador. </param>
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
-        private void Credits(ConsoleKey key, bool retry) {
-            do {
+        private void Credits(ConsoleKey key, bool retry)
+        {
+            do
+            {
                 Console.Clear();
 
-                AlignText("");
-                AlignText("Made with love by:");
-                AlignText("");
-                AlignText("");
-                AlignText("André Cosme;");
-                AlignText("");
-                AlignText("Francisco Pires;");
-                AlignText("");
-                AlignText("Nuno Figueiredo.");
-                AlignText("");
-                AlignText("");
-                while (!Console.KeyAvailable) {
-                    AlignText("Press ESQ to retreat to the menu.");
-                    Thread.Sleep(500);
+                Console.WriteLine("\n\t       Made with love by:\n\n");
+                Console.WriteLine("\t\t  André Cosme;\n");
+                Console.WriteLine("\t\tFrancisco Pires;\n");
+                Console.WriteLine("\t\tNuno Figueiredo.\n\n");
+                // Enquanto o jogador não clicar
+                while (!Console.KeyAvailable)
+                {
+                    Console.WriteLine("\tPress ESQ to retreat to the menu.");
+                    Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    ClearCurrentConsoleLine();
-                    AlignText("Press     to retreat to the menu.");
-                    Thread.Sleep(500);
+                    // Apagar a linha anterior
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+                    Console.WriteLine("\tPress     to retreat to the menu.");
+                    Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    ClearCurrentConsoleLine();
+                    // Apagar a linha anterior
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
-
+                // Variável que contem a opção do jogador
                 key = Console.ReadKey(true).Key;
 
-                if (key == ConsoleKey.Escape) {
-                    Console.Clear();
-                    MainMenu(false, false);
-                    retry = false;
-                } else {
-                    Console.Clear();
-                    retry = true;
-                }
-            } while (retry == true);
+                if (key == ConsoleKey.Escape) MainMenu(false, false);
+                else retry = true;
+            }
+            while (retry == true);
         }
 
         /// <summary>
         /// Sair do jogo.
         /// </summary>
-        private void Exit() {
+        private void Exit()
+        {
             Environment.Exit(0);
         }
 
         /// <summary>
         /// Leitura da pontuação.
         /// </summary>
-        private void ScoreReader() {
+        private void ScoreReader()
+        {
+            // Variável que contém o ficheiro do score
             string fileName = "Score.txt";
-
-            string[] lines = File.ReadAllLines(fileName);
-            foreach (string line in lines) {
-                Console.WriteLine(line);
+            if (File.Exists(fileName)) {
+                // Ler as linhas do ficheiro
+                string[] lines = File.ReadAllLines(fileName);
+                // Imprimir as linhas do ficheiro
+                foreach (string line in lines) {
+                    Console.WriteLine("\t" + line);
+                }
             }
-        }
-
-        /// <summary>
-        /// Alinhar o texto.
-        /// </summary>
-        /// <param name="text"></param>
-        public void AlignText(string text) {
-            Console.SetCursorPosition((Console.WindowWidth - text.Length)
-                / 2, Console.CursorTop);
-            Console.WriteLine(text);
-        }
-
-        /// <summary>
-        /// Limpar o ecrã.
-        /// </summary>
-        public void ClearCurrentConsoleLine() {
-            int currentLineCursor = Console.CursorTop;
-            Console.SetCursorPosition(0, Console.CursorTop);
-            Console.Write(new string(' ', Console.WindowWidth));
-            Console.SetCursorPosition(0, currentLineCursor);
+            else {
+                Console.WriteLine("Not available");
+            }
         }
     }
 }
