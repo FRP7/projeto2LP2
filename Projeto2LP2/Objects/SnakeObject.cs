@@ -19,12 +19,11 @@ namespace Projeto2LP2
         // Cabeça da cobra.
         public static SnakePart Head { get => snakeBody.Last(); }
 
-        // Verificar qual a direção atual da cobra.
-        public static Direction direction;
-
         // Recolher informação da posição da cobra.
         public static int SnakeX { get; set; }
         public static int SnakeY { get; set; }
+
+        public static Direction direction;
 
         /// <summary>
         /// Método para ser chamado quando o jogo começa.
@@ -32,12 +31,12 @@ namespace Projeto2LP2
         public override void Start() {
 
             // Definir a posição inicial da cobra.
-            SnakeX = SceneObject.SceneX / 2;
-            SnakeY = SceneObject.SceneY / 2;
+            SnakeX = Facade.GetSceneX / 2;
+            SnakeY = Facade.GetSceneY / 2;
 
             // Definir a direção inicial.
             direction = new Direction();
-            direction = Direction.None;
+            Facade.GetDirection = Direction.None;
 
             // Definir o tamanho da cobra.
             snakeBody = new List<SnakePart>();
@@ -93,18 +92,18 @@ namespace Projeto2LP2
         /// Verificar e atualizar a posição da cobra de acordo com a direção.
         /// </summary>
         private void SnakePositionCheck() {
-            if (GameState.GetDirection == Direction.Up) {
-                if (GameState.GetCordSnakeY > 0) {
-                    GameState.GetCordSnakeY--;
+            if (direction == Direction.Up) {
+                if (Facade.GetCordSnakeY > 0) {
+                    Facade.GetCordSnakeY--;
                 }
-            } else if (GameState.GetDirection == Direction.Down) {
-                GameState.GetCordSnakeY++;
-            } else if (GameState.GetDirection == Direction.Left) {
+            } else if (direction == Direction.Down) {
+                Facade.GetCordSnakeY++;
+            } else if (direction == Direction.Left) {
                 if (GameState.GetCordSnakeX > 0) {
-                    GameState.GetCordSnakeX--;
+                    Facade.GetCordSnakeX--;
                 }
-            } else if (GameState.GetDirection == Direction.Right) {
-                GameState.GetCordSnakeX++;
+            } else if (direction == Direction.Right) {
+                Facade.GetCordSnakeX++;
             }
         }
 
@@ -112,14 +111,14 @@ namespace Projeto2LP2
         /// Verificar se a cobra colidiu com a comida.
         /// </summary>
         private void CheckFood() {
-            if (GameState.GetHead.CordX == GameState.GetCordFoodX && 
-                GameState.GetHead.CordY == GameState.GetCordFoodY) {
-                GameState.GetSnakeBody.Add(new SnakePart(
-                    GameState.GetCordSnakeX, GameState.GetCordSnakeY, '@'));
-                Console.SetCursorPosition(GameState.GetCordFoodX, 
-                    GameState.GetCordFoodY);
+            if (Facade.GetHead.CordX == Facade.GetCordFoodX && 
+                Facade.GetHead.CordY == Facade.GetCordFoodY) {
+                Facade.GetSnakeBody.Add(new SnakePart(
+                    Facade.GetCordSnakeX, Facade.GetCordSnakeY, '@'));
+                Console.SetCursorPosition(Facade.GetCordFoodX, 
+                    Facade.GetCordFoodY);
                 Console.Write(' ');
-                GameObject foodObject = new FoodObject();
+                FoodObject foodObject = new FoodObject();
                 foodObject.Update();
                 Facade.GetScore++;
             }
@@ -130,12 +129,12 @@ namespace Projeto2LP2
         ///  Verificar se a cobra colidiu em si própria.
         /// </summary>
         private void CheckSnakeTouch() {
-            for (int i = 3; i < GameState.GetSnakeBody.Count; i++) {
-                if (GameState.GetSnakeBody[0].CordX == 
-                    GameState.GetSnakeBody[i].CordX && 
-                    GameState.GetSnakeBody[0].CordY ==
-                    GameState.GetSnakeBody[i].CordY) {
-                    GameLoop.isGameOver = true;
+            for (int i = 3; i < Facade.GetSnakeBody.Count; i++) {
+                if (Facade.GetSnakeBody[0].CordX == 
+                    Facade.GetSnakeBody[i].CordX && 
+                    Facade.GetSnakeBody[0].CordY ==
+                    Facade.GetSnakeBody[i].CordY) {
+                    Facade.isGameOver = true;
                 }
             }
 
@@ -145,17 +144,17 @@ namespace Projeto2LP2
         /// Verificar se a cobra colidiu numa parede.
         /// </summary>
         private void CheckWalls() {
-            if (GameState.GetCordSnakeX == 0) {
-                GameLoop.isGameOver = true;
+            if (Facade.GetCordSnakeX == 0) {
+                Facade.isGameOver = true;
             }
-            if (GameState.GetCordSnakeX == GameState.GetSceneX - 1) {
-                GameLoop.isGameOver = true;
+            if (Facade.GetCordSnakeX == Facade.GetSceneX - 1) {
+                Facade.isGameOver = true;
             }
-            if (GameState.GetCordSnakeY == 0) {
-                GameLoop.isGameOver = true;
+            if (Facade.GetCordSnakeY == 0) {
+                Facade.isGameOver = true;
             }
-            if (GameState.GetCordSnakeY == GameState.GetSceneY - 1) {
-                GameLoop.isGameOver = true;
+            if (Facade.GetCordSnakeY == Facade.GetSceneY - 1) {
+                Facade.isGameOver = true;
             }
         }
     }

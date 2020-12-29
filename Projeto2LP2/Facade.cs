@@ -14,6 +14,15 @@ namespace Projeto2LP2
         // Aceder à coordenada Y do cenário no SceneObject.
         public static int GetSceneY { get => SceneObject.SceneY; }
 
+        public static bool isGameOver {
+            get {
+                return GameLoop.isGameOver;
+            }
+            set {
+                GameLoop.isGameOver = value;
+            }
+        }
+
 
         // Aceder ao corpo da cobra no SnakeObject.
         public static List<SnakePart> GetSnakeBody {
