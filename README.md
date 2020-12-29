@@ -2,10 +2,12 @@
 
  **Francisco Pires a21804873:**
  - Planeamento, estruturação, organização e gestão do projeto.
- - `GameLoop`, `Update`, `Render` e `GameObjects`. 
+ - `GameLoop`, `GameState`, `RenderEngine`, `UserInput`, `Food`, `GameObject`,
+ `SceneObject`, `SnakeObject`, `SnakePart`, `Direction`, `Facade`.
  - Movimento da cobra.
  - Cenário.
- - Colisões e comida (feito em equipa com o André via *Discord*).
+ - Colisões e comida (feito em equipa com o André via *Discord* e depois 
+ transformei-os em *GameObject*.).
  - *Polishing* e documentação do código.
  - Correção de *bugs*.
  - Relatório.
