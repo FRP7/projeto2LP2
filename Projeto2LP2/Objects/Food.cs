@@ -2,12 +2,13 @@
 
 namespace Projeto2LP2
 {
-    class Food
+    struct Food
     {
         // Coordenadas.
         public int CordX { get; set; }
         public int CordY { get; set; }
-        // Caracter da comida..
+
+        // Caracter da comida.
         public char FoodChar { get; set; }
 
         /// <summary>

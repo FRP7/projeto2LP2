@@ -3,7 +3,7 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Direções da serpente.
+    /// Enum que indica a direção da cobra.
     /// </summary>
     enum Direction
     {

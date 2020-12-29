@@ -7,12 +7,15 @@ namespace Projeto2LP2
     /// Podem utilizar pa testar os métodos do jogo enquanto o menu não estiver
     /// terminado, só peço que não façam add ás alterações desta classe no git.
     /// </summary>
-    class Program
+    sealed class Program
     {
-        // Começar o jogo.
+        /// <summary>
+        /// Começar o jogo.
+        /// </summary>
+        /// <param name="args"> Argumentos. </param>
         static void Main(string[] args) {
-            Intro intro = new Intro();
-            intro.StartIntro();
+            Menu menu = new Menu();
+            menu.MainMenu(true, true);
         }
     }
 }

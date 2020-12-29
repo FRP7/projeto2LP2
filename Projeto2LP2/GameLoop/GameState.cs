@@ -5,24 +5,25 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe onde é atualizada a lógica do jogo.
     /// </summary>
-    class GameState
+    sealed class GameState
     {
         // Aceder à coordenada X do cenário no GameLoop.
-        public static int GetSceneX { get => GameLoop.SceneX; }
+        public static int GetSceneX { get => Facade.GetSceneX; }
 
         // Aceder à coordenada Y do cenário no GameLoop.
-        public static int GetSceneY { get => GameLoop.SceneY; }
+        public static int GetSceneY { get => Facade.GetSceneY; }
+
 
         // Aceder ao corpo da cobra no GameLoop.
         public static List<SnakePart> GetSnakeBody
         {
             get
             {
-                return GameLoop.snakeBody;
+                return Facade.GetSnakeBody;
             }
             set 
             {
-                GameLoop.snakeBody = value;
+                Facade.GetSnakeBody = value;
             }
         }
 
@@ -31,11 +32,11 @@ namespace Projeto2LP2
         {
             get
             {
-                return GameLoop.SnakeX;
+                return Facade.GetCordSnakeX;
             }
             set
             {
-                GameLoop.SnakeX = value;
+                Facade.GetCordSnakeX = value;
             }
         }
 
@@ -44,41 +45,41 @@ namespace Projeto2LP2
         {
             get
             {
-                return GameLoop.SnakeY;
+                return Facade.GetCordSnakeY;
             }
             set
             {
-                GameLoop.SnakeY = value;
+                Facade.GetCordSnakeY = value;
             }
         }
 
         // Aceder à cabeça da cobra no GameLoop.
         public static SnakePart GetHead {
             get {
-                return GameLoop.Head;
+                return Facade.GetHead;
             }
         }
 
         // Aceder à cauda da cobra no GameLoop.
         public static SnakePart GetTail {
             get {
-                return GameLoop.Tail;
+                return Facade.GetTail;
             }
         }
 
         // Aceder à direção da cobra no GameLoop.
-        public static Direction GetDirection { get => GameLoop.direction; }
+        public static Direction GetDirection { get => Facade.GetDirection; }
 
         // Aceder à coordenada X da comida no GameLoop.
         public static int GetCordFoodX
         {
             get
             {
-                return GameLoop.FoodX;
+                return Facade.GetCordFoodX;
             }
             set
             {
-                GameLoop.FoodX = value;
+                Facade.GetCordFoodX = value;
             }
         }
 
@@ -87,11 +88,11 @@ namespace Projeto2LP2
         {
             get
             {
-                return GameLoop.FoodY;
+                return Facade.GetCordFoodY;
             }
             set
             {
-                GameLoop.FoodY = value;
+                Facade.GetCordFoodY = value;
             }
         }
 
@@ -100,11 +101,7 @@ namespace Projeto2LP2
         {
             get
             {
-                return GameLoop.ScoreValue;
-            }
-            set 
-            {
-                GameLoop.ScoreValue = value;
+                return Facade.GetScore;
             }
         }
 
@@ -113,26 +110,16 @@ namespace Projeto2LP2
         /// </summary>
         public void Update()
         {
-            CollisionCheck();
-            SnakePositionCheck();
+            SnakeUpdate();
         }
 
         /// <summary>
-        /// Verificar colisões.
+        /// Verificar posição e colisões da cobra.
         /// </summary>
-        private void CollisionCheck()
+        private void SnakeUpdate()
         {
-            Collisions collisions = new Collisions();
-            collisions.CollisionCheck();
-        }
-
-        /// <summary>
-        /// Verificar a posição da cobra.
-        /// </summary>
-        private void SnakePositionCheck()
-        {
-            SnakePosition snakePosition = new SnakePosition();
-            snakePosition.SnakePositionCheck();
+            Facade facade = new Facade();
+            facade.gameObjects[2].Update();
         }
     }
 }
