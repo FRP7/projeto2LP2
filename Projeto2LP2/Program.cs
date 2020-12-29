@@ -14,8 +14,8 @@ namespace Projeto2LP2
         /// </summary>
         /// <param name="args"> Argumentos. </param>
         static void Main(string[] args) {
-            Intro intro = new Intro();
-            intro.StartIntro();
+            Menu menu = new Menu();
+            menu.MainMenu(true, true);
         }
     }
 }
