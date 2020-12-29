@@ -23,9 +23,8 @@ namespace Projeto2LP2
                 menu.AlignText("Final score: " + GameLoop.ScoreValue);
                 menu.AlignText("");
 
-                StreamWriter sw = new StreamWriter(path, true);
-                sw.WriteLineAsync($"{DateTime.Now} - {GameLoop.ScoreValue}.");
-                sw.Close();
+                File.AppendAllText("Score.txt", Environment.NewLine + $"{DateTime.Now} - {GameLoop.ScoreValue}.");
+
                 if (GameLoop.ScoreValue < 0)
                 {
                     menu.AlignText("How did you get this score!? Cheater!");

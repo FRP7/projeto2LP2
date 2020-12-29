@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Projeto2LP2
 {
@@ -213,12 +215,42 @@ namespace Projeto2LP2
 
         private void ScoreReader()
         {
-            string path = (Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Score.txt");
+            Dictionary<int, Score> scoreDic = new Dictionary<int, Score>();
+            string fileName = "Score.txt";
+            int lineCount;
+            string content = "";
+            string[] lines;
+            string[] date;
+            int[] scoreValue;
 
-            string[] lines = File.ReadAllLines(path);
-            foreach (string line in lines)
-            {
-                Console.WriteLine("\t" + line);
+            try {
+
+                using (StreamReader sr = File.OpenText(fileName)) {
+                    lineCount = File.ReadLines(fileName).Count();
+
+                    content = sr.ReadToEnd();
+
+                    lines = new string[content.Length];
+                    lines = content.Split('.');
+                    // pares são string e impáres int?
+                }
+
+                date = new string[lines.Length];
+                scoreValue = new int[lines.Length];
+               
+
+                for(int i = 0; i < lines.Length; i++) {
+                    Console.WriteLine($"Index: {i}. Content: {lines[i]}");
+                }
+
+                foreach(KeyValuePair<int, Score> item in scoreDic) {
+                    Console.WriteLine($"Date: {item.Value.Date}." +
+                        $" Score: {item.Value.ScoreValue}");
+                }
+
+            }
+            catch (Exception) {
+                Console.WriteLine("No score file available.");
             }
         }
 
