@@ -24,6 +24,7 @@ namespace Projeto2LP2
             do
             {
                 Console.Clear();
+                // Escrever no ficheiro o score adquirido
                 File.AppendAllText(fileName, Environment.NewLine + 
                     $"Date: {DateTime.Now.ToString()} | Score: {GameLoop.ScoreValue}");
                 Console.WriteLine("\n\tYou have met an unfortunate end.");
@@ -43,16 +44,20 @@ namespace Projeto2LP2
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+                    // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
-
+                // Variável que contem a opção do jogador
                 ConsoleKey key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
