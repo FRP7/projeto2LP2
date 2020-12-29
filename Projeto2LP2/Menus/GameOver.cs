@@ -16,7 +16,7 @@ namespace Projeto2LP2
         /// <param name="retry"> Indicar se pode sair da página. </param>
         public void GameOverMenu()
         {
-            Menu menu = new Menu();
+            Facade facade = new Facade();
 
             string fileName = "Score.txt";
             bool retry;
@@ -28,27 +28,27 @@ namespace Projeto2LP2
                 if(File.Exists(fileName)) {
                     File.AppendAllText(fileName, Environment.NewLine +
                    $"Date: {DateTime.Now.ToString()} | Score: " +
-                   $"{GameLoop.ScoreValue}");
+                   $"{Facade.GetScore}");
                 }
                 else {
                     using(StreamWriter sr = new StreamWriter(fileName, true)) {
                         sr.WriteLine(Environment.NewLine + $"Date:" +
                             $" {DateTime.Now.ToString()} " +
-                            $"| Score: " + $"{GameLoop.ScoreValue}");
+                            $"| Score: " + $"{Facade.GetScore}");
                     }
                 }
                 Console.WriteLine("\n\tYou have met an unfortunate end.");
-                Console.WriteLine("\n\t\tFinal score: " + GameLoop.ScoreValue);
+                Console.WriteLine("\n\t\tFinal score: " + Facade.GetScore);
 
-                if (GameLoop.ScoreValue < 0)
+                if (Facade.GetScore < 0)
                     Console.WriteLine("\n\tHow did you get this score!? Cheater!\n");
-                else if (GameLoop.ScoreValue == 0)
+                else if (Facade.GetScore == 0)
                     Console.WriteLine("\n\t     You didn't even try...\n");
-                else if (GameLoop.ScoreValue >= 1 && GameLoop.ScoreValue < 10)
+                else if (Facade.GetScore >= 1 && Facade.GetScore < 10)
                     Console.WriteLine("\n       You can do better I believe in you!\n");
-                else if (GameLoop.ScoreValue >= 10 && GameLoop.ScoreValue < 20)
+                else if (Facade.GetScore >= 10 && Facade.GetScore < 20)
                     Console.WriteLine("\n\t    Not bad at all, good job!\n");
-                else if (GameLoop.ScoreValue >= 20)
+                else if (Facade.GetScore >= 20)
                     Console.WriteLine("\n\t  Great score, congratulations!\n");
                 while (!Console.KeyAvailable)
                 {
@@ -72,7 +72,7 @@ namespace Projeto2LP2
 
                 if (key == ConsoleKey.Escape)
                 {
-                    menu.MainMenu(false, false);
+                    facade.Menu(false, false);
                     retry = false;
                 }
                 else retry = true;
