@@ -2,10 +2,11 @@
 
 namespace Projeto2LP2
 {
+    /// <summary>
+    /// GameObject da comida.
+    /// </summary>
     class FoodObject : GameObject
     {
-        private Random random;
-
         // Recolher informação da posição da comida.
         public static int FoodX { get; set; }
         public static int FoodY { get; set; }
@@ -24,7 +25,7 @@ namespace Projeto2LP2
         /// Método para ser chamado continuamente ao longo do jogo.
         /// </summary>
         public override void Update() {
-            random = new Random();
+            Random random = new Random();
 
             Facade.GetCordFoodX = random.Next(2, Facade.GetSceneX - 2);
             Facade.GetCordFoodY = random.Next(2, Facade.GetSceneY - 2);

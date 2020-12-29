@@ -14,6 +14,7 @@ namespace Projeto2LP2
         // Aceder à coordenada Y do cenário no SceneObject.
         public static int GetSceneY { get => SceneObject.SceneY; }
 
+        // Aceder ao bool que indica se o jogo acabou no GameLoop.
         public static bool isGameOver {
             get {
                 return GameLoop.isGameOver;

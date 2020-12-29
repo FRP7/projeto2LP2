@@ -2,6 +2,9 @@
 
 namespace Projeto2LP2
 {
+    /// <summary>
+    /// Struct dos stats da comida.
+    /// </summary>
     struct Food
     {
         // Coordenadas.

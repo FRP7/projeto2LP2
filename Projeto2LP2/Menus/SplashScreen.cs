@@ -3,6 +3,9 @@ using System.Threading;
 
 namespace Projeto2LP2
 {
+    /// <summary>
+    /// Classe do SplashScreen.
+    /// </summary>
     class SplashScreen
     {
         /// <summary>
@@ -49,7 +52,7 @@ namespace Projeto2LP2
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
-                // Variável que contem a opção do jogador
+                // Variável que contêm a opção do jogador
                 ConsoleKey key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Enter) retry = false;

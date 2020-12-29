@@ -7,7 +7,7 @@
  - Movimento da cobra.
  - Cenário.
  - Colisões e comida (feito em equipa com o André via *Discord* e depois 
- transformei-os em *GameObject*.).
+ transformei-os em *GameObject*).
  - *Polishing* e documentação do código.
  - Correção de *bugs*.
  - Relatório.

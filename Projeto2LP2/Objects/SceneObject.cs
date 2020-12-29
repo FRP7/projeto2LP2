@@ -2,6 +2,9 @@
 
 namespace Projeto2LP2
 {
+    /// <summary>
+    /// GameObject do cenário.
+    /// </summary>
     class SceneObject : GameObject
     {
         // Tamanho do cenário.

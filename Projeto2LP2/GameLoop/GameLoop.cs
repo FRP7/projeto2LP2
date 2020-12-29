@@ -5,7 +5,6 @@ namespace Projeto2LP2
 {
     /// <summary>
     /// Classe do ciclo de jogo. 
-    /// Funciona como um Facade também.
     /// </summary>
     sealed class GameLoop
     {
