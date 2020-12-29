@@ -14,73 +14,55 @@ namespace Projeto2LP2
         /// </summary>
         /// <param name="key"> Input do jogador. </param>
         /// <param name="retry"> Indicar se pode sair da página. </param>
-        public void GameOverMenu(ConsoleKey key, bool retry)
+        public void GameOverMenu()
         {
             Menu menu = new Menu();
 
             string fileName = "Score.txt";
+            bool retry;
 
             do
             {
                 Console.Clear();
-                File.AppendAllText(fileName, Environment.NewLine + $"Date: {DateTime.Now.ToString()} | Score: {GameLoop.ScoreValue}");
-                menu.AlignText("");
-                menu.AlignText("You have met an unfortunate end.");
-                menu.AlignText("");
-                menu.AlignText("Final score: " + GameLoop.ScoreValue);
-                menu.AlignText("");
+                File.AppendAllText(fileName, Environment.NewLine + 
+                    $"Date: {DateTime.Now.ToString()} | Score: {GameLoop.ScoreValue}");
+                Console.WriteLine("\n\tYou have met an unfortunate end.");
+                Console.WriteLine("\n\t\tFinal score: " + GameLoop.ScoreValue);
 
                 if (GameLoop.ScoreValue < 0)
-                {
-                    menu.AlignText("How did you get this score!? Cheater!");
-                    menu.AlignText("");
-                }
-                if (GameLoop.ScoreValue == 0)
-                {
-                    menu.AlignText("You didn't even try...");
-                    menu.AlignText("");
-                }
-                if (GameLoop.ScoreValue >= 1 && GameLoop.ScoreValue < 10)
-                {
-                    menu.AlignText("You can do better I believe in you!");
-                    menu.AlignText("");
-                }
+                    Console.WriteLine("\n\tHow did you get this score!? Cheater!\n");
+                else if (GameLoop.ScoreValue == 0)
+                    Console.WriteLine("\n\t     You didn't even try...\n");
+                else if (GameLoop.ScoreValue >= 1 && GameLoop.ScoreValue < 10)
+                    Console.WriteLine("\n       You can do better I believe in you!\n");
                 else if (GameLoop.ScoreValue >= 10 && GameLoop.ScoreValue < 20)
-                {
-                    menu.AlignText("Not bad at all, good job!");
-                    menu.AlignText("");
-                }
+                    Console.WriteLine("\n\t    Not bad at all, good job!\n");
                 else if (GameLoop.ScoreValue >= 20)
-                {
-                    menu.AlignText("Great score, congratulations!");
-                    menu.AlignText("");
-                }
+                    Console.WriteLine("\n\t  Great score, congratulations!\n");
                 while (!Console.KeyAvailable)
                 {
-                    menu.AlignText("Press ESQ to retreat to the menu.");
-                    Thread.Sleep(500);
+                    Console.WriteLine("\tPress ESQ to retreat to the menu.");
+                    Thread.Sleep(250);
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    menu.ClearCurrentConsoleLine();
-                    menu.AlignText("Press     to retreat to the menu.");
-                    Thread.Sleep(500);
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+                    Console.WriteLine("\tPress     to retreat to the menu.");
+                    Thread.Sleep(250);
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    menu.ClearCurrentConsoleLine();
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                key = Console.ReadKey(true).Key;
+                ConsoleKey key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
                 {
-                    Console.Clear();
                     menu.MainMenu(false, false);
                     retry = false;
                 }
-                else
-                {
-                    Console.Clear();
-                    retry = true;
-                }
-            } while (retry == true);
+                else retry = true;
+            }
+            while (retry == true);
         }
     }
 }

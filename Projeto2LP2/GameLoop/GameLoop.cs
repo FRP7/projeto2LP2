@@ -78,7 +78,7 @@ namespace Projeto2LP2
             }
 
             // Mostrar o menu de game over caso perca.
-            facade.GameOver(ConsoleKey.Backspace, true);
+            facade.GameOver();
         }
 
         /// <summary>

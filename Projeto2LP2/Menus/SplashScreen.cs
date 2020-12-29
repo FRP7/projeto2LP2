@@ -10,56 +10,52 @@ namespace Projeto2LP2
         /// </summary>
         /// <param name="key"> User input. </param>
         /// <param name="retry"> Indicar se a intro pode ser mostrada. </param>
-        public void SplashScreenMenu(ConsoleKey key, bool retry)
+        public void SplashScreenMenu()
         {
-            Menu menu = new Menu();
-
+            bool retry;
             do
             {
                 Console.Clear();
 
-                menu.AlignText("");
-                menu.AlignText("   _________   ____ __  _   ___      ___" +
-                    " ___  ____ ____  ____  ____    __ ");
-                menu.AlignText("  / ___/    \\ /    |  |/ ] /  _]    |   |" +
-                    "   |/    |    \\|    |/    |  /  ]");
-                menu.AlignText(" (   \\_|  _  |  o  |  ' / /  [_     | _  " +
-                    " _ |  o  |  _  ||  ||  o  | /  / ");
-                menu.AlignText("  \\__  |  |  |     |    \\|    _]    |" +
-                    "  \\_/  |     |  |  ||  ||     |/  /  ");
-                menu.AlignText("  /  \\ |  |  |  _  |     |   [_     | " +
-                    "  |   |  _  |  |  ||  ||  _  /   \\_ ");
-                menu.AlignText("   \\    |  |  |  |  |  .  |     |    | " +
-                    "  |   |  |  |  |  ||  ||  |  \\     | ");
-                menu.AlignText("    \\___|__|__|__|__|__|\\_|_____| " +
-                    "   |___|___|__|__|__|__|____|__|__|\\____| ");
-                menu.AlignText("");
-                menu.AlignText("");
-
+                Console.WriteLine("\n\t\t\t   _________   ____ __  _   ___" +
+                    "      ___ ___  ____ ____  ____  ____    __ ");
+                Console.WriteLine("\t\t\t  / ___/    \\ /    |  |/ ] /  _]" +
+                    "    |   |   |/    |    \\|    |/    |  /  ]");
+                Console.WriteLine("\t\t\t (   \\_|  _  |  o  |  ' / /  [_" +
+                    "     | _   _ |  o  |  _  ||  ||  o  | /  / ");
+                Console.WriteLine("\t\t\t  \\__  |  |  |     |    \\|    _]" +
+                    "    |  \\_/  |     |  |  ||  ||     |/  /  ");
+                Console.WriteLine("\t\t\t  /  \\ |  |  |  _  |     |   [_" +
+                    "     |   |   |  _  |  |  ||  ||  _  /   \\_ ");
+                Console.WriteLine("\t\t\t  \\    |  |  |  |  |  .  |     |" +
+                    "    |   |   |  |  |  |  ||  ||  |  \\     | ");
+                Console.WriteLine("\t\t\t   \\___|__|__|__|__|__|\\_|_____|" +
+                    "    |___|___|__|__|__|__|____|__|__|\\____| \n\n");
+                // Enquanto o jogador não clicar
                 while (!Console.KeyAvailable)
                 {
-                    menu.AlignText("Press ENTER to continue.");
-                    Thread.Sleep(500);
+                    Console.WriteLine("\t\t\t\t\t\tPress ENTER to continue.");
+                    Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    menu.ClearCurrentConsoleLine();
-                    menu.AlignText("Press       to continue.");
-                    Thread.Sleep(500);
+                    // Apagar a linha anterior
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+                    Console.WriteLine("\t\t\t\t\t\tPress       to continue.");
+                    Thread.Sleep(250);
+                    // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    menu.ClearCurrentConsoleLine();
+                    // Apagar a linha anterior
+                    Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
+                        "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
+                // Variável que contem a opção do jogador
+                ConsoleKey key = Console.ReadKey(true).Key;
 
-                key = Console.ReadKey(true).Key;
-
-                if (key == ConsoleKey.Enter)
-                {
-                    Console.Clear();
-                    retry = false;
-                }
-                else
-                {
-                    retry = true;
-                }
-            } while (retry == true);
+                if (key == ConsoleKey.Enter) retry = false;
+                else retry = true;
+            }
+            while (retry == true);
         }
     }
 }
