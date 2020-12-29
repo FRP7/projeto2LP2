@@ -145,17 +145,17 @@ namespace Projeto2LP2
         /// <summary>
         /// Chamar o método MainMenu no Menu.
         /// </summary>
-        public void Menu() {
+        public void Menu(bool x, bool y) {
             Menu menu = new Menu();
-            menu.MainMenu();
+            menu.MainMenu(x, y);
         }
 
         /// <summary>
         /// Chamar o método GameOverMenu no GameOver.
         /// </summary>
-        public void GameOver() {
+        public void GameOver(ConsoleKey x, bool y) {
             GameOver gameOver = new GameOver();
-            gameOver.GameOverMenu();
+            gameOver.GameOverMenu(x, y);
         }
 
         // Array de GameObjects.

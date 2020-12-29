@@ -39,7 +39,7 @@ namespace Projeto2LP2
                         }
                         break;
                     case ConsoleKey.Escape:
-                        facade.Menu();
+                        facade.Menu(false, false);
                         break;
                     default:
                         Facade.GetDirection = Direction.None;
