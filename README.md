@@ -13,9 +13,10 @@
  - Relatório.
  
  **Nuno Figueiredo a21705451:**
- - `Menu`.
- - `Intro`.
  - `GameOver`.
+ - `Intro`.
+ - `Menu`.
+ - `SplashScreen`.
 
  **André Cosme a21802129:**
  - Colisões e comida (feito em equipa com o Francisco via *Discord*).
