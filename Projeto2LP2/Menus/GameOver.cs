@@ -11,21 +11,18 @@ namespace Projeto2LP2
         {
             Menu menu = new Menu();
 
-            string path = (Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Score.txt");
+            string fileName = "Score.txt";
 
             do
             {
                 Console.Clear();
-
+                File.AppendAllText(fileName, Environment.NewLine + $"Date: {DateTime.Now.ToString()} | Score: {GameLoop.ScoreValue}");
                 menu.AlignText("");
                 menu.AlignText("You have met an unfortunate end.");
                 menu.AlignText("");
                 menu.AlignText("Final score: " + GameLoop.ScoreValue);
                 menu.AlignText("");
 
-                StreamWriter sw = new StreamWriter(path, true);
-                sw.WriteLineAsync($"{DateTime.Now} - {GameLoop.ScoreValue}.");
-                sw.Close();
                 if (GameLoop.ScoreValue < 0)
                 {
                     menu.AlignText("How did you get this score!? Cheater!");

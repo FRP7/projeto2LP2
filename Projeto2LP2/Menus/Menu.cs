@@ -213,12 +213,12 @@ namespace Projeto2LP2
 
         private void ScoreReader()
         {
-            string path = (Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Score.txt");
+            string fileName = "Score.txt";
 
-            string[] lines = File.ReadAllLines(path);
+            string[] lines = File.ReadAllLines(fileName);
             foreach (string line in lines)
             {
-                Console.WriteLine("\t" + line);
+                Console.WriteLine(line);
             }
         }
 
