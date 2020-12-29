@@ -48,7 +48,7 @@ namespace Projeto2LP2
                 AlignText("");
                 AlignText("(I)NSTRUTIONS");
                 AlignText("");
-                AlignText("(H)IGHSCORE");
+                AlignText("(S)CORES");
                 AlignText("");
                 AlignText("(C)REDITS");
                 AlignText("");
@@ -66,7 +66,7 @@ namespace Projeto2LP2
                         Console.Clear();
                         Instructions(key, retry);
                         break;
-                    case ConsoleKey.H:
+                    case ConsoleKey.S:
                         Console.Clear();
                         HighScore(key, retry);
                         break;
