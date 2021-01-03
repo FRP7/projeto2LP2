@@ -87,7 +87,7 @@ namespace Projeto2LP2
             // Começar thread para o input do jogador.
             inputThread = new Thread(facade.CheckUserInput);
             inputThread.Start();
-            GetKey = facade.consoleKey;
+            GetKey = facade.ConsoleKey;
             // Fechar a thread.
             inputThread.Join();
         }

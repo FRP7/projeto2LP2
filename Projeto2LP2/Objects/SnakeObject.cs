@@ -39,8 +39,9 @@ namespace Projeto2LP2
             Facade.GetDirection = Direction.None;
 
             // Definir o tamanho da cobra.
-            snakeBody = new List<SnakePart>();
-            snakeBody.Add(new SnakePart(SnakeX, SnakeY, '@'));
+            snakeBody = new List<SnakePart> {
+                new SnakePart(SnakeX, SnakeY, '@')
+            };
         }
 
         /// <summary>
@@ -134,7 +135,7 @@ namespace Projeto2LP2
                     Facade.GetSnakeBody[i].CordX && 
                     Facade.GetSnakeBody[0].CordY ==
                     Facade.GetSnakeBody[i].CordY) {
-                    Facade.isGameOver = true;
+                    Facade.IsGameOver = true;
                 }
             }
 
@@ -145,16 +146,16 @@ namespace Projeto2LP2
         /// </summary>
         private void CheckWalls() {
             if (Facade.GetCordSnakeX == 0) {
-                Facade.isGameOver = true;
+                Facade.IsGameOver = true;
             }
             if (Facade.GetCordSnakeX == Facade.GetSceneX - 1) {
-                Facade.isGameOver = true;
+                Facade.IsGameOver = true;
             }
             if (Facade.GetCordSnakeY == 0) {
-                Facade.isGameOver = true;
+                Facade.IsGameOver = true;
             }
             if (Facade.GetCordSnakeY == Facade.GetSceneY - 1) {
-                Facade.isGameOver = true;
+                Facade.IsGameOver = true;
             }
         }
     }

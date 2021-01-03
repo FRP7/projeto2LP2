@@ -10,8 +10,7 @@ namespace Projeto2LP2
         /// <summary>
         /// Começar o jogo.
         /// </summary>
-        /// <param name="args"> Argumentos. </param>
-        static void Main(string[] args) {
+        static void Main(/*string[] args*/) {
             Menu menu = new Menu();
             menu.MainMenu(true, true);
         }

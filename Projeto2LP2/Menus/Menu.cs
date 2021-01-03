@@ -9,6 +9,7 @@ namespace Projeto2LP2
     /// </summary>
     class Menu
     {
+        private ConsoleKey key;
         /// <summary>
         /// Método onde é exposto o menu principal.
         /// </summary>
@@ -23,7 +24,6 @@ namespace Projeto2LP2
             GameLoop game = new GameLoop();
 
             bool retry = false;
-            ConsoleKey key = ConsoleKey.Backspace;
 
             // Mostrar a introdução do jogo
             if (introPlay) intro.IntroMenu();
@@ -64,13 +64,13 @@ namespace Projeto2LP2
                         game.Game();
                         break;
                     case ConsoleKey.I:
-                        Instructions(key, retry);
+                        Instructions(retry);
                         break;
                     case ConsoleKey.S:
-                        Score(key, retry);
+                        Score(retry);
                         break;
                     case ConsoleKey.C:
-                        Credits(key, retry);
+                        Credits(retry);
                         break;
                     case ConsoleKey.E:
                         Exit();
@@ -85,9 +85,8 @@ namespace Projeto2LP2
         /// <summary>
         /// Páginas das instruções.
         /// </summary>
-        /// <param name="key"> Input do jogador. </param>
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
-        private void Instructions(ConsoleKey key, bool retry)
+        private void Instructions(bool retry)
         {
             do
             {
@@ -129,9 +128,8 @@ namespace Projeto2LP2
         /// <summary>
         /// Página da pontuação.
         /// </summary>
-        /// <param name="key"> Input do jogador. </param>
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
-        private void Score(ConsoleKey key, bool retry)
+        private void Score(bool retry)
         {
             do
             {
@@ -170,9 +168,8 @@ namespace Projeto2LP2
         /// <summary>
         /// Página dos créditos.
         /// </summary>
-        /// <param name="key"> Input do jogador. </param>
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
-        private void Credits(ConsoleKey key, bool retry)
+        private void Credits(bool retry)
         {
             do
             {

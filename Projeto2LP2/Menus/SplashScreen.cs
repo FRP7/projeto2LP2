@@ -11,8 +11,6 @@ namespace Projeto2LP2
         /// <summary>
         /// Método da página que aparece antes de entrar para o menu.
         /// </summary>
-        /// <param name="key"> User input. </param>
-        /// <param name="retry"> Indicar se a intro pode ser mostrada. </param>
         public void SplashScreenMenu()
         {
             bool retry;

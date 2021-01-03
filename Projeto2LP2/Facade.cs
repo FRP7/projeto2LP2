@@ -15,7 +15,7 @@ namespace Projeto2LP2
         public static int GetSceneY { get => SceneObject.SceneY; }
 
         // Aceder ao bool que indica se o jogo acabou no GameLoop.
-        public static bool isGameOver {
+        public static bool IsGameOver {
             get {
                 return GameLoop.isGameOver;
             }
@@ -120,16 +120,16 @@ namespace Projeto2LP2
         }
 
         // Aceder ao UserInput.
-        private UserInput userInput;
+        private readonly UserInput userInput;
 
         // Aceder ao GameState.
-        private GameState gameState;
+        private readonly GameState gameState;
 
         // Aceder ao RenderEngine.
-        private RenderEngine renderEngine;
+        private readonly RenderEngine renderEngine;
 
         // Aceder ao input do jogador no UserInput.
-        public ConsoleKey consoleKey { get => userInput.GetKey; }
+        public ConsoleKey ConsoleKey { get => userInput.GetKey; }
 
         /// <summary>
         /// / Chamar o método CheckUserInput no User Input.
