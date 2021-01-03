@@ -10,6 +10,7 @@ namespace Projeto2LP2
     class Menu
     {
         private ConsoleKey key;
+
         /// <summary>
         /// Método onde é exposto o menu principal.
         /// </summary>
@@ -25,11 +26,15 @@ namespace Projeto2LP2
 
             bool retry = false;
 
-            // Mostrar a introdução do jogo
-            if (introPlay) intro.IntroMenu();
-            // Mostrar o splash do jopo
-            if (splashPlay) splash.SplashScreenMenu();
-            // Mostrar o menu principal
+            // Mostrar a introdução do jogo.
+            if (introPlay)
+                intro.IntroMenu();
+
+            // Mostrar o splash do jogo.
+            if (splashPlay)
+                splash.SplashScreenMenu();
+
+            // Mostrar o menu principal.
             do
             {
                 Console.Clear();
@@ -54,8 +59,10 @@ namespace Projeto2LP2
                 Console.WriteLine("\n\t\t\t\t\t\t      (S)CORES");
                 Console.WriteLine("\n\t\t\t\t\t\t      (C)REDITS");
                 Console.WriteLine("\n\t\t\t\t\t\t       (E)XIT");
+
                 // Variável que contem a opção do jogador
                 key = Console.ReadKey(true).Key;
+
                 // Switch para verificar qual opção foi escolhida
                 switch (key)
                 {
@@ -79,7 +86,7 @@ namespace Projeto2LP2
                         retry = true;
                         break;
                 }
-            } while (retry == true);
+            } while (retry);
         }
 
         /// <summary>
@@ -98,31 +105,39 @@ namespace Projeto2LP2
                 Console.WriteLine("\tAvoid hitting the walls, they kill you.");
                 Console.WriteLine("    Avoid eating yourself, that might kill you too.");
                 Console.WriteLine("\t\t   Good Luck!\n");
+
                 // Enquanto o jogador não clicar
                 while (!Console.KeyAvailable)
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
+
                 // Variável que contem a opção do jogador
                 key = Console.ReadKey(true).Key;
 
-                if (key == ConsoleKey.Escape) MainMenu(false, false);
-                else retry = true;
+                if (key == ConsoleKey.Escape)
+                    MainMenu(false, false);
+                else
+                    retry = true;
             }
-            while (retry == true);
+            while (retry);
         }
 
         /// <summary>
@@ -135,34 +150,42 @@ namespace Projeto2LP2
             {
                 Console.Clear();
 
-                Console.WriteLine("");
+                Console.WriteLine(string.Empty);
                 ScoreReader();
-                Console.WriteLine("");
+                Console.WriteLine(string.Empty);
+
                 // Enquanto o jogador não clicar
                 while (!Console.KeyAvailable)
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
+
                 // Variável que contem a opção do jogador
                 key = Console.ReadKey(true).Key;
 
-                if (key == ConsoleKey.Escape) MainMenu(false, false);
-                else retry = true;
+                if (key == ConsoleKey.Escape)
+                    MainMenu(false, false);
+                else
+                    retry = true;
             }
-            while (retry == true);
+            while (retry);
         }
 
         /// <summary>
@@ -179,31 +202,39 @@ namespace Projeto2LP2
                 Console.WriteLine("\t\t  André Cosme;\n");
                 Console.WriteLine("\t\tFrancisco Pires;\n");
                 Console.WriteLine("\t\tNuno Figueiredo.\n\n");
+
                 // Enquanto o jogador não clicar
                 while (!Console.KeyAvailable)
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
+
                 // Variável que contem a opção do jogador
                 key = Console.ReadKey(true).Key;
 
-                if (key == ConsoleKey.Escape) MainMenu(false, false);
-                else retry = true;
+                if (key == ConsoleKey.Escape)
+                    MainMenu(false, false);
+                else
+                    retry = true;
             }
-            while (retry == true);
+            while (retry);
         }
 
         /// <summary>
@@ -224,6 +255,7 @@ namespace Projeto2LP2
             if (File.Exists(fileName)) {
                 // Ler as linhas do ficheiro
                 string[] lines = File.ReadAllLines(fileName);
+
                 // Imprimir as linhas do ficheiro
                 foreach (string line in lines) {
                     Console.WriteLine("\t" + line);

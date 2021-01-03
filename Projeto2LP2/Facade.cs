@@ -8,13 +8,20 @@ namespace Projeto2LP2
     /// </summary>
     sealed class Facade
     {
-        // Aceder à coordenada X do cenário no SceneObject.
+        /// <summary>
+        /// Gets (ler) Coordenada X do cenário no SceneObject.
+        /// </summary>
         public static int GetSceneX { get => SceneObject.SceneX; }
 
-        // Aceder à coordenada Y do cenário no SceneObject.
+        /// <summary>
+        /// Gets (ler) Coordenada Y do cenário no SceneObject.
+        /// </summary>
         public static int GetSceneY { get => SceneObject.SceneY; }
 
-        // Aceder ao bool que indica se o jogo acabou no GameLoop.
+        /// <summary>
+        /// Gets or sets a value indicating whether gets (ler) Sets
+        /// (modificar) a indicação se o jogo acabou no GameLoop.
+        /// </summary>
         public static bool IsGameOver {
             get {
                 return GameLoop.isGameOver;
@@ -24,8 +31,10 @@ namespace Projeto2LP2
             }
         }
 
-
-        // Aceder ao corpo da cobra no SnakeObject.
+        /// <summary>
+        /// Gets or sets (ler), Sets (modificar) o corpo da cobra no 
+        /// SnakeObject.
+        /// </summary>
         public static List<SnakePart> GetSnakeBody {
             get {
                 return SnakeObject.snakeBody;
@@ -35,7 +44,10 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à coordenada X da cobra no SnakeObject.
+        /// <summary>
+        /// Gets or sets (ler), Sets (modificar) o corpo da cobra do
+        /// SnakeObject.
+        /// </summary>
         public static int GetCordSnakeX {
             get {
                 return SnakeObject.SnakeX;
@@ -45,7 +57,10 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à coordenada Y da cobra no SnakeObject.
+        /// <summary>
+        /// Gets or sets (ler), Sets(modificar) a coordenada Y da cobra no
+        /// SnakeObject.
+        /// </summary>
         public static int GetCordSnakeY {
             get {
                 return SnakeObject.SnakeY;
@@ -55,21 +70,28 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à cabeça da cobra no SnakeObject.
+        /// <summary>
+        /// Gets (ler), Sets (modificar) a cabeça da cobra no SnakeObject.
+        /// </summary>
         public static SnakePart GetHead {
             get {
                 return SnakeObject.Head;
             }
         }
 
-        // Aceder à cauda da cobra no SnakePart.
+        /// <summary>
+        /// Gets (ler), Sets (modificar) a cauda da cobra no SnakePart.
+        /// </summary>
         public static SnakePart GetTail {
             get {
                 return SnakeObject.Tail;
             }
         }
 
-        // Aceder à direção da cobra no SnakeObject.
+        /// <summary>
+        /// Gets or sets (ler), Sets (modificar) a direção da cobra no
+        /// SnakeObject.
+        /// </summary>
         public static Direction GetDirection {
             get {
                 return SnakeObject.direction;
@@ -79,7 +101,10 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à coordenada X da comida no FoodObject.
+        /// <summary>
+        /// Gets or sets (ler), Sets (modificar) a coordenada X da comida no
+        /// FoodObject.
+        /// </summary>
         public static int GetCordFoodX {
             get {
                 return FoodObject.FoodX;
@@ -89,7 +114,10 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à coordenada Y da comida no FoodObject.
+        /// <summary>
+        /// Gets or sets (ler), Sets (modificar) a coordenada Y da comida no 
+        /// FoodObject.
+        /// </summary>
         public static int GetCordFoodY {
             get {
                 return FoodObject.FoodY;
@@ -99,7 +127,10 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à contagem do tamanho da cobra no RenderEngine.
+        /// <summary>
+        /// Gets or sets (ler), Sets (modificar) o tamanho da cobra no
+        /// RenderEngine.
+        /// </summary>
         public static int GetCount {
             get {
                 return RenderEngine.count;
@@ -109,7 +140,9 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à pontuação no GameLoop.
+        /// <summary>
+        /// Gets or sets (ler), Sets (modificar) a pontuação no GameLoop.
+        /// </summary>
         public static int GetScore {
             get {
                 return GameLoop.ScoreValue;
@@ -128,7 +161,9 @@ namespace Projeto2LP2
         // Aceder ao RenderEngine.
         private readonly RenderEngine renderEngine;
 
-        // Aceder ao input do jogador no UserInput.
+        /// <summary>
+        /// Gets (ler) o input do jogador no UserInput.
+        /// </summary>
         public ConsoleKey ConsoleKey { get => userInput.GetKey; }
 
         /// <summary>
@@ -155,6 +190,8 @@ namespace Projeto2LP2
         /// <summary>
         /// Chamar o método MainMenu no Menu.
         /// </summary>
+        /// <param name="x"> Se pode correr a intro. </param>
+        /// <param name="y"> Se pode correr o splashscreen. </param>
         public void Menu(bool x, bool y) {
             Menu menu = new Menu();
             menu.MainMenu(x, y);
@@ -169,7 +206,7 @@ namespace Projeto2LP2
         }
 
         // Array de GameObjects.
-        public GameObject[] gameObjects = {
+        private readonly GameObject[] gameObjects = {
             new FoodObject(),
             new SceneObject(),
             new SnakeObject(),
