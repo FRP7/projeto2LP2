@@ -5,7 +5,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe onde é analisado o input do jogador.
     /// </summary>
-    sealed class UserInput
+    public class UserInput
     {
         /// Input do user.
         public ConsoleKey GetKey { get; private set; }

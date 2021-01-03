@@ -7,7 +7,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe de GameOver.
     /// </summary>
-    class GameOver
+    public class GameOver
     {
         /// <summary>
         /// Página do GameOver.
@@ -16,7 +16,7 @@ namespace Projeto2LP2
         {
             Facade facade = new Facade();
 
-            string fileName = "Score.txt";
+            const string fileName = "Score.txt";
             bool retry;
 
             do
@@ -30,9 +30,9 @@ namespace Projeto2LP2
                 }
                 else {
                     using StreamWriter sr = new StreamWriter(fileName, true);
-                    sr.WriteLine(Environment.NewLine + $"Date:" +
+                    sr.WriteLine(Environment.NewLine + "Date:" +
                         $" {DateTime.Now} " +
-                        $"| Score: " + $"{Facade.GetScore}");
+                        "| Score: " + $"{Facade.GetScore}");
                 }
                 Console.WriteLine("\n\tYou have met an unfortunate end.");
                 Console.WriteLine("\n\t\tFinal score: " + Facade.GetScore);
@@ -72,9 +72,12 @@ namespace Projeto2LP2
                     facade.Menu(false, false);
                     retry = false;
                 }
-                else retry = true;
+                else
+                {
+                    retry = true;
+                }
             }
-            while (retry == true);
+            while (retry);
         }
     }
 }

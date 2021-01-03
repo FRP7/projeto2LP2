@@ -13,14 +13,24 @@ namespace Projeto2LP2
         // Corpo da cobra.
         public static List<SnakePart> snakeBody;
 
-        // Cauda da cobra.
+        /// <summary>
+        /// Gets rabo da cobra.
+        /// </summary>
         public static SnakePart Tail { get => snakeBody[0]; }
 
-        // Cabeça da cobra.
+        /// <summary>
+        /// Gets cabeça da cobra.
+        /// </summary>
         public static SnakePart Head { get => snakeBody.Last(); }
 
-        // Recolher informação da posição da cobra.
+        /// <summary>
+        /// Gets or sets coordenada x da cobra.
+        /// </summary>
         public static int SnakeX { get; set; }
+
+        /// <summary>
+        /// Gets or sets coordenada y da cobra.
+        /// </summary>
         public static int SnakeY { get; set; }
 
         public static Direction direction;

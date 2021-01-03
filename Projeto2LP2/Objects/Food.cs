@@ -5,13 +5,21 @@ namespace Projeto2LP2
     /// <summary>
     /// Struct dos stats da comida.
     /// </summary>
-    struct Food
+    public struct Food
     {
-        // Coordenadas.
+        /// <summary>
+        /// Gets or sets coordenada x da comida.
+        /// </summary>
         public int CordX { get; set; }
+
+        /// <summary>
+        /// Gets or sets coordenada y da comida.
+        /// </summary>
         public int CordY { get; set; }
 
-        // Caracter da comida.
+        /// <summary>
+        /// Gets or sets caracter da comida.
+        /// </summary>
         public char FoodChar { get; set; }
 
         /// <summary>

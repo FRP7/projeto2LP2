@@ -5,14 +5,13 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe onde é atualizada a lógica do jogo.
     /// </summary>
-    sealed class GameState
+    public class GameState
     {
         // Aceder à coordenada X do cenário no GameLoop.
         public static int GetSceneX { get => Facade.GetSceneX; }
 
         // Aceder à coordenada Y do cenário no GameLoop.
         public static int GetSceneY { get => Facade.GetSceneY; }
-
 
         // Aceder ao corpo da cobra no GameLoop.
         public static List<SnakePart> GetSnakeBody
@@ -21,7 +20,7 @@ namespace Projeto2LP2
             {
                 return Facade.GetSnakeBody;
             }
-            set 
+            set
             {
                 Facade.GetSnakeBody = value;
             }
@@ -97,7 +96,7 @@ namespace Projeto2LP2
         }
 
         // Aceder à pontuação no GameLoop.
-        public static int GetScore 
+        public static int GetScore
         {
             get
             {
