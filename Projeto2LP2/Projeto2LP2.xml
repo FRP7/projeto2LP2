@@ -164,9 +164,9 @@
             Gets informação do teclado.
             </summary>
         </member>
-        <member name="F:Projeto2LP2.GameLoop.ScoreValue">
+        <member name="P:Projeto2LP2.GameLoop.ScoreValue">
             <summary>
-            Pontuação.
+            Gets or sets pontuação.
             </summary>
         </member>
         <member name="P:Projeto2LP2.GameLoop.IsGameOver">
@@ -404,7 +404,7 @@
             Método onde é exposto o menu principal.
             </summary>
             <param name="introPlay"> Indicar se pode correr a intro. </param>
-            <param name="splashPlay"> Indicar se pode correr o splashscreen
+            <param name="splashPlay"> Indicar se pode correr o splashscreen.
             </param>
         </member>
         <member name="M:Projeto2LP2.Menu.Instructions(System.Boolean)">
@@ -558,7 +558,7 @@
             GameObject cobra.
             </summary>
         </member>
-        <member name="F:Projeto2LP2.SnakeObject.snakeBody">
+        <member name="F:Projeto2LP2.SnakeObject.SnakeBody">
             <summary>
             Corpo da cobra.
             </summary>
@@ -583,7 +583,7 @@
             Gets or sets coordenada y da cobra.
             </summary>
         </member>
-        <member name="F:Projeto2LP2.SnakeObject.direction">
+        <member name="F:Projeto2LP2.SnakeObject.SnakeDirection">
             <summary>
             Direção.
             </summary>

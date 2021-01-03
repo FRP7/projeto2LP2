@@ -14,9 +14,9 @@ namespace Projeto2LP2
         public static ConsoleKey GetKey { get; private set; }
 
         /// <summary>
-        /// Pontuação.
+        /// Gets or sets pontuação.
         /// </summary>
-        public static int ScoreValue;
+        public static int ScoreValue { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether jogo acabou.
@@ -34,6 +34,7 @@ namespace Projeto2LP2
         public void Game() {
             // Chamado no início do jogo.
             Start();
+
             // Chamado em todos os frames.
             Update();
         }
@@ -90,6 +91,7 @@ namespace Projeto2LP2
             Thread inputThread = new Thread(facade.CheckUserInput);
             inputThread.Start();
             GetKey = facade.ConsoleKey;
+
             // Fechar a thread.
             inputThread.Join();
         }

@@ -24,21 +24,25 @@ namespace Projeto2LP2
                         if (Facade.GetDirection != Direction.Down) {
                             Facade.GetDirection = Direction.Up;
                         }
+
                         break;
                     case ConsoleKey.DownArrow:
                         if (Facade.GetDirection != Direction.Up) {
                             Facade.GetDirection = Direction.Down;
                         }
+
                         break;
                     case ConsoleKey.LeftArrow:
                         if (Facade.GetDirection != Direction.Right) {
                             Facade.GetDirection = Direction.Left;
                         }
+
                         break;
                     case ConsoleKey.RightArrow:
                         if (Facade.GetDirection != Direction.Left) {
                             Facade.GetDirection = Direction.Right;
                         }
+
                         break;
                     case ConsoleKey.Escape:
                         facade.Menu(false, false);

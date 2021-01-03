@@ -37,10 +37,10 @@ namespace Projeto2LP2
         /// </summary>
         public static List<SnakePart> GetSnakeBody {
             get {
-                return SnakeObject.snakeBody;
+                return SnakeObject.SnakeBody;
             }
             set {
-                SnakeObject.snakeBody = value;
+                SnakeObject.SnakeBody = value;
             }
         }
 
@@ -94,10 +94,10 @@ namespace Projeto2LP2
         /// </summary>
         public static Direction GetDirection {
             get {
-                return SnakeObject.direction;
+                return SnakeObject.SnakeDirection;
             }
             set {
-                SnakeObject.direction = value;
+                SnakeObject.SnakeDirection = value;
             }
         }
 

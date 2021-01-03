@@ -13,17 +13,17 @@ namespace Projeto2LP2
         /// <summary>
         /// Corpo da cobra.
         /// </summary>
-        public static List<SnakePart> snakeBody;
+        public static List<SnakePart> SnakeBody;
 
         /// <summary>
         /// Gets rabo da cobra.
         /// </summary>
-        public static SnakePart Tail { get => snakeBody[0]; }
+        public static SnakePart Tail { get => SnakeBody[0]; }
 
         /// <summary>
         /// Gets cabeça da cobra.
         /// </summary>
-        public static SnakePart Head { get => snakeBody.Last(); }
+        public static SnakePart Head { get => SnakeBody.Last(); }
 
         /// <summary>
         /// Gets or sets coordenada x da cobra.
@@ -38,7 +38,7 @@ namespace Projeto2LP2
         /// <summary>
         /// Direção.
         /// </summary>
-        public static Direction direction;
+        public static Direction SnakeDirection;
 
         /// <summary>
         /// Método para ser chamado quando o jogo começa.
@@ -49,11 +49,11 @@ namespace Projeto2LP2
             SnakeY = Facade.GetSceneY / 2;
 
             // Definir a direção inicial.
-            direction = Direction.Up;
+            SnakeDirection = Direction.Up;
             Facade.GetDirection = Direction.None;
 
             // Definir o tamanho da cobra.
-            snakeBody = new List<SnakePart> {
+            SnakeBody = new List<SnakePart> {
                 new SnakePart(SnakeX, SnakeY, '@'),
             };
         }
@@ -108,17 +108,17 @@ namespace Projeto2LP2
         /// Verificar e atualizar a posição da cobra de acordo com a direção.
         /// </summary>
         private void SnakePositionCheck() {
-            if (direction == Direction.Up) {
+            if (SnakeDirection == Direction.Up) {
                 if (Facade.GetCordSnakeY > 0) {
                     Facade.GetCordSnakeY--;
                 }
-            } else if (direction == Direction.Down) {
+            } else if (SnakeDirection == Direction.Down) {
                 Facade.GetCordSnakeY++;
-            } else if (direction == Direction.Left) {
+            } else if (SnakeDirection == Direction.Left) {
                 if (GameState.GetCordSnakeX > 0) {
                     Facade.GetCordSnakeX--;
                 }
-            } else if (direction == Direction.Right) {
+            } else if (SnakeDirection == Direction.Right) {
                 Facade.GetCordSnakeX++;
             }
         }

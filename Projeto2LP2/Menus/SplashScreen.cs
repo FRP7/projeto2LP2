@@ -32,24 +32,30 @@ namespace Projeto2LP2
                     "    |   |   |  |  |  |  ||  ||  |  \\     | ");
                 Console.WriteLine("\t\t\t   \\___|__|__|__|__|__|\\_|_____|" +
                     "    |___|___|__|__|__|__|____|__|__|\\____| \n\n");
+
                 // Enquanto o jogador não clicar
                 while (!Console.KeyAvailable)
                 {
                     Console.WriteLine("\t\t\t\t\t\tPress ENTER to continue.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\t\t\t\t\t\tPress       to continue.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
+
                 // Variável que contêm a opção do jogador
                 ConsoleKey key = Console.ReadKey(true).Key;
 

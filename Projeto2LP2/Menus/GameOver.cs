@@ -24,10 +24,9 @@ namespace Projeto2LP2
                 Console.Clear();
 
                 // Escrever no ficheiro o score adquirido
-                if(File.Exists(fileName)) {
+                if (File.Exists(fileName)) {
                     File.AppendAllText(fileName, Environment.NewLine +
-                   $"Date: {DateTime.Now} | Score: " +
-                   $"{Facade.GetScore}");
+                   $"Date: {DateTime.Now} | Score: {Facade.GetScore}");
                 }
                 else {
                     using StreamWriter sr = new StreamWriter(fileName, true);
@@ -35,6 +34,7 @@ namespace Projeto2LP2
                         $" {DateTime.Now} " +
                         "| Score: " + $"{Facade.GetScore}");
                 }
+
                 Console.WriteLine("\n\tYou have met an unfortunate end.");
                 Console.WriteLine("\n\t\tFinal score: " + Facade.GetScore);
 
@@ -52,8 +52,10 @@ namespace Projeto2LP2
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");

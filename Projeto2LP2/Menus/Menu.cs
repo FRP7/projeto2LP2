@@ -13,11 +13,12 @@ namespace Projeto2LP2
         /// Método onde é exposto o menu principal.
         /// </summary>
         /// <param name="introPlay"> Indicar se pode correr a intro. </param>
-        /// <param name="splashPlay"> Indicar se pode correr o splashscreen
+        /// <param name="splashPlay"> Indicar se pode correr o splashscreen.
         /// </param>
         public void MainMenu(bool introPlay, bool splashPlay)
         {
             ConsoleKey key;
+
             // Inicializações necessárias
             Intro intro = new Intro();
             SplashScreen splash = new SplashScreen();
