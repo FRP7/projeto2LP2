@@ -22,6 +22,7 @@ namespace Projeto2LP2
             do
             {
                 Console.Clear();
+
                 // Escrever no ficheiro o score adquirido
                 if(File.Exists(fileName)) {
                     File.AppendAllText(fileName, Environment.NewLine +
@@ -58,12 +59,15 @@ namespace Projeto2LP2
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
+
                     // Posicionar o cursor na linha anterior
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
+
                     // Apagar a linha anterior
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
+
                 // Variável que contem a opção do jogador
                 ConsoleKey key = Console.ReadKey(true).Key;
 

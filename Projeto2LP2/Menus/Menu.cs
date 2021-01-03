@@ -9,8 +9,6 @@ namespace Projeto2LP2
     /// </summary>
     public class Menu
     {
-        private ConsoleKey key;
-
         /// <summary>
         /// Método onde é exposto o menu principal.
         /// </summary>
@@ -19,6 +17,7 @@ namespace Projeto2LP2
         /// </param>
         public void MainMenu(bool introPlay, bool splashPlay)
         {
+            ConsoleKey key;
             // Inicializações necessárias
             Intro intro = new Intro();
             SplashScreen splash = new SplashScreen();
@@ -95,6 +94,7 @@ namespace Projeto2LP2
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
         private void Instructions(bool retry)
         {
+            ConsoleKey key;
             do
             {
                 Console.Clear();
@@ -146,6 +146,7 @@ namespace Projeto2LP2
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
         private void Score(bool retry)
         {
+            ConsoleKey key;
             do
             {
                 Console.Clear();
@@ -194,6 +195,7 @@ namespace Projeto2LP2
         /// <param name="retry"> Indicar se pode voltar atrás. </param>
         private void Credits(bool retry)
         {
+            ConsoleKey key;
             do
             {
                 Console.Clear();

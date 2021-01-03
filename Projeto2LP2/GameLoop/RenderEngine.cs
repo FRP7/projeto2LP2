@@ -80,7 +80,7 @@ namespace Projeto2LP2
         /// </summary>
         private void RenderScene() {
             facade.GameObjects[1].Render();
-            if(Facade.GetDirection != Direction.None) {
+            if (Facade.GetDirection != Direction.None) {
                 count++;
             }
         }
