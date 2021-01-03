@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Francisco\\Documents\\GitHub\\projeto2LP2\\Projeto2LP2\\Projeto2LP2.csproj": {}
+    "C:\\Users\\frelv\\Documents\\Github\\projeto2LP2\\Projeto2LP2\\Projeto2LP2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Francisco\\Documents\\GitHub\\projeto2LP2\\Projeto2LP2\\Projeto2LP2.csproj": {
+    "C:\\Users\\frelv\\Documents\\Github\\projeto2LP2\\Projeto2LP2\\Projeto2LP2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Francisco\\Documents\\GitHub\\projeto2LP2\\Projeto2LP2\\Projeto2LP2.csproj",
+        "projectUniqueName": "C:\\Users\\frelv\\Documents\\Github\\projeto2LP2\\Projeto2LP2\\Projeto2LP2.csproj",
         "projectName": "Projeto2LP2",
-        "projectPath": "C:\\Users\\Francisco\\Documents\\GitHub\\projeto2LP2\\Projeto2LP2\\Projeto2LP2.csproj",
-        "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Francisco\\Documents\\GitHub\\projeto2LP2\\Projeto2LP2\\obj\\",
+        "projectPath": "C:\\Users\\frelv\\Documents\\Github\\projeto2LP2\\Projeto2LP2\\Projeto2LP2.csproj",
+        "packagesPath": "C:\\Users\\frelv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frelv\\Documents\\Github\\projeto2LP2\\Projeto2LP2\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frelv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\Francisco\\Downloads": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -40,6 +37,32 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Roslynator.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Roslynator.Formatting.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.16.0.25740, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
