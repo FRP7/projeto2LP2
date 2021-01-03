@@ -7,8 +7,14 @@ namespace Projeto2LP2
     /// </summary>
     public class FoodObject : GameObject
     {
-        // Recolher informação da posição da comida.
+        /// <summary>
+        /// Gets or sets coordenada x da comida.
+        /// </summary>
         public static int FoodX { get; set; }
+
+        /// <summary>
+        /// Gets or sets coordenada y da comida.
+        /// </summary>
         public static int FoodY { get; set; }
 
         /// <summary>

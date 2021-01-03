@@ -8,16 +8,24 @@ namespace Projeto2LP2
     /// </summary>
     public class GameLoop
     {
-        // Recolher informação do teclado definida no UserInput.
+        /// <summary>
+        /// Gets informação do teclado.
+        /// </summary>
         public static ConsoleKey GetKey { get; private set; }
 
-        // Pontuação.
+        /// <summary>
+        /// Pontuação.
+        /// </summary>
         public static int ScoreValue;
 
-        // Indicar se o jogo acabou.
+        /// <summary>
+        /// Indicar se o jogo acabou.
+        /// </summary>
         public static bool isGameOver;
 
-        //Facade
+        /// <summary>
+        /// Facade.
+        /// </summary>
         private Facade facade;
 
         /// <summary>

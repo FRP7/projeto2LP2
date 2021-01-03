@@ -8,37 +8,59 @@ namespace Projeto2LP2
     /// </summary>
     public class RenderEngine
     {
-        // Contar o tamanho da cobra.
+        /// <summary>
+        /// Contar o tamanho da cobra.
+        /// </summary>
         public static int count = 0;
 
-        // Aceder à coordenada X do cenário no GameLoop.
+        /// <summary>
+        /// Gets coordenada X do cenário no GameLoop.
+        /// </summary>
         public static int GetSceneX { get => Facade.GetSceneX; }
 
-        // Aceder à coordenada Y do cenário no GameLoop.
+        /// <summary>
+        /// Gets coordenada Y do cenário no GameLoop.
+        /// </summary>
         public static int GetSceneY { get => Facade.GetSceneY; }
 
-        // Aceder à coordenada X da cobra no GameLoop.
+        /// <summary>
+        /// Gets coordenada X da cobra no GameLoop.
+        /// </summary>
         public static int GetSnakeX { get => Facade.GetCordSnakeX; }
 
-        // Aceder à coordenada Y da cobra no GameLoop.
+        /// <summary>
+        /// Gets coordenada y da cobra.
+        /// </summary>
         public static int GetSnakeY { get => Facade.GetCordSnakeY; }
 
-        // Aceder ao corpo da cobra no GameLoop.
+        /// <summary>
+        /// Gets corpo da cobra.
+        /// </summary>
         public static List<SnakePart> SnakeBody { get => Facade.GetSnakeBody; }
 
-        // Aceder à cabeça da cobra no GameLoop.
+        /// <summary>
+        /// Gets cabeça da cobra no GameLoop.
+        /// </summary>
         public static SnakePart Head { get => Facade.GetHead; }
 
-        // Aceder à cauda da cobra no GameLoop.
+        /// <summary>
+        /// Gets cauda da cobra no GameLoop.
+        /// </summary>
         public static SnakePart Tail { get => Facade.GetTail; }
 
-        // Aceder à coordenada X da comida no GameLoop.
+        /// <summary>
+        /// Gets coordenada X da comida no GameLoop.
+        /// </summary>
         public static int GetFoodX { get => Facade.GetCordFoodX; }
 
-        // Aceder à coordenada Y da comida no GameLoop.
+        /// <summary>
+        /// Gets coordenada Y da comida no GameLoop.
+        /// </summary>
         public static int GetFoodY { get => Facade.GetCordFoodY; }
 
-        // Aceder à pontuação no GameLoop.
+        /// <summary>
+        /// Gets pontuação no GameLoop.
+        /// </summary>
         public static int GetScore { get => Facade.GetScore; }
 
         private Facade facade;

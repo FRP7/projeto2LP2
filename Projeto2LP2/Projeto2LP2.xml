@@ -159,6 +159,26 @@
             Classe do ciclo de jogo.
             </summary>
         </member>
+        <member name="P:Projeto2LP2.GameLoop.GetKey">
+            <summary>
+            Gets informação do teclado.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.GameLoop.ScoreValue">
+            <summary>
+            Pontuação.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.GameLoop.isGameOver">
+            <summary>
+            Indicar se o jogo acabou.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.GameLoop.facade">
+            <summary>
+            Facade.
+            </summary>
+        </member>
         <member name="M:Projeto2LP2.GameLoop.Game">
             <summary>
             Ciclo de jogo.
@@ -262,6 +282,61 @@
         <member name="T:Projeto2LP2.RenderEngine">
             <summary>
             Classe onde é renderizado o jogo.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.RenderEngine.count">
+            <summary>
+            Contar o tamanho da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetSceneX">
+            <summary>
+            Gets coordenada X do cenário no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetSceneY">
+            <summary>
+            Gets coordenada Y do cenário no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetSnakeX">
+            <summary>
+            Gets coordenada X da cobra no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetSnakeY">
+            <summary>
+            Gets coordenada y da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.SnakeBody">
+            <summary>
+            Gets corpo da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.Head">
+            <summary>
+            Gets cabeça da cobra no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.Tail">
+            <summary>
+            Gets cauda da cobra no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetFoodX">
+            <summary>
+            Gets coordenada X da comida no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetFoodY">
+            <summary>
+            Gets coordenada Y da comida no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetScore">
+            <summary>
+            Gets pontuação no GameLoop.
             </summary>
         </member>
         <member name="M:Projeto2LP2.RenderEngine.Render">
@@ -401,6 +476,16 @@
         <member name="T:Projeto2LP2.FoodObject">
             <summary>
             GameObject da comida.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.FoodObject.FoodX">
+            <summary>
+            Gets or sets coordenada x da comida.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.FoodObject.FoodY">
+            <summary>
+            Gets or sets coordenada y da comida.
             </summary>
         </member>
         <member name="M:Projeto2LP2.FoodObject.Start">
