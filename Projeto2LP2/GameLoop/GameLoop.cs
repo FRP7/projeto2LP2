@@ -43,13 +43,13 @@ namespace Projeto2LP2
             isGameOver = false;
 
             // Start do cenário.
-            facade.gameObjects[1].Start();
+            facade.GameObjects[1].Start();
 
             // Start da cobra.
-            facade.gameObjects[2].Start();
+            facade.GameObjects[2].Start();
 
             // Star da comida.
-            facade.gameObjects[0].Start();
+            facade.GameObjects[0].Start();
 
             // Definir o score inicial.
             ScoreValue = 0;

@@ -205,8 +205,10 @@ namespace Projeto2LP2
             gameOver.GameOverMenu();
         }
 
-        // Array de GameObjects.
-        public readonly GameObject[] gameObjects = {
+        /// <summary>
+        /// Array de GameObjects.
+        /// </summary>
+        public readonly GameObject[] GameObjects = {
             new FoodObject(),
             new SceneObject(),
             new SnakeObject(),

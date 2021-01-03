@@ -144,6 +144,11 @@
             Chamar o método GameOverMenu no GameOver.
             </summary>
         </member>
+        <member name="F:Projeto2LP2.Facade.GameObjects">
+            <summary>
+            Array de GameObjects.
+            </summary>
+        </member>
         <member name="M:Projeto2LP2.Facade.#ctor">
             <summary>
             Inicializar as variáveis.
@@ -187,6 +192,61 @@
         <member name="T:Projeto2LP2.GameState">
             <summary>
             Classe onde é atualizada a lógica do jogo.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetSceneX">
+            <summary>
+            Gets coordenada X do cenário no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetSceneY">
+            <summary>
+            Gets coordenada Y do cenário no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetSnakeBody">
+            <summary>
+            Gets or sets corpo da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetCordSnakeX">
+            <summary>
+            Gets or sets coordenada x da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetCordSnakeY">
+            <summary>
+            Gets or sets coordenada Y da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetHead">
+            <summary>
+            Gets cabeça da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetTail">
+            <summary>
+            Gets cauda da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetDirection">
+            <summary>
+            Gets direção da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetCordFoodX">
+            <summary>
+            Gets or sets coordenada x da comida.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetCordFoodY">
+            <summary>
+            Gets or sets coordenada Y da comida.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetScore">
+            <summary>
+            Gets pontuação no GameLoop.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameState.Update">

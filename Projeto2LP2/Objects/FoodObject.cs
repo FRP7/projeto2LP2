@@ -5,7 +5,7 @@ namespace Projeto2LP2
     /// <summary>
     /// GameObject da comida.
     /// </summary>
-    class FoodObject : GameObject
+    public class FoodObject : GameObject
     {
         // Recolher informação da posição da comida.
         public static int FoodX { get; set; }
@@ -15,7 +15,6 @@ namespace Projeto2LP2
         /// Método para ser chamado quando o jogo começa.
         /// </summary>
         public override void Start() {
-
             // Definir a posição da comida inicial.
             FoodX = (Facade.GetSceneX / 2) - 5;
             FoodY = (Facade.GetSceneY / 2) - 5;
@@ -35,7 +34,7 @@ namespace Projeto2LP2
         /// Método de renderização.
         /// </summary>
         public override void Render() {
-            Console.SetCursorPosition(Facade.GetCordFoodX, 
+            Console.SetCursorPosition(Facade.GetCordFoodX,
                 Facade.GetCordFoodY);
             Food food = new Food(Facade.GetCordFoodX, Facade.GetCordFoodY,
                 '$');

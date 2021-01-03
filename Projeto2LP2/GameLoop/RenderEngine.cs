@@ -57,7 +57,7 @@ namespace Projeto2LP2
         /// Renderizar o cenário.
         /// </summary>
         private void RenderScene() {
-            facade.gameObjects[1].Render();
+            facade.GameObjects[1].Render();
             if(Facade.GetDirection != Direction.None) {
                 count++;
             }
@@ -67,14 +67,14 @@ namespace Projeto2LP2
         /// Renderizar a cobra.
         /// </summary>
         private void RenderSnake() {
-            facade.gameObjects[2].Render();
+            facade.GameObjects[2].Render();
         }
 
         /// <summary>
         /// Renderizar a comida.
         /// </summary>
         private void RenderFood() {
-            facade.gameObjects[0].Render();
+            facade.GameObjects[0].Render();
         }
     }
 }

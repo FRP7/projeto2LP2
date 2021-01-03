@@ -6,7 +6,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Intro do jogo.
     /// </summary>
-    class Intro
+    public class Intro
     {
         /// <summary>
         /// Método que reproduz a intro do jogo.

@@ -77,7 +77,8 @@ namespace Projeto2LP2
             if (Facade.GetCordSnakeX >= 0 && Facade.GetCordSnakeY >= 0) {
                 if (Facade.GetCount < Facade.GetSnakeBody.Count) {
                     Thread.Sleep(100);
-                    Console.SetCursorPosition(Facade.GetCordSnakeX,
+                    Console.SetCursorPosition(
+                        Facade.GetCordSnakeX,
                         Facade.GetCordSnakeY);
                     Facade.GetSnakeBody[Facade.GetCount].CordX =
                         Facade.GetCordSnakeX;
@@ -86,12 +87,13 @@ namespace Projeto2LP2
                     Console.Write(Facade.GetSnakeBody[Facade.GetCount].Part);
                 } else if (Facade.GetCount > Facade.GetSnakeBody.Count - 1) {
                     Thread.Sleep(500);
-                    Console.SetCursorPosition(Facade.GetTail.CordX,
+                    Console.SetCursorPosition(
+                        Facade.GetTail.CordX,
                         Facade.GetTail.CordY);
                     Console.Write(' ');
                     Facade.GetSnakeBody.RemoveAt(0);
-                    Facade.GetSnakeBody.Add(new SnakePart(Facade.GetCordSnakeX,
-                        Facade.GetCordSnakeY, '@'));
+                    Facade.GetSnakeBody.Add(new SnakePart(
+                        Facade.GetCordSnakeX, Facade.GetCordSnakeY, '@'));
                     Facade.GetCount -= 2;
                 }
             }
@@ -124,7 +126,8 @@ namespace Projeto2LP2
                 Facade.GetHead.CordY == Facade.GetCordFoodY) {
                 Facade.GetSnakeBody.Add(new SnakePart(
                     Facade.GetCordSnakeX, Facade.GetCordSnakeY, '@'));
-                Console.SetCursorPosition(Facade.GetCordFoodX,
+                Console.SetCursorPosition(
+                    Facade.GetCordFoodX,
                     Facade.GetCordFoodY);
                 Console.Write(' ');
                 FoodObject foodObject = new FoodObject();
@@ -154,12 +157,15 @@ namespace Projeto2LP2
             if (Facade.GetCordSnakeX == 0) {
                 Facade.IsGameOver = true;
             }
+
             if (Facade.GetCordSnakeX == Facade.GetSceneX - 1) {
                 Facade.IsGameOver = true;
             }
+
             if (Facade.GetCordSnakeY == 0) {
                 Facade.IsGameOver = true;
             }
+
             if (Facade.GetCordSnakeY == Facade.GetSceneY - 1) {
                 Facade.IsGameOver = true;
             }

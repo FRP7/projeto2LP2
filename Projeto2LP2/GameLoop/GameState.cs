@@ -7,13 +7,19 @@ namespace Projeto2LP2
     /// </summary>
     public class GameState
     {
-        // Aceder à coordenada X do cenário no GameLoop.
+        /// <summary>
+        /// Gets coordenada X do cenário no GameLoop.
+        /// </summary>
         public static int GetSceneX { get => Facade.GetSceneX; }
 
-        // Aceder à coordenada Y do cenário no GameLoop.
+        /// <summary>
+        /// Gets coordenada Y do cenário no GameLoop.
+        /// </summary>
         public static int GetSceneY { get => Facade.GetSceneY; }
 
-        // Aceder ao corpo da cobra no GameLoop.
+        /// <summary>
+        /// Gets or sets corpo da cobra.
+        /// </summary>
         public static List<SnakePart> GetSnakeBody
         {
             get
@@ -26,7 +32,9 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à coordenada X da cobra no GameLoop.
+        /// <summary>
+        /// Gets or sets coordenada x da cobra.
+        /// </summary>
         public static int GetCordSnakeX
         {
             get
@@ -39,7 +47,9 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à coordenada Y da cobra no GameLoop.
+        /// <summary>
+        /// Gets or sets coordenada Y da cobra.
+        /// </summary>
         public static int GetCordSnakeY
         {
             get
@@ -52,24 +62,32 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à cabeça da cobra no GameLoop.
+        /// <summary>
+        /// Gets cabeça da cobra.
+        /// </summary>
         public static SnakePart GetHead {
             get {
                 return Facade.GetHead;
             }
         }
 
-        // Aceder à cauda da cobra no GameLoop.
+        /// <summary>
+        /// Gets cauda da cobra.
+        /// </summary>
         public static SnakePart GetTail {
             get {
                 return Facade.GetTail;
             }
         }
 
-        // Aceder à direção da cobra no GameLoop.
+        /// <summary>
+        /// Gets direção da cobra.
+        /// </summary>
         public static Direction GetDirection { get => Facade.GetDirection; }
 
-        // Aceder à coordenada X da comida no GameLoop.
+        /// <summary>
+        /// Gets or sets coordenada x da comida.
+        /// </summary>
         public static int GetCordFoodX
         {
             get
@@ -82,7 +100,9 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à coordenada Y da comida no GameLoop.
+        /// <summary>
+        /// Gets or sets coordenada Y da comida.
+        /// </summary>
         public static int GetCordFoodY
         {
             get
@@ -95,7 +115,9 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder à pontuação no GameLoop.
+        /// <summary>
+        /// Gets pontuação no GameLoop.
+        /// </summary>
         public static int GetScore
         {
             get
@@ -118,7 +140,7 @@ namespace Projeto2LP2
         private void SnakeUpdate()
         {
             Facade facade = new Facade();
-            facade.gameObjects[2].Update();
+            facade.GameObjects[2].Update();
         }
     }
 }
