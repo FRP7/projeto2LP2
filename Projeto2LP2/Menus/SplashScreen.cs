@@ -6,7 +6,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe do SplashScreen.
     /// </summary>
-    class SplashScreen
+    public class SplashScreen
     {
         /// <summary>
         /// Método da página que aparece antes de entrar para o menu.
@@ -53,10 +53,9 @@ namespace Projeto2LP2
                 // Variável que contêm a opção do jogador
                 ConsoleKey key = Console.ReadKey(true).Key;
 
-                if (key == ConsoleKey.Enter) retry = false;
-                else retry = true;
+                retry = key != ConsoleKey.Enter;
             }
-            while (retry == true);
+            while (retry);
         }
     }
 }

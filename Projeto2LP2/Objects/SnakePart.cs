@@ -7,11 +7,19 @@ namespace Projeto2LP2
     /// </summary>
     public class SnakePart
     {
-        // Coordenadas.
+        /// <summary>
+        /// Gets or sets coordenada x da parte da cobra.
+        /// </summary>
         public int CordX { get; set; }
+
+        /// <summary>
+        /// Gets or sets coordenada y da parte da cobra.
+        /// </summary>
         public int CordY { get; set; }
 
-        // Caracter da parte.
+        /// <summary>
+        /// Gets or sets caracter da parte.
+        /// </summary>
         public char Part { get; set; }
 
         /// <summary>

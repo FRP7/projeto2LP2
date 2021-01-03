@@ -290,7 +290,9 @@
             </summary>
         </member>
         <member name="P:Projeto2LP2.UserInput.GetKey">
-            Input do user.
+            <summary>
+            Gets or sets Input do user.
+            </summary>
         </member>
         <member name="M:Projeto2LP2.UserInput.CheckUserInput">
             <summary>
@@ -441,6 +443,16 @@
             GameObject do cenário.
             </summary>
         </member>
+        <member name="P:Projeto2LP2.SceneObject.SceneX">
+            <summary>
+            Gets tamanho horizontal do cenário.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SceneObject.SceneY">
+            <summary>
+            Gets tamanho vertical do cenário.
+            </summary>
+        </member>
         <member name="M:Projeto2LP2.SceneObject.Start">
             <summary>
             Método para ser chamado quando o jogo começa.
@@ -519,6 +531,21 @@
         <member name="T:Projeto2LP2.SnakePart">
             <summary>
             Classe das uma partes da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakePart.CordX">
+            <summary>
+            Gets or sets coordenada x da parte da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakePart.CordY">
+            <summary>
+            Gets or sets coordenada y da parte da cobra.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakePart.Part">
+            <summary>
+            Gets or sets caracter da parte.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakePart.#ctor(System.Int32,System.Int32,System.Char)">

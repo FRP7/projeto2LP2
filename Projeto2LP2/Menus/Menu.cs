@@ -7,7 +7,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe do menu principal.
     /// </summary>
-    class Menu
+    public class Menu
     {
         private ConsoleKey key;
 

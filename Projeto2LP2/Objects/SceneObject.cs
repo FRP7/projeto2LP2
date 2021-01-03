@@ -7,8 +7,14 @@ namespace Projeto2LP2
     /// </summary>
     public class SceneObject : GameObject
     {
-        // Tamanho do cenário.
+        /// <summary>
+        /// Gets tamanho horizontal do cenário.
+        /// </summary>
         public static int SceneX { get; private set; }
+
+        /// <summary>
+        /// Gets tamanho vertical do cenário.
+        /// </summary>
         public static int SceneY { get; private set; }
 
         /// <summary>
