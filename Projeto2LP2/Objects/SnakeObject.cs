@@ -10,7 +10,9 @@ namespace Projeto2LP2
     /// </summary>
     public class SnakeObject : GameObject
     {
-        // Corpo da cobra.
+        /// <summary>
+        /// Corpo da cobra.
+        /// </summary>
         public static List<SnakePart> snakeBody;
 
         /// <summary>
@@ -33,6 +35,9 @@ namespace Projeto2LP2
         /// </summary>
         public static int SnakeY { get; set; }
 
+        /// <summary>
+        /// Direção.
+        /// </summary>
         public static Direction direction;
 
         /// <summary>
@@ -44,12 +49,12 @@ namespace Projeto2LP2
             SnakeY = Facade.GetSceneY / 2;
 
             // Definir a direção inicial.
-            direction = new Direction();
+            direction = Direction.Up;
             Facade.GetDirection = Direction.None;
 
             // Definir o tamanho da cobra.
             snakeBody = new List<SnakePart> {
-                new SnakePart(SnakeX, SnakeY, '@')
+                new SnakePart(SnakeX, SnakeY, '@'),
             };
         }
 

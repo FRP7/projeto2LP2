@@ -286,7 +286,7 @@
         </member>
         <member name="P:Projeto2LP2.RenderEngine.Count">
             <summary>
-            Contar o tamanho da cobra.
+            Gets or sets contar o tamanho da cobra.
             </summary>
         </member>
         <member name="P:Projeto2LP2.RenderEngine.GetSceneX">
@@ -558,6 +558,11 @@
             GameObject cobra.
             </summary>
         </member>
+        <member name="F:Projeto2LP2.SnakeObject.snakeBody">
+            <summary>
+            Corpo da cobra.
+            </summary>
+        </member>
         <member name="P:Projeto2LP2.SnakeObject.Tail">
             <summary>
             Gets rabo da cobra.
@@ -576,6 +581,11 @@
         <member name="P:Projeto2LP2.SnakeObject.SnakeY">
             <summary>
             Gets or sets coordenada y da cobra.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.SnakeObject.direction">
+            <summary>
+            Direção.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.Start">
