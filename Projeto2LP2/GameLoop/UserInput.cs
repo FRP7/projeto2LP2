@@ -8,7 +8,7 @@ namespace Projeto2LP2
     public class UserInput
     {
         /// <summary>
-        /// Gets or sets Input do user.
+        /// Gets input do user.
         /// </summary>
         public ConsoleKey GetKey { get; private set; }
 

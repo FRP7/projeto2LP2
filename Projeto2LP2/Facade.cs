@@ -133,10 +133,10 @@ namespace Projeto2LP2
         /// </summary>
         public static int GetCount {
             get {
-                return RenderEngine.count;
+                return RenderEngine.Count;
             }
             set {
-                RenderEngine.count = value;
+                RenderEngine.Count = value;
             }
         }
 

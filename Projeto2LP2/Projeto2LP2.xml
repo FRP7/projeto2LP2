@@ -284,7 +284,7 @@
             Classe onde é renderizado o jogo.
             </summary>
         </member>
-        <member name="F:Projeto2LP2.RenderEngine.count">
+        <member name="P:Projeto2LP2.RenderEngine.Count">
             <summary>
             Contar o tamanho da cobra.
             </summary>
@@ -366,7 +366,7 @@
         </member>
         <member name="P:Projeto2LP2.UserInput.GetKey">
             <summary>
-            Gets or sets Input do user.
+            Gets input do user.
             </summary>
         </member>
         <member name="M:Projeto2LP2.UserInput.CheckUserInput">

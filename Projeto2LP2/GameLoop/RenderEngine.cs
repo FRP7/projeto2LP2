@@ -9,9 +9,9 @@ namespace Projeto2LP2
     public class RenderEngine
     {
         /// <summary>
-        /// Contar o tamanho da cobra.
+        /// Gets or sets contar o tamanho da cobra.
         /// </summary>
-        public static int count = 0;
+        public static int Count { get; set; }
 
         /// <summary>
         /// Gets coordenada X do cenário no GameLoop.
@@ -81,7 +81,7 @@ namespace Projeto2LP2
         private void RenderScene() {
             facade.GameObjects[1].Render();
             if (Facade.GetDirection != Direction.None) {
-                count++;
+                Count++;
             }
         }
 
