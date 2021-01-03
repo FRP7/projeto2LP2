@@ -24,10 +24,10 @@ namespace Projeto2LP2
         /// </summary>
         public static bool IsGameOver {
             get {
-                return GameLoop.isGameOver;
+                return GameLoop.IsGameOver;
             }
             set {
-                GameLoop.isGameOver = value;
+                GameLoop.IsGameOver = value;
             }
         }
 

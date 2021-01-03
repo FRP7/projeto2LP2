@@ -169,9 +169,9 @@
             Pontuação.
             </summary>
         </member>
-        <member name="F:Projeto2LP2.GameLoop.isGameOver">
+        <member name="P:Projeto2LP2.GameLoop.IsGameOver">
             <summary>
-            Indicar se o jogo acabou.
+            Gets or sets a value indicating whether jogo acabou.
             </summary>
         </member>
         <member name="F:Projeto2LP2.GameLoop.facade">

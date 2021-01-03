@@ -19,9 +19,9 @@ namespace Projeto2LP2
         public static int ScoreValue;
 
         /// <summary>
-        /// Indicar se o jogo acabou.
+        /// Gets or sets a value indicating whether jogo acabou.
         /// </summary>
-        public static bool isGameOver;
+        public static bool IsGameOver { get; set; }
 
         /// <summary>
         /// Facade.
@@ -45,7 +45,7 @@ namespace Projeto2LP2
             facade = new Facade();
 
             // Inicializar bool.
-            isGameOver = false;
+            IsGameOver = false;
 
             // Start do cenário.
             facade.GameObjects[1].Start();
@@ -67,7 +67,7 @@ namespace Projeto2LP2
         ///  Método que corre todos os frames.
         /// </summary>
         private void Update() {
-            while (!isGameOver) {
+            while (!IsGameOver) {
                 // Verificar o input do jogador.
                 CheckUserInput();
 
