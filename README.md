@@ -200,3 +200,5 @@ Snake.prototype.collision = function () {
 Para o Nuno criar o texto da *intro* facilmente, ele utilizou este website para
 gerar o texto nesse estilo:
 https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
+Também consultámos os slides das aulas e a documentação do C# da *Microsoft*.
