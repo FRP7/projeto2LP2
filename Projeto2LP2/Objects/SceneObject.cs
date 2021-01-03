@@ -5,7 +5,7 @@ namespace Projeto2LP2
     /// <summary>
     /// GameObject do cenário.
     /// </summary>
-    class SceneObject : GameObject
+    public class SceneObject : GameObject
     {
         // Tamanho do cenário.
         public static int SceneX { get; private set; }
@@ -15,7 +15,6 @@ namespace Projeto2LP2
         /// Método para ser chamado quando o jogo começa.
         /// </summary>
         public override void Start() {
-
             // Definir o tamanho do cenário.
             SceneX = 35;
             SceneY = 16;
@@ -25,7 +24,6 @@ namespace Projeto2LP2
         /// Método para ser chamado continuamente ao longo do jogo.
         /// </summary>
         public override void Update() {
-
         }
 
         /// <summary>

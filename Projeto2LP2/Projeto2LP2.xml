@@ -9,9 +9,112 @@
             Enum que indica a direção da cobra.
             </summary>
         </member>
+        <member name="F:Projeto2LP2.Direction.Up">
+            <summary>
+            Para cima.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.Down">
+            <summary>
+            Para baixo.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.Left">
+            <summary>
+            Para a esquerda.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.Right">
+            <summary>
+            Para a direita.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.None">
+            <summary>
+            Nenhuma direção definida.
+            </summary>
+        </member>
         <member name="T:Projeto2LP2.Facade">
             <summary>
             Classe que tenta tornar o código menos esparguete.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetSceneX">
+            <summary>
+            Gets (ler) Coordenada X do cenário no SceneObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetSceneY">
+            <summary>
+            Gets (ler) Coordenada Y do cenário no SceneObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.IsGameOver">
+            <summary>
+            Gets or sets a value indicating whether gets (ler) Sets
+            (modificar) a indicação se o jogo acabou no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetSnakeBody">
+            <summary>
+            Gets or sets (ler), Sets (modificar) o corpo da cobra no
+            SnakeObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCordSnakeX">
+            <summary>
+            Gets or sets (ler), Sets (modificar) o corpo da cobra do
+            SnakeObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCordSnakeY">
+            <summary>
+            Gets or sets (ler), Sets(modificar) a coordenada Y da cobra no
+            SnakeObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetHead">
+            <summary>
+            Gets (ler), Sets (modificar) a cabeça da cobra no SnakeObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetTail">
+            <summary>
+            Gets (ler), Sets (modificar) a cauda da cobra no SnakePart.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetDirection">
+            <summary>
+            Gets or sets (ler), Sets (modificar) a direção da cobra no
+            SnakeObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCordFoodX">
+            <summary>
+            Gets or sets (ler), Sets (modificar) a coordenada X da comida no
+            FoodObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCordFoodY">
+            <summary>
+            Gets or sets (ler), Sets (modificar) a coordenada Y da comida no
+            FoodObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCount">
+            <summary>
+            Gets or sets (ler), Sets (modificar) o tamanho da cobra no
+            RenderEngine.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetScore">
+            <summary>
+            Gets or sets (ler), Sets (modificar) a pontuação no GameLoop.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.ConsoleKey">
+            <summary>
+            Gets (ler) o input do jogador no UserInput.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Facade.CheckUserInput">
@@ -33,6 +136,8 @@
             <summary>
             Chamar o método MainMenu no Menu.
             </summary>
+            <param name="x"> Se pode correr a intro. </param>
+            <param name="y"> Se pode correr o splashscreen. </param>
         </member>
         <member name="M:Projeto2LP2.Facade.GameOver">
             <summary>
@@ -46,7 +151,7 @@
         </member>
         <member name="T:Projeto2LP2.GameLoop">
             <summary>
-            Classe do ciclo de jogo. 
+            Classe do ciclo de jogo.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameLoop.Game">

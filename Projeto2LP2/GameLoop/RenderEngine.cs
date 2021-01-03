@@ -6,7 +6,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe onde é renderizado o jogo.
     /// </summary>
-    sealed class RenderEngine
+    public class RenderEngine
     {
         // Contar o tamanho da cobra.
         public static int count = 0;

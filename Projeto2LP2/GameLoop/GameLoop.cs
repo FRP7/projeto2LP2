@@ -4,9 +4,9 @@ using System.Threading;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe do ciclo de jogo. 
+    /// Classe do ciclo de jogo.
     /// </summary>
-    sealed class GameLoop
+    public class GameLoop
     {
         // Recolher informação do teclado definida no UserInput.
         public static ConsoleKey GetKey { get; private set; }
@@ -27,7 +27,6 @@ namespace Projeto2LP2
         /// Ciclo de jogo.
         /// </summary>
         public void Game() {
-
             // Chamado no início do jogo.
             Start();
             // Chamado em todos os frames.
@@ -38,7 +37,6 @@ namespace Projeto2LP2
         /// Método de início do jogo.
         /// </summary>
         private void Start() {
-
             facade = new Facade();
 
             // Inicializar bool.
@@ -64,8 +62,7 @@ namespace Projeto2LP2
         ///  Método que corre todos os frames.
         /// </summary>
         private void Update() {
-            while (isGameOver == false) {
-
+            while (!isGameOver) {
                 // Verificar o input do jogador.
                 CheckUserInput();
 

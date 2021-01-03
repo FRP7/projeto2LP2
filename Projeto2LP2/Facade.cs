@@ -6,7 +6,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe que tenta tornar o código menos esparguete.
     /// </summary>
-    sealed class Facade
+    public class Facade
     {
         /// <summary>
         /// Gets (ler) Coordenada X do cenário no SceneObject.
@@ -32,7 +32,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) o corpo da cobra no 
+        /// Gets or sets (ler), Sets (modificar) o corpo da cobra no
         /// SnakeObject.
         /// </summary>
         public static List<SnakePart> GetSnakeBody {
@@ -115,7 +115,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) a coordenada Y da comida no 
+        /// Gets or sets (ler), Sets (modificar) a coordenada Y da comida no
         /// FoodObject.
         /// </summary>
         public static int GetCordFoodY {
@@ -206,7 +206,7 @@ namespace Projeto2LP2
         }
 
         // Array de GameObjects.
-        private readonly GameObject[] gameObjects = {
+        public readonly GameObject[] gameObjects = {
             new FoodObject(),
             new SceneObject(),
             new SnakeObject(),

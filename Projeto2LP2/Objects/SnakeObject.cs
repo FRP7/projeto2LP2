@@ -8,13 +8,13 @@ namespace Projeto2LP2
     /// <summary>
     /// GameObject cobra.
     /// </summary>
-    class SnakeObject : GameObject
+    public class SnakeObject : GameObject
     {
         // Corpo da cobra.
         public static List<SnakePart> snakeBody;
 
         // Cauda da cobra.
-        public static SnakePart Tail { get => snakeBody.First(); }
+        public static SnakePart Tail { get => snakeBody[0]; }
 
         // Cabeça da cobra.
         public static SnakePart Head { get => snakeBody.Last(); }
@@ -29,7 +29,6 @@ namespace Projeto2LP2
         /// Método para ser chamado quando o jogo começa.
         /// </summary>
         public override void Start() {
-
             // Definir a posição inicial da cobra.
             SnakeX = Facade.GetSceneX / 2;
             SnakeY = Facade.GetSceneY / 2;
@@ -48,7 +47,6 @@ namespace Projeto2LP2
         /// Método para ser chamado continuamente ao longo do jogo.
         /// </summary>
         public override void Update() {
-
             // Verificar a posição da cobra.
             SnakePositionCheck();
 
@@ -69,16 +67,16 @@ namespace Projeto2LP2
             if (Facade.GetCordSnakeX >= 0 && Facade.GetCordSnakeY >= 0) {
                 if (Facade.GetCount < Facade.GetSnakeBody.Count) {
                     Thread.Sleep(100);
-                    Console.SetCursorPosition(Facade.GetCordSnakeX, 
+                    Console.SetCursorPosition(Facade.GetCordSnakeX,
                         Facade.GetCordSnakeY);
-                    Facade.GetSnakeBody[Facade.GetCount].CordX = 
+                    Facade.GetSnakeBody[Facade.GetCount].CordX =
                         Facade.GetCordSnakeX;
-                    Facade.GetSnakeBody[Facade.GetCount].CordY = 
+                    Facade.GetSnakeBody[Facade.GetCount].CordY =
                         Facade.GetCordSnakeY;
                     Console.Write(Facade.GetSnakeBody[Facade.GetCount].Part);
                 } else if (Facade.GetCount > Facade.GetSnakeBody.Count - 1) {
                     Thread.Sleep(500);
-                    Console.SetCursorPosition(Facade.GetTail.CordX, 
+                    Console.SetCursorPosition(Facade.GetTail.CordX,
                         Facade.GetTail.CordY);
                     Console.Write(' ');
                     Facade.GetSnakeBody.RemoveAt(0);
@@ -112,18 +110,17 @@ namespace Projeto2LP2
         /// Verificar se a cobra colidiu com a comida.
         /// </summary>
         private void CheckFood() {
-            if (Facade.GetHead.CordX == Facade.GetCordFoodX && 
+            if (Facade.GetHead.CordX == Facade.GetCordFoodX &&
                 Facade.GetHead.CordY == Facade.GetCordFoodY) {
                 Facade.GetSnakeBody.Add(new SnakePart(
                     Facade.GetCordSnakeX, Facade.GetCordSnakeY, '@'));
-                Console.SetCursorPosition(Facade.GetCordFoodX, 
+                Console.SetCursorPosition(Facade.GetCordFoodX,
                     Facade.GetCordFoodY);
                 Console.Write(' ');
                 FoodObject foodObject = new FoodObject();
                 foodObject.Update();
                 Facade.GetScore++;
             }
-
         }
 
         /// <summary>
@@ -131,14 +128,13 @@ namespace Projeto2LP2
         /// </summary>
         private void CheckSnakeTouch() {
             for (int i = 3; i < Facade.GetSnakeBody.Count; i++) {
-                if (Facade.GetSnakeBody[0].CordX == 
-                    Facade.GetSnakeBody[i].CordX && 
+                if (Facade.GetSnakeBody[0].CordX ==
+                    Facade.GetSnakeBody[i].CordX &&
                     Facade.GetSnakeBody[0].CordY ==
                     Facade.GetSnakeBody[i].CordY) {
                     Facade.IsGameOver = true;
                 }
             }
-
         }
 
         /// <summary>

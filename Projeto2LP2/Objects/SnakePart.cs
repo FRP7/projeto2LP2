@@ -5,7 +5,7 @@ namespace Projeto2LP2
     /// <summary>
     /// Classe das uma partes da cobra.
     /// </summary>
-    class SnakePart
+    public class SnakePart
     {
         // Coordenadas.
         public int CordX { get; set; }
