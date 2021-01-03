@@ -14,9 +14,6 @@ namespace Projeto2LP2
         // Pontuação.
         public static int ScoreValue;
 
-        // Thread do user input.
-        private Thread inputThread;
-
         // Indicar se o jogo acabou.
         public static bool isGameOver;
 
@@ -82,7 +79,7 @@ namespace Projeto2LP2
         /// </summary>
         private void CheckUserInput() {
             // Começar thread para o input do jogador.
-            inputThread = new Thread(facade.CheckUserInput);
+            Thread inputThread = new Thread(facade.CheckUserInput);
             inputThread.Start();
             GetKey = facade.ConsoleKey;
             // Fechar a thread.

@@ -329,7 +329,7 @@
             Método onde é exposto o menu principal.
             </summary>
             <param name="introPlay"> Indicar se pode correr a intro. </param>
-            <param name="splashPlay"> Indicar se pode correr o splashscreen. 
+            <param name="splashPlay"> Indicar se pode correr o splashscreen
             </param>
         </member>
         <member name="M:Projeto2LP2.Menu.Instructions(System.Boolean)">
