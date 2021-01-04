@@ -18,6 +18,7 @@ namespace Projeto2LP2
 
             const string fileName = "Score.txt";
             bool retry;
+            string result = $"Date: {DateTime.Now} | Score: {Facade.GetScore}";
 
             do
             {
@@ -25,8 +26,7 @@ namespace Projeto2LP2
 
                 // Escrever no ficheiro o score adquirido
                 if (File.Exists(fileName)) {
-                    File.AppendAllText(fileName, Environment.NewLine +
-                   $"Date: {DateTime.Now} | Score: {Facade.GetScore}");
+                    File.AppendAllText(fileName, Environment.NewLine + result);
                 }
                 else {
                     using StreamWriter sr = new StreamWriter(fileName, true);

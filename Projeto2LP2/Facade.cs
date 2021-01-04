@@ -22,11 +22,14 @@ namespace Projeto2LP2
         /// Gets or sets a value indicating whether gets (ler) Sets
         /// (modificar) a indicação se o jogo acabou no GameLoop.
         /// </summary>
-        public static bool IsGameOver {
-            get {
+        public static bool IsGameOver
+        {
+            get
+            {
                 return GameLoop.IsGameOver;
             }
-            set {
+            set
+            {
                 GameLoop.IsGameOver = value;
             }
         }
@@ -35,11 +38,14 @@ namespace Projeto2LP2
         /// Gets or sets (ler), Sets (modificar) o corpo da cobra no
         /// SnakeObject.
         /// </summary>
-        public static List<SnakePart> GetSnakeBody {
-            get {
+        public static List<SnakePart> GetSnakeBody
+        {
+            get
+            {
                 return SnakeObject.SnakeBody;
             }
-            set {
+            set
+            {
                 SnakeObject.SnakeBody = value;
             }
         }
@@ -48,11 +54,14 @@ namespace Projeto2LP2
         /// Gets or sets (ler), Sets (modificar) o corpo da cobra do
         /// SnakeObject.
         /// </summary>
-        public static int GetCordSnakeX {
-            get {
+        public static int GetCordSnakeX
+        {
+            get
+            {
                 return SnakeObject.SnakeX;
             }
-            set {
+            set
+            {
                 SnakeObject.SnakeX = value;
             }
         }
@@ -61,11 +70,14 @@ namespace Projeto2LP2
         /// Gets or sets (ler), Sets(modificar) a coordenada Y da cobra no
         /// SnakeObject.
         /// </summary>
-        public static int GetCordSnakeY {
-            get {
+        public static int GetCordSnakeY
+        {
+            get
+            {
                 return SnakeObject.SnakeY;
             }
-            set {
+            set
+            {
                 SnakeObject.SnakeY = value;
             }
         }
@@ -73,8 +85,10 @@ namespace Projeto2LP2
         /// <summary>
         /// Gets (ler), Sets (modificar) a cabeça da cobra no SnakeObject.
         /// </summary>
-        public static SnakePart GetHead {
-            get {
+        public static SnakePart GetHead
+        {
+            get
+            {
                 return SnakeObject.Head;
             }
         }
@@ -82,8 +96,10 @@ namespace Projeto2LP2
         /// <summary>
         /// Gets (ler), Sets (modificar) a cauda da cobra no SnakePart.
         /// </summary>
-        public static SnakePart GetTail {
-            get {
+        public static SnakePart GetTail
+        {
+            get
+            {
                 return SnakeObject.Tail;
             }
         }
@@ -92,11 +108,14 @@ namespace Projeto2LP2
         /// Gets or sets (ler), Sets (modificar) a direção da cobra no
         /// SnakeObject.
         /// </summary>
-        public static Direction GetDirection {
-            get {
+        public static Direction GetDirection
+        {
+            get
+            {
                 return SnakeObject.SnakeDirection;
             }
-            set {
+            set
+            {
                 SnakeObject.SnakeDirection = value;
             }
         }
@@ -105,11 +124,14 @@ namespace Projeto2LP2
         /// Gets or sets (ler), Sets (modificar) a coordenada X da comida no
         /// FoodObject.
         /// </summary>
-        public static int GetCordFoodX {
-            get {
+        public static int GetCordFoodX
+        {
+            get
+            {
                 return FoodObject.FoodX;
             }
-            set {
+            set
+            {
                 FoodObject.FoodX = value;
             }
         }
@@ -118,11 +140,14 @@ namespace Projeto2LP2
         /// Gets or sets (ler), Sets (modificar) a coordenada Y da comida no
         /// FoodObject.
         /// </summary>
-        public static int GetCordFoodY {
-            get {
+        public static int GetCordFoodY
+        {
+            get
+            {
                 return FoodObject.FoodY;
             }
-            set {
+            set
+            {
                 FoodObject.FoodY = value;
             }
         }
@@ -131,11 +156,14 @@ namespace Projeto2LP2
         /// Gets or sets (ler), Sets (modificar) o tamanho da cobra no
         /// RenderEngine.
         /// </summary>
-        public static int GetCount {
-            get {
+        public static int GetCount
+        {
+            get
+            {
                 return RenderEngine.Count;
             }
-            set {
+            set
+            {
                 RenderEngine.Count = value;
             }
         }
@@ -143,11 +171,14 @@ namespace Projeto2LP2
         /// <summary>
         /// Gets or sets (ler), Sets (modificar) a pontuação no GameLoop.
         /// </summary>
-        public static int GetScore {
-            get {
+        public static int GetScore
+        {
+            get
+            {
                 return GameLoop.ScoreValue;
             }
-            set {
+            set
+            {
                 GameLoop.ScoreValue = value;
             }
         }
@@ -169,21 +200,24 @@ namespace Projeto2LP2
         /// <summary>
         /// / Chamar o método CheckUserInput no User Input.
         /// </summary>
-        public void CheckUserInput() {
+        public void CheckUserInput()
+        {
             userInput.CheckUserInput();
         }
 
         /// <summary>
         ///  Chamar o método Update no GameState.
         /// </summary>
-        public void Update() {
+        public void Update()
+        {
             gameState.Update();
         }
 
         /// <summary>
         /// Chamar o método Render no RenderEngine.
         /// </summary>
-        public void Render() {
+        public void Render()
+        {
             renderEngine.Render();
         }
 
@@ -192,7 +226,8 @@ namespace Projeto2LP2
         /// </summary>
         /// <param name="x"> Se pode correr a intro. </param>
         /// <param name="y"> Se pode correr o splashscreen. </param>
-        public void Menu(bool x, bool y) {
+        public void Menu(bool x, bool y)
+        {
             Menu menu = new Menu();
             menu.MainMenu(x, y);
         }
@@ -200,24 +235,29 @@ namespace Projeto2LP2
         /// <summary>
         /// Chamar o método GameOverMenu no GameOver.
         /// </summary>
-        public void GameOver() {
+        public void GameOver()
+        {
             GameOver gameOver = new GameOver();
             gameOver.GameOverMenu();
         }
 
-        /// <summary>
-        /// Array de GameObjects.
-        /// </summary>
-        public readonly GameObject[] GameObjects = {
+        private readonly GameObject[] gameObjects =
+        {
             new FoodObject(),
             new SceneObject(),
             new SnakeObject(),
         };
 
         /// <summary>
+        /// Gets GameObjects.
+        /// </summary>
+        public GameObject[] GameObjects { get => gameObjects; }
+
+        /// <summary>
         /// Inicializar as variáveis.
         /// </summary>
-        public Facade() {
+        public Facade()
+        {
             userInput = new UserInput();
             gameState = new GameState();
             renderEngine = new RenderEngine();

@@ -11,9 +11,9 @@ namespace Projeto2LP2
     public class SnakeObject : GameObject
     {
         /// <summary>
-        /// Corpo da cobra.
+        /// Gets or sets Corpo da cobra.
         /// </summary>
-        public static List<SnakePart> SnakeBody;
+        public static List<SnakePart> SnakeBody { get; set; }
 
         /// <summary>
         /// Gets rabo da cobra.
@@ -36,9 +36,9 @@ namespace Projeto2LP2
         public static int SnakeY { get; set; }
 
         /// <summary>
-        /// Direção.
+        /// Gets or sets Direção.
         /// </summary>
-        public static Direction SnakeDirection;
+        public static Direction SnakeDirection { get; set; }
 
         /// <summary>
         /// Método para ser chamado quando o jogo começa.

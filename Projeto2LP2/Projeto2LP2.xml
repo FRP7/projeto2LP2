@@ -144,9 +144,9 @@
             Chamar o método GameOverMenu no GameOver.
             </summary>
         </member>
-        <member name="F:Projeto2LP2.Facade.GameObjects">
+        <member name="P:Projeto2LP2.Facade.GameObjects">
             <summary>
-            Array de GameObjects.
+            Gets GameObjects.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Facade.#ctor">
@@ -558,9 +558,9 @@
             GameObject cobra.
             </summary>
         </member>
-        <member name="F:Projeto2LP2.SnakeObject.SnakeBody">
+        <member name="P:Projeto2LP2.SnakeObject.SnakeBody">
             <summary>
-            Corpo da cobra.
+            Gets or sets Corpo da cobra.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakeObject.Tail">
@@ -583,9 +583,9 @@
             Gets or sets coordenada y da cobra.
             </summary>
         </member>
-        <member name="F:Projeto2LP2.SnakeObject.SnakeDirection">
+        <member name="P:Projeto2LP2.SnakeObject.SnakeDirection">
             <summary>
-            Direção.
+            Gets or sets Direção.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.Start">
