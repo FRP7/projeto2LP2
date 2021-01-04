@@ -56,52 +56,52 @@
         </member>
         <member name="P:Projeto2LP2.Facade.GetSnakeBody">
             <summary>
-            Gets or sets the body of the snake.
+            Gets or sets the body of the Snake.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetCordSnakeX">
             <summary>
-            Gets or sets the cord x of the snake body.
+            Gets or sets the cord x of the Snake's body.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetCordSnakeY">
             <summary>
-            Gets or sets the cord y of the snake body.
+            Gets or sets the cord y of the Snake's body.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetHead">
             <summary>
-            Gets the snake head.
+            Gets the Snake's head.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetTail">
             <summary>
-            Gets the snake tail.
+            Gets the Snake's tail.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetDirection">
             <summary>
-            Gets or sets the snake current direction.
+            Gets or sets the Snake's current direction.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetCordFoodX">
             <summary>
-            Gets or sets the cord x of the food.
+            Gets or sets the cord x of the Food.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetCordFoodY">
             <summary>
-            Gets or sets the cord y of the food.
+            Gets or sets the cord y of the Food.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetCount">
             <summary>
-            Gets or sets the snake size.
+            Gets or sets the Snake size.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.GetScore">
             <summary>
-            Gets or sets the score.
+            Gets or sets the Score.
             </summary>
         </member>
         <member name="P:Projeto2LP2.Facade.ConsoleKey">
@@ -143,7 +143,7 @@
         </member>
         <member name="P:Projeto2LP2.Facade.GameObjects">
             <summary>
-            Gets gameObjects.
+            Gets GameObjects.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Facade.#ctor">
@@ -223,32 +223,32 @@
         </member>
         <member name="P:Projeto2LP2.GameState.GetSnakeBody">
             <summary>
-            Gets or sets the snake's body.
+            Gets or sets the Snake's body.
             </summary>
         </member>
         <member name="P:Projeto2LP2.GameState.GetCordSnakeX">
             <summary>
-            Gets or sets the cord x of the snake.
+            Gets or sets the cord x of the Snake.
             </summary>
         </member>
         <member name="P:Projeto2LP2.GameState.GetCordSnakeY">
             <summary>
-            Gets or sets the cord y of the snake.
+            Gets or sets the cord y of the Snake.
             </summary>
         </member>
         <member name="P:Projeto2LP2.GameState.GetHead">
             <summary>
-            Gets the snake's head.
+            Gets the Snake's head.
             </summary>
         </member>
         <member name="P:Projeto2LP2.GameState.GetTail">
             <summary>
-            Gets the snake's tail.
+            Gets the Snake's tail.
             </summary>
         </member>
         <member name="P:Projeto2LP2.GameState.GetDirection">
             <summary>
-            Gets the snake's direction.
+            Gets the Snake's direction.
             </summary>
         </member>
         <member name="P:Projeto2LP2.GameState.GetCordFoodX">
@@ -263,7 +263,7 @@
         </member>
         <member name="P:Projeto2LP2.GameState.GetScore">
             <summary>
-            Gets the score.
+            Gets the Score.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameState.Update">
@@ -273,7 +273,7 @@
         </member>
         <member name="M:Projeto2LP2.GameState.SnakeUpdate">
             <summary>
-            Update the snake.
+            Update the Snake.
             </summary>
         </member>
         <member name="T:Projeto2LP2.RenderEngine">
@@ -283,7 +283,7 @@
         </member>
         <member name="P:Projeto2LP2.RenderEngine.Count">
             <summary>
-            Gets or sets to count the snake's size.
+            Gets or sets to count the Snake's size.
             </summary>
         </member>
         <member name="P:Projeto2LP2.RenderEngine.GetSceneX">
@@ -298,27 +298,27 @@
         </member>
         <member name="P:Projeto2LP2.RenderEngine.GetSnakeX">
             <summary>
-            Gets cord x of the snake's body.
+            Gets cord x of the Snake's body.
             </summary>
         </member>
         <member name="P:Projeto2LP2.RenderEngine.GetSnakeY">
             <summary>
-            Gets cord y of the snake's body.
+            Gets cord y of the Snake's body.
             </summary>
         </member>
         <member name="P:Projeto2LP2.RenderEngine.SnakeBody">
             <summary>
-            Gets the snake's body.
+            Gets the Snake's body.
             </summary>
         </member>
         <member name="P:Projeto2LP2.RenderEngine.Head">
             <summary>
-            Gets the snake's head.
+            Gets the Snake's head.
             </summary>
         </member>
         <member name="P:Projeto2LP2.RenderEngine.Tail">
             <summary>
-            Gets the snake's tail.
+            Gets the Snake's tail.
             </summary>
         </member>
         <member name="P:Projeto2LP2.RenderEngine.GetFoodX">
@@ -333,7 +333,7 @@
         </member>
         <member name="P:Projeto2LP2.RenderEngine.GetScore">
             <summary>
-            Gets the score.
+            Gets the Score.
             </summary>
         </member>
         <member name="M:Projeto2LP2.RenderEngine.Render">
@@ -348,12 +348,12 @@
         </member>
         <member name="M:Projeto2LP2.RenderEngine.RenderSnake">
             <summary>
-            Render the snake.
+            Render the Snake.
             </summary>
         </member>
         <member name="M:Projeto2LP2.RenderEngine.RenderFood">
             <summary>
-            Render the food.
+            Render the Food.
             </summary>
         </member>
         <member name="T:Projeto2LP2.UserInput">
@@ -429,7 +429,7 @@
         </member>
         <member name="M:Projeto2LP2.Menu.ScoreReader">
             <summary>
-            Read the score file.
+            Read the Score file.
             </summary>
         </member>
         <member name="T:Projeto2LP2.SplashScreen">
@@ -527,12 +527,12 @@
         </member>
         <member name="P:Projeto2LP2.SceneObject.SceneX">
             <summary>
-            Gets the scene width.
+            Gets the Scene's width.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SceneObject.SceneY">
             <summary>
-            Gets the scene height.
+            Gets the Scene's height.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SceneObject.Start">
@@ -557,32 +557,32 @@
         </member>
         <member name="P:Projeto2LP2.SnakeObject.SnakeBody">
             <summary>
-            Gets or sets the snake body.
+            Gets or sets the Snake's body.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakeObject.Tail">
             <summary>
-            Gets the snake tail.
+            Gets the SNake's tail.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakeObject.Head">
             <summary>
-            Gets the snake head.
+            Gets the Snake's head.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakeObject.SnakeX">
             <summary>
-            Gets or sets the cord x of snake.
+            Gets or sets the cord x of the Snake.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakeObject.SnakeY">
             <summary>
-            Gets or sets the cord y of snake.
+            Gets or sets the cord y of the Snake.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakeObject.SnakeDirection">
             <summary>
-            Gets or sets the current direction..
+            Gets or sets the current direction.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.Start">
@@ -597,56 +597,56 @@
         </member>
         <member name="M:Projeto2LP2.SnakeObject.Render">
             <summary>
-            Method where the snake is rendered.
+            Method where the Snake is rendered.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.SnakePositionCheck">
             <summary>
-            Check and update the snake's position according to the direction.
+            Check and update the Snake's position according to the direction.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.CheckFood">
             <summary>
-            Check if the snake collided with the food.
+            Check if the Snake collided with the Food.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.CheckSnakeTouch">
             <summary>
-            Check if the snake collided with itself.
+            Check if the Snake collided with itself.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.CheckWalls">
             <summary>
-            Check if the snake collided with the wall.
+            Check if the Snake collided with the wall.
             </summary>
         </member>
         <member name="T:Projeto2LP2.SnakePart">
             <summary>
-            Class of one of the snake's parts.
+            Class of one of the Snake's parts.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakePart.CordX">
             <summary>
-            Gets or sets cord x of the snake part.
+            Gets or sets cord x of the Snake's part.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakePart.CordY">
             <summary>
-            Gets or sets cord y of the snake part.
+            Gets or sets cord y of the Snake's part.
             </summary>
         </member>
         <member name="P:Projeto2LP2.SnakePart.Part">
             <summary>
-            Gets or sets the char to be shown of the snake part.
+            Gets or sets the char to be shown of the Snake's part.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakePart.#ctor(System.Int32,System.Int32,System.Char)">
             <summary>
             Initialize the properties.
             </summary>
-            <param name="x"> Cord X of the snake part.</param>
-            <param name="y"> Cord Y of the snake part.</param>
-            <param name="part"> Char or the snake part.</param>
+            <param name="x"> Cord X of the Snake's part.</param>
+            <param name="y"> Cord Y of the Snake's part.</param>
+            <param name="part"> Char or the Snake's part.</param>
         </member>
         <member name="T:Projeto2LP2.Program">
             <summary>

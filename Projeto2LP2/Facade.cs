@@ -34,7 +34,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the body of the snake.
+        /// Gets or sets the body of the Snake.
         /// </summary>
         public static List<SnakePart> GetSnakeBody
         {
@@ -49,7 +49,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the cord x of the snake body.
+        /// Gets or sets the cord x of the Snake's body.
         /// </summary>
         public static int GetCordSnakeX
         {
@@ -64,7 +64,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the cord y of the snake body.
+        /// Gets or sets the cord y of the Snake's body.
         /// </summary>
         public static int GetCordSnakeY
         {
@@ -79,17 +79,17 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets the snake head.
+        /// Gets the Snake's head.
         /// </summary>
         public static SnakePart GetHead { get => SnakeObject.Head; }
 
         /// <summary>
-        /// Gets the snake tail.
+        /// Gets the Snake's tail.
         /// </summary>
         public static SnakePart GetTail { get => SnakeObject.Tail; }
 
         /// <summary>
-        /// Gets or sets the snake current direction.
+        /// Gets or sets the Snake's current direction.
         /// </summary>
         public static Direction GetDirection
         {
@@ -104,7 +104,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the cord x of the food.
+        /// Gets or sets the cord x of the Food.
         /// </summary>
         public static int GetCordFoodX
         {
@@ -119,7 +119,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the cord y of the food.
+        /// Gets or sets the cord y of the Food.
         /// </summary>
         public static int GetCordFoodY
         {
@@ -134,7 +134,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the snake size.
+        /// Gets or sets the Snake size.
         /// </summary>
         public static int GetCount
         {
@@ -149,7 +149,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the score.
+        /// Gets or sets the Score.
         /// </summary>
         public static int GetScore
         {
@@ -232,7 +232,7 @@ namespace Projeto2LP2
         };
 
         /// <summary>
-        /// Gets gameObjects.
+        /// Gets GameObjects.
         /// </summary>
         public GameObject[] GameObjects { get => gameObjects; }
 

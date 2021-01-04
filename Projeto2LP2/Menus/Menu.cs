@@ -60,7 +60,7 @@ namespace Projeto2LP2
                 Console.WriteLine("\n\t\t\t\t\t\t      (C)REDITS");
                 Console.WriteLine("\n\t\t\t\t\t\t       (E)XIT");
 
-                // Variable that contains the player's choice.
+                // The player's choice.
                 key = Console.ReadKey(true).Key;
 
                 // Check which option was chosen.
@@ -130,7 +130,7 @@ namespace Projeto2LP2
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                // Variable that contains the player's choice.
+                // The player's choice.
                 key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
@@ -179,7 +179,7 @@ namespace Projeto2LP2
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                // Variable that contains the player's choice.
+                // The player's choice.
                 key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
@@ -229,7 +229,7 @@ namespace Projeto2LP2
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                // Variabe that contains the player's choice.
+                // The player's choice.
                 key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
@@ -249,11 +249,11 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Read the score file.
+        /// Read the Score file.
         /// </summary>
         private void ScoreReader()
         {
-            // Variable that contains the file name.
+            // The file name.
             const string fileName = "Score.txt";
             if (File.Exists(fileName)) {
                 // Read the file lines.

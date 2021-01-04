@@ -51,7 +51,7 @@ namespace Projeto2LP2
             // Start of the scenario.
             facade.GameObjects[1].Start();
 
-            // Start of the snake.
+            // Start of the Snake.
             facade.GameObjects[2].Start();
 
             // Start of the Food.
@@ -60,7 +60,7 @@ namespace Projeto2LP2
             // Set the initial score.
             ScoreValue = 0;
 
-            // Set the snake's body counter to zero.
+            // Set the Snake's body counter to zero.
             Facade.GetCount = 0;
         }
 

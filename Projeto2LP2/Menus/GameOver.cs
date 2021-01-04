@@ -70,7 +70,7 @@ namespace Projeto2LP2
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                // Variable that contains the player's choice.
+                // The player's choice.
                 ConsoleKey key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)

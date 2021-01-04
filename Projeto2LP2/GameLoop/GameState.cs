@@ -18,7 +18,7 @@ namespace Projeto2LP2
         public static int GetSceneY { get => Facade.GetSceneY; }
 
         /// <summary>
-        /// Gets or sets the snake's body.
+        /// Gets or sets the Snake's body.
         /// </summary>
         public static List<SnakePart> GetSnakeBody
         {
@@ -33,7 +33,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the cord x of the snake.
+        /// Gets or sets the cord x of the Snake.
         /// </summary>
         public static int GetCordSnakeX
         {
@@ -48,7 +48,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets the cord y of the snake.
+        /// Gets or sets the cord y of the Snake.
         /// </summary>
         public static int GetCordSnakeY
         {
@@ -63,7 +63,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets the snake's head.
+        /// Gets the Snake's head.
         /// </summary>
         public static SnakePart GetHead {
             get {
@@ -72,7 +72,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets the snake's tail.
+        /// Gets the Snake's tail.
         /// </summary>
         public static SnakePart GetTail {
             get {
@@ -81,7 +81,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets the snake's direction.
+        /// Gets the Snake's direction.
         /// </summary>
         public static Direction GetDirection { get => Facade.GetDirection; }
 
@@ -116,7 +116,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets the score.
+        /// Gets the Score.
         /// </summary>
         public static int GetScore
         {
@@ -135,7 +135,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Update the snake.
+        /// Update the Snake.
         /// </summary>
         private void SnakeUpdate()
         {

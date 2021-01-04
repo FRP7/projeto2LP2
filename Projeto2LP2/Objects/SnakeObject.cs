@@ -11,32 +11,32 @@ namespace Projeto2LP2
     public class SnakeObject : GameObject
     {
         /// <summary>
-        /// Gets or sets the snake body.
+        /// Gets or sets the Snake's body.
         /// </summary>
         public static List<SnakePart> SnakeBody { get; set; }
 
         /// <summary>
-        /// Gets the snake tail.
+        /// Gets the SNake's tail.
         /// </summary>
         public static SnakePart Tail { get => SnakeBody[0]; }
 
         /// <summary>
-        /// Gets the snake head.
+        /// Gets the Snake's head.
         /// </summary>
         public static SnakePart Head { get => SnakeBody.Last(); }
 
         /// <summary>
-        /// Gets or sets the cord x of snake.
+        /// Gets or sets the cord x of the Snake.
         /// </summary>
         public static int SnakeX { get; set; }
 
         /// <summary>
-        /// Gets or sets the cord y of snake.
+        /// Gets or sets the cord y of the Snake.
         /// </summary>
         public static int SnakeY { get; set; }
 
         /// <summary>
-        /// Gets or sets the current direction..
+        /// Gets or sets the current direction.
         /// </summary>
         public static Direction SnakeDirection { get; set; }
 
@@ -44,7 +44,7 @@ namespace Projeto2LP2
         /// Method to be called when the game starts.
         /// </summary>
         public override void Start() {
-            // Sets the initial position of the snake.
+            // Sets the initial position of the Snake.
             SnakeX = Facade.GetSceneX / 2;
             SnakeY = Facade.GetSceneY / 2;
 
@@ -52,7 +52,7 @@ namespace Projeto2LP2
             SnakeDirection = Direction.None;
             Facade.GetDirection = Direction.None;
 
-            // Set the snake body.
+            // Set the Snake's body.
             SnakeBody = new List<SnakePart> {
                 new SnakePart(SnakeX, SnakeY, '@'),
             };
@@ -62,21 +62,21 @@ namespace Projeto2LP2
         /// Method to be called all the time during the whole game session.
         /// </summary>
         public override void Update() {
-            // Check the snake's position.
+            // Check the Snake's position.
             SnakePositionCheck();
 
-            // Check if the snake collided with the food.
+            // Check if the Snake collided with the Food.
             CheckFood();
 
-            // Check if the snake collided with itself.
+            // Check if the Snake collided with itself.
             CheckSnakeTouch();
 
-            // Check if the snake collided with the wall.
+            // Check if the Snake collided with the wall.
             CheckWalls();
         }
 
         /// <summary>
-        /// Method where the snake is rendered.
+        /// Method where the Snake is rendered.
         /// </summary>
         public override void Render() {
             if (Facade.GetCordSnakeX >= 0 && Facade.GetCordSnakeY >= 0) {
@@ -105,7 +105,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Check and update the snake's position according to the direction.
+        /// Check and update the Snake's position according to the direction.
         /// </summary>
         private void SnakePositionCheck() {
             if (SnakeDirection == Direction.Up) {
@@ -124,7 +124,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Check if the snake collided with the food.
+        /// Check if the Snake collided with the Food.
         /// </summary>
         private void CheckFood() {
             if (Facade.GetHead.CordX == Facade.GetCordFoodX &&
@@ -142,7 +142,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Check if the snake collided with itself.
+        /// Check if the Snake collided with itself.
         /// </summary>
         private void CheckSnakeTouch() {
             for (int i = 3; i < Facade.GetSnakeBody.Count; i++) {
@@ -156,7 +156,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Check if the snake collided with the wall.
+        /// Check if the Snake collided with the wall.
         /// </summary>
         private void CheckWalls() {
             if (Facade.GetCordSnakeX == 0) {

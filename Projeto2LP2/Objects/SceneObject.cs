@@ -8,12 +8,12 @@ namespace Projeto2LP2
     public class SceneObject : GameObject
     {
         /// <summary>
-        /// Gets the scene width.
+        /// Gets the Scene's width.
         /// </summary>
         public static int SceneX { get; private set; }
 
         /// <summary>
-        /// Gets the scene height.
+        /// Gets the Scene's height.
         /// </summary>
         public static int SceneY { get; private set; }
 

@@ -9,7 +9,7 @@ namespace Projeto2LP2
     public class RenderEngine
     {
         /// <summary>
-        /// Gets or sets to count the snake's size.
+        /// Gets or sets to count the Snake's size.
         /// </summary>
         public static int Count { get; set; }
 
@@ -24,27 +24,27 @@ namespace Projeto2LP2
         public static int GetSceneY { get => Facade.GetSceneY; }
 
         /// <summary>
-        /// Gets cord x of the snake's body.
+        /// Gets cord x of the Snake's body.
         /// </summary>
         public static int GetSnakeX { get => Facade.GetCordSnakeX; }
 
         /// <summary>
-        /// Gets cord y of the snake's body.
+        /// Gets cord y of the Snake's body.
         /// </summary>
         public static int GetSnakeY { get => Facade.GetCordSnakeY; }
 
         /// <summary>
-        /// Gets the snake's body.
+        /// Gets the Snake's body.
         /// </summary>
         public static List<SnakePart> SnakeBody { get => Facade.GetSnakeBody; }
 
         /// <summary>
-        /// Gets the snake's head.
+        /// Gets the Snake's head.
         /// </summary>
         public static SnakePart Head { get => Facade.GetHead; }
 
         /// <summary>
-        /// Gets the snake's tail.
+        /// Gets the Snake's tail.
         /// </summary>
         public static SnakePart Tail { get => Facade.GetTail; }
 
@@ -59,7 +59,7 @@ namespace Projeto2LP2
         public static int GetFoodY { get => Facade.GetCordFoodY; }
 
         /// <summary>
-        /// Gets the score.
+        /// Gets the Score.
         /// </summary>
         public static int GetScore { get => Facade.GetScore; }
 
@@ -86,14 +86,14 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Render the snake.
+        /// Render the Snake.
         /// </summary>
         private void RenderSnake() {
             facade.GameObjects[2].Render();
         }
 
         /// <summary>
-        /// Render the food.
+        /// Render the Food.
         /// </summary>
         private void RenderFood() {
             facade.GameObjects[0].Render();

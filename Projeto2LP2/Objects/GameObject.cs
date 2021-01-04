@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Projeto2LP2
+﻿namespace Projeto2LP2
 {
     /// <summary>
     /// GameObject abstract class.
