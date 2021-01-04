@@ -5,35 +5,36 @@ using System.IO;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe de GameOver.
+    /// GameOver class.
     /// </summary>
-    class GameOver
+    public class GameOver
     {
         /// <summary>
-        /// Página do GameOver.
+        /// GameOver page.
         /// </summary>
         public void GameOverMenu()
         {
             Facade facade = new Facade();
 
-            string fileName = "Score.txt";
+            const string fileName = "Score.txt";
             bool retry;
+            string result = $"Date: {DateTime.Now} | Score: {Facade.GetScore}";
 
             do
             {
                 Console.Clear();
-                // Escrever no ficheiro o score adquirido
-                if(File.Exists(fileName)) {
-                    File.AppendAllText(fileName, Environment.NewLine +
-                   $"Date: {DateTime.Now} | Score: " +
-                   $"{Facade.GetScore}");
+
+                // Write on a file the final score.
+                if (File.Exists(fileName)) {
+                    File.AppendAllText(fileName, Environment.NewLine + result);
                 }
                 else {
                     using StreamWriter sr = new StreamWriter(fileName, true);
-                    sr.WriteLine(Environment.NewLine + $"Date:" +
+                    sr.WriteLine(Environment.NewLine + "Date:" +
                         $" {DateTime.Now} " +
-                        $"| Score: " + $"{Facade.GetScore}");
+                        "| Score: " + $"{Facade.GetScore}");
                 }
+
                 Console.WriteLine("\n\tYou have met an unfortunate end.");
                 Console.WriteLine("\n\t\tFinal score: " + Facade.GetScore);
 
@@ -51,20 +52,25 @@ namespace Projeto2LP2
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
-                    // Posicionar o cursor na linha anterior
+
+                    // Set cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    // Apagar a linha anterior
+
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
-                    // Posicionar o cursor na linha anterior
+
+                    // Set cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    // Apagar a linha anterior
+
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
-                // Variável que contem a opção do jogador
+
+                // The player's choice.
                 ConsoleKey key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
@@ -72,9 +78,12 @@ namespace Projeto2LP2
                     facade.Menu(false, false);
                     retry = false;
                 }
-                else retry = true;
+                else
+                {
+                    retry = true;
+                }
             }
-            while (retry == true);
+            while (retry);
         }
     }
 }

@@ -4,103 +4,107 @@ using System.Threading;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe do ciclo de jogo. 
+    /// Game cycle class.
     /// </summary>
-    sealed class GameLoop
+    public class GameLoop
     {
-        // Recolher informação do teclado definida no UserInput.
+        /// <summary>
+        /// Gets player's input.
+        /// </summary>
         public static ConsoleKey GetKey { get; private set; }
 
-        // Pontuação.
-        public static int ScoreValue;
+        /// <summary>
+        /// Gets or sets score.
+        /// </summary>
+        public static int ScoreValue { get; set; }
 
-        // Thread do user input.
-        private Thread inputThread;
+        /// <summary>
+        /// Gets or sets a value indicating whether the game is over.
+        /// </summary>
+        public static bool IsGameOver { get; set; }
 
-        // Indicar se o jogo acabou.
-        public static bool isGameOver;
-
-        //Facade
+        /// <summary>
+        /// Facade.
+        /// </summary>
         private Facade facade;
 
         /// <summary>
-        /// Ciclo de jogo.
+        /// Game cycle.
         /// </summary>
         public void Game() {
-
-            // Chamado no início do jogo.
+            // Called in the start of the game.
             Start();
-            // Chamado em todos os frames.
+
+            // Called in every frame during the game's session.
             Update();
         }
 
         /// <summary>
-        /// Método de início do jogo.
+        /// Method to be called in the beginning of the game.
         /// </summary>
         private void Start() {
-
             facade = new Facade();
 
-            // Inicializar bool.
-            isGameOver = false;
+            // Set the bool to false.
+            IsGameOver = false;
 
-            // Start do cenário.
-            facade.gameObjects[1].Start();
+            // Start of the scenario.
+            facade.GameObjects[1].Start();
 
-            // Start da cobra.
-            facade.gameObjects[2].Start();
+            // Start of the Snake.
+            facade.GameObjects[2].Start();
 
-            // Star da comida.
-            facade.gameObjects[0].Start();
+            // Start of the Food.
+            facade.GameObjects[0].Start();
 
-            // Definir o score inicial.
+            // Set the initial score.
             ScoreValue = 0;
 
-            // Colocar o contador a zero.
+            // Set the Snake's body counter to zero.
             Facade.GetCount = 0;
         }
 
         /// <summary>
-        ///  Método que corre todos os frames.
+        ///  Method to be called the whole time during the game's session.
         /// </summary>
         private void Update() {
-            while (isGameOver == false) {
-
-                // Verificar o input do jogador.
+            while (!IsGameOver) {
+                // Check player's input.
                 CheckUserInput();
 
-                // Atualizar o estado do jogo.
+                // Update the game's state.
                 GameState();
 
-                // Desenhar o jogo.
+                // Render the game.
                 Render();
             }
 
-            // Mostrar o menu de game over caso perca.
+            // Show the GameOver menu when the game is lost.
             facade.GameOver();
         }
 
         /// <summary>
-        /// Input do jogador.
+        /// Player's input.
         /// </summary>
         private void CheckUserInput() {
-            // Começar thread para o input do jogador.
-            inputThread = new Thread(facade.CheckUserInput);
+            // Start a new thread for the player's input.
+            Thread inputThread = new Thread(facade.CheckUserInput);
             inputThread.Start();
             GetKey = facade.ConsoleKey;
-            // Fechar a thread.
+
+            // Close the thread.
             inputThread.Join();
         }
 
         /// <summary>
-        /// Update do estado lógico do jogo.
+        /// Update the game's logic.
         /// </summary>
         private void GameState() {
             facade.Update();
         }
 
         /// <summary>
-        /// Renderizar o visual do jogo.
+        /// Render the game.
         /// </summary>
         private void Render() {
             facade.Render();

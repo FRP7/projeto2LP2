@@ -3,60 +3,64 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// GameObject do cenário.
+    /// Scenario GameObject.
     /// </summary>
-    class SceneObject : GameObject
+    public class SceneObject : GameObject
     {
-        // Tamanho do cenário.
+        /// <summary>
+        /// Gets the Scene's width.
+        /// </summary>
         public static int SceneX { get; private set; }
+
+        /// <summary>
+        /// Gets the Scene's height.
+        /// </summary>
         public static int SceneY { get; private set; }
 
         /// <summary>
-        /// Método para ser chamado quando o jogo começa.
+        /// Method to be called when the game begins.
         /// </summary>
         public override void Start() {
-
-            // Definir o tamanho do cenário.
+            // Set scene size.
             SceneX = 35;
             SceneY = 16;
         }
 
         /// <summary>
-        /// Método para ser chamado continuamente ao longo do jogo.
+        /// Method to be called the whole time during the game session.
         /// </summary>
         public override void Update() {
-
         }
 
         /// <summary>
-        /// Método onde é renderizado o cenário.
+        /// Method where the scenario is rendered.
         /// </summary>
         public override void Render() {
-                // Linha de cima
+                // Up line.
                 for (int i = 0; i < Facade.GetSceneX; i++) {
                     Console.SetCursorPosition(i, 0);
                     Console.WriteLine("_");
                 }
 
-                // Linha de baixo.
+                // Down line.
                 for (int i = 0; i < Facade.GetSceneX; i++) {
                     Console.SetCursorPosition(i, Facade.GetSceneY - 1);
                     Console.WriteLine("_");
                 }
 
-                // Linha da esquerda.
+                // Left line.
                 for (int i = 0; i < Facade.GetSceneY; i++) {
                     Console.SetCursorPosition(0, i);
                     Console.WriteLine("|");
                 }
 
-                // Linha da direita.
+                // RIght line.
                 for (int i = 0; i < Facade.GetSceneY; i++) {
                     Console.SetCursorPosition(Facade.GetSceneX, i);
                     Console.WriteLine("|");
                 }
 
-                // Pontuação.
+                // Score.
                 Console.SetCursorPosition(0, Facade.GetSceneY + 1);
                 Console.WriteLine("Score: " + Facade.GetScore);
         }

@@ -3,15 +3,17 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe onde é analisado o input do jogador.
+    /// Classe of the player's input.
     /// </summary>
-    sealed class UserInput
+    public class UserInput
     {
-        /// Input do user.
+        /// <summary>
+        /// Gets input from the player.
+        /// </summary>
         public ConsoleKey GetKey { get; private set; }
 
         /// <summary>
-        /// Verificar o input do user e escolher a direção atual da cobra.
+        /// Check the player's input and set the snake's direction.
         /// </summary>
         public void CheckUserInput() {
             Facade facade = new Facade();
@@ -22,21 +24,25 @@ namespace Projeto2LP2
                         if (Facade.GetDirection != Direction.Down) {
                             Facade.GetDirection = Direction.Up;
                         }
+
                         break;
                     case ConsoleKey.DownArrow:
                         if (Facade.GetDirection != Direction.Up) {
                             Facade.GetDirection = Direction.Down;
                         }
+
                         break;
                     case ConsoleKey.LeftArrow:
                         if (Facade.GetDirection != Direction.Right) {
                             Facade.GetDirection = Direction.Left;
                         }
+
                         break;
                     case ConsoleKey.RightArrow:
                         if (Facade.GetDirection != Direction.Left) {
                             Facade.GetDirection = Direction.Right;
                         }
+
                         break;
                     case ConsoleKey.Escape:
                         facade.Menu(false, false);

@@ -6,337 +6,656 @@
     <members>
         <member name="T:Projeto2LP2.Direction">
             <summary>
-            Enum que indica a direção da cobra.
+            Enum that sets the direction of the snake.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.Up">
+            <summary>
+            Go up.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.Down">
+            <summary>
+            Go down.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.Left">
+            <summary>
+            Go to the left.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.Right">
+            <summary>
+            Go to the right.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Direction.None">
+            <summary>
+            No direction set.
             </summary>
         </member>
         <member name="T:Projeto2LP2.Facade">
             <summary>
-            Classe que tenta tornar o código menos esparguete.
+            Facade class that tries to keep the general code more organized.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetSceneX">
+            <summary>
+            Gets cord x from the game scenario.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetSceneY">
+            <summary>
+            Gets cord y from the game scenario.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.IsGameOver">
+            <summary>
+            Gets or sets a value indicating whether the game is lost.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetSnakeBody">
+            <summary>
+            Gets or sets the body of the Snake.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCordSnakeX">
+            <summary>
+            Gets or sets the cord x of the Snake's body.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCordSnakeY">
+            <summary>
+            Gets or sets the cord y of the Snake's body.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetHead">
+            <summary>
+            Gets the Snake's head.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetTail">
+            <summary>
+            Gets the Snake's tail.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetDirection">
+            <summary>
+            Gets or sets the Snake's current direction.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCordFoodX">
+            <summary>
+            Gets or sets the cord x of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCordFoodY">
+            <summary>
+            Gets or sets the cord y of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetCount">
+            <summary>
+            Gets or sets the Snake size.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GetScore">
+            <summary>
+            Gets or sets the Score.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.ConsoleKey">
+            <summary>
+            Gets the player input.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Facade.CheckUserInput">
             <summary>
-            / Chamar o método CheckUserInput no User Input.
+            Calls the method CheckUserInput from UserInput class.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Facade.Update">
             <summary>
-             Chamar o método Update no GameState.
+            Calls the Update method from GameState class.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Facade.Render">
             <summary>
-            Chamar o método Render no RenderEngine.
+            Calls the Render method from RenderEngine class.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Facade.Menu(System.Boolean,System.Boolean)">
             <summary>
-            Chamar o método MainMenu no Menu.
+            Calls the MainMenu method from Menu class.
             </summary>
+            <param name="x"> Check if intro can be run. </param>
+            <param name="y"> Check if splashscreen can be run. </param>
         </member>
         <member name="M:Projeto2LP2.Facade.GameOver">
             <summary>
-            Chamar o método GameOverMenu no GameOver.
+            Call GameOverMenu method from GameOver class.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.Facade.gameObjects">
+            <summary>
+            Array of GameObjects.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Facade.GameObjects">
+            <summary>
+            Gets GameObjects.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Facade.#ctor">
             <summary>
-            Inicializar as variáveis.
+            Initialize variables.
             </summary>
         </member>
         <member name="T:Projeto2LP2.GameLoop">
             <summary>
-            Classe do ciclo de jogo. 
+            Game cycle class.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameLoop.GetKey">
+            <summary>
+            Gets player's input.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameLoop.ScoreValue">
+            <summary>
+            Gets or sets score.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameLoop.IsGameOver">
+            <summary>
+            Gets or sets a value indicating whether the game is over.
+            </summary>
+        </member>
+        <member name="F:Projeto2LP2.GameLoop.facade">
+            <summary>
+            Facade.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameLoop.Game">
             <summary>
-            Ciclo de jogo.
+            Game cycle.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameLoop.Start">
             <summary>
-            Método de início do jogo.
+            Method to be called in the beginning of the game.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameLoop.Update">
             <summary>
-             Método que corre todos os frames.
+             Method to be called the whole time during the game's session.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameLoop.CheckUserInput">
             <summary>
-            Input do jogador.
+            Player's input.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameLoop.GameState">
             <summary>
-            Update do estado lógico do jogo.
+            Update the game's logic.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameLoop.Render">
             <summary>
-            Renderizar o visual do jogo.
+            Render the game.
             </summary>
         </member>
         <member name="T:Projeto2LP2.GameState">
             <summary>
-            Classe onde é atualizada a lógica do jogo.
+            Class where the game logic is updated.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetSceneX">
+            <summary>
+            Gets cord x of the game's scenario.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetSceneY">
+            <summary>
+            Gets cord y of the game's scenario.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetSnakeBody">
+            <summary>
+            Gets or sets the Snake's body.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetCordSnakeX">
+            <summary>
+            Gets or sets the cord x of the Snake.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetCordSnakeY">
+            <summary>
+            Gets or sets the cord y of the Snake.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetHead">
+            <summary>
+            Gets the Snake's head.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetTail">
+            <summary>
+            Gets the Snake's tail.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetDirection">
+            <summary>
+            Gets the Snake's direction.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetCordFoodX">
+            <summary>
+            Gets or sets the cord x of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetCordFoodY">
+            <summary>
+            Gets or sets the cord y of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.GameState.GetScore">
+            <summary>
+            Gets the Score.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameState.Update">
             <summary>
-            Verificar a lógica do jogo.
+            Update the game logic.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameState.SnakeUpdate">
             <summary>
-            Verificar posição e colisões da cobra.
+            Update the Snake.
             </summary>
         </member>
         <member name="T:Projeto2LP2.RenderEngine">
             <summary>
-            Classe onde é renderizado o jogo.
+            Class where the game is rendered.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.Count">
+            <summary>
+            Gets or sets to count the Snake's size.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetSceneX">
+            <summary>
+            Gets cord x of the game's scenario.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetSceneY">
+            <summary>
+            Gets cord y of the game's scenario.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetSnakeX">
+            <summary>
+            Gets cord x of the Snake's body.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetSnakeY">
+            <summary>
+            Gets cord y of the Snake's body.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.SnakeBody">
+            <summary>
+            Gets the Snake's body.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.Head">
+            <summary>
+            Gets the Snake's head.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.Tail">
+            <summary>
+            Gets the Snake's tail.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetFoodX">
+            <summary>
+            Gets cord x of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetFoodY">
+            <summary>
+            Gets cord y of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.RenderEngine.GetScore">
+            <summary>
+            Gets the Score.
             </summary>
         </member>
         <member name="M:Projeto2LP2.RenderEngine.Render">
             <summary>
-            Renderizar o jogo.
+            Render the game.
             </summary>
         </member>
         <member name="M:Projeto2LP2.RenderEngine.RenderScene">
             <summary>
-            Renderizar o cenário.
+            Render the scenario.
             </summary>
         </member>
         <member name="M:Projeto2LP2.RenderEngine.RenderSnake">
             <summary>
-            Renderizar a cobra.
+            Render the Snake.
             </summary>
         </member>
         <member name="M:Projeto2LP2.RenderEngine.RenderFood">
             <summary>
-            Renderizar a comida.
+            Render the Food.
             </summary>
         </member>
         <member name="T:Projeto2LP2.UserInput">
             <summary>
-            Classe onde é analisado o input do jogador.
+            Classe of the player's input.
             </summary>
         </member>
         <member name="P:Projeto2LP2.UserInput.GetKey">
-            Input do user.
+            <summary>
+            Gets input from the player.
+            </summary>
         </member>
         <member name="M:Projeto2LP2.UserInput.CheckUserInput">
             <summary>
-            Verificar o input do user e escolher a direção atual da cobra.
+            Check the player's input and set the snake's direction.
             </summary>
         </member>
         <member name="T:Projeto2LP2.GameOver">
             <summary>
-            Classe de GameOver.
+            GameOver class.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameOver.GameOverMenu">
             <summary>
-            Página do GameOver.
+            GameOver page.
             </summary>
         </member>
         <member name="T:Projeto2LP2.Intro">
             <summary>
-            Intro do jogo.
+            Game intro class.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Intro.IntroMenu">
             <summary>
-            Método que reproduz a intro do jogo.
+            Method that plays the intro of the game.
             </summary>
         </member>
         <member name="T:Projeto2LP2.Menu">
             <summary>
-            Classe do menu principal.
+            Classe of the main Menu.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Menu.MainMenu(System.Boolean,System.Boolean)">
             <summary>
-            Método onde é exposto o menu principal.
+            Method where the main Menu is exposed.
             </summary>
-            <param name="introPlay"> Indicar se pode correr a intro. </param>
-            <param name="splashPlay"> Indicar se pode correr o splashscreen. 
+            <param name="introPlay"> Check if the intro can be played.</param>
+            <param name="splashPlay"> Check if the SplashScreen can be shown.
             </param>
         </member>
         <member name="M:Projeto2LP2.Menu.Instructions(System.Boolean)">
             <summary>
-            Páginas das instruções.
+            Instructions page.
             </summary>
-            <param name="retry"> Indicar se pode voltar atrás. </param>
+            <param name="retry"> Check if can return back. </param>
         </member>
         <member name="M:Projeto2LP2.Menu.Score(System.Boolean)">
             <summary>
-            Página da pontuação.
+            Page of the score.
             </summary>
-            <param name="retry"> Indicar se pode voltar atrás. </param>
+            <param name="retry"> Check if can return back. </param>
         </member>
         <member name="M:Projeto2LP2.Menu.Credits(System.Boolean)">
             <summary>
-            Página dos créditos.
+            Page of the Credits.
             </summary>
-            <param name="retry"> Indicar se pode voltar atrás. </param>
+            <param name="retry"> Check if can return back. </param>
         </member>
         <member name="M:Projeto2LP2.Menu.Exit">
             <summary>
-            Sair do jogo.
+            Exit game.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Menu.ScoreReader">
             <summary>
-            Leitura da pontuação.
+            Read the Score file.
             </summary>
         </member>
         <member name="T:Projeto2LP2.SplashScreen">
             <summary>
-            Classe do SplashScreen.
+            Class of the SplashScreen.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SplashScreen.SplashScreenMenu">
             <summary>
-            Método da página que aparece antes de entrar para o menu.
+            Method of the page that appears before entering the menu.
             </summary>
         </member>
         <member name="T:Projeto2LP2.Food">
             <summary>
-            Struct dos stats da comida.
+            Struct of the Food's stats.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Food.CordX">
+            <summary>
+            Gets or sets cord x of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Food.CordY">
+            <summary>
+            Gets or sets cord y of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.Food.FoodChar">
+            <summary>
+            Gets or sets the char of the Food to be shown.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Food.#ctor(System.Int32,System.Int32,System.Char)">
             <summary>
-            Inicializar propiedades e variáveis.
+            Initialize the properties.
             </summary>
-            <param name="x"> Coordenada X da comida. </param>
-            <param name="y"> Coordenada Y da comida. </param>
-            <param name="food"> Caracter da comida. </param>
+            <param name="x"> Cord X of the Food. </param>
+            <param name="y"> Coord Y of the Food. </param>
+            <param name="food"> Char of the Food. </param>
         </member>
         <member name="T:Projeto2LP2.FoodObject">
             <summary>
-            GameObject da comida.
+            Food GameObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.FoodObject.FoodX">
+            <summary>
+            Gets or sets cord x of the Food.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.FoodObject.FoodY">
+            <summary>
+            Gets or sets cord y of the Food.
             </summary>
         </member>
         <member name="M:Projeto2LP2.FoodObject.Start">
             <summary>
-            Método para ser chamado quando o jogo começa.
+            Method to be called when the game begins.
             </summary>
         </member>
         <member name="M:Projeto2LP2.FoodObject.Update">
             <summary>
-            Método para ser chamado continuamente ao longo do jogo.
+            Method to be called the whole time during the game session.
             </summary>
         </member>
         <member name="M:Projeto2LP2.FoodObject.Render">
             <summary>
-            Método de renderização.
+            Method where the Food is rendered.
             </summary>
         </member>
         <member name="T:Projeto2LP2.GameObject">
             <summary>
-            Classe abstracta de GameObject.
+            GameObject abstract class.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameObject.Start">
             <summary>
-            Método para ser chamado quando o jogo começa.
+            Method to be called when the game begins.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameObject.Update">
             <summary>
-            Método para ser chamado continuamente ao longo do jogo.
+            Method to be called the whole time during the game session.
             </summary>
         </member>
         <member name="M:Projeto2LP2.GameObject.Render">
             <summary>
-            Método de renderização.
+            Rendering method.
             </summary>
         </member>
         <member name="T:Projeto2LP2.SceneObject">
             <summary>
-            GameObject do cenário.
+            Scenario GameObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SceneObject.SceneX">
+            <summary>
+            Gets the Scene's width.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SceneObject.SceneY">
+            <summary>
+            Gets the Scene's height.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SceneObject.Start">
             <summary>
-            Método para ser chamado quando o jogo começa.
+            Method to be called when the game begins.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SceneObject.Update">
             <summary>
-            Método para ser chamado continuamente ao longo do jogo.
+            Method to be called the whole time during the game session.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SceneObject.Render">
             <summary>
-            Método onde é renderizado o cenário.
+            Method where the scenario is rendered.
             </summary>
         </member>
         <member name="T:Projeto2LP2.SnakeObject">
             <summary>
-            GameObject cobra.
+            Snake GameObject.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakeObject.SnakeBody">
+            <summary>
+            Gets or sets the Snake's body.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakeObject.Tail">
+            <summary>
+            Gets the SNake's tail.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakeObject.Head">
+            <summary>
+            Gets the Snake's head.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakeObject.SnakeX">
+            <summary>
+            Gets or sets the cord x of the Snake.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakeObject.SnakeY">
+            <summary>
+            Gets or sets the cord y of the Snake.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakeObject.SnakeDirection">
+            <summary>
+            Gets or sets the current direction.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.Start">
             <summary>
-            Método para ser chamado quando o jogo começa.
+            Method to be called when the game starts.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.Update">
             <summary>
-            Método para ser chamado continuamente ao longo do jogo.
+            Method to be called all the time during the whole game session.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.Render">
             <summary>
-            Método onde é renderizado a cobra.
+            Method where the Snake is rendered.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.SnakePositionCheck">
             <summary>
-            Verificar e atualizar a posição da cobra de acordo com a direção.
+            Check and update the Snake's position according to the direction.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.CheckFood">
             <summary>
-            Verificar se a cobra colidiu com a comida.
+            Check if the Snake collided with the Food.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.CheckSnakeTouch">
             <summary>
-             Verificar se a cobra colidiu em si própria.
+            Check if the Snake collided with itself.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakeObject.CheckWalls">
             <summary>
-            Verificar se a cobra colidiu numa parede.
+            Check if the Snake collided with the wall.
             </summary>
         </member>
         <member name="T:Projeto2LP2.SnakePart">
             <summary>
-            Classe das uma partes da cobra.
+            Class of one of the Snake's parts.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakePart.CordX">
+            <summary>
+            Gets or sets cord x of the Snake's part.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakePart.CordY">
+            <summary>
+            Gets or sets cord y of the Snake's part.
+            </summary>
+        </member>
+        <member name="P:Projeto2LP2.SnakePart.Part">
+            <summary>
+            Gets or sets the char to be shown of the Snake's part.
             </summary>
         </member>
         <member name="M:Projeto2LP2.SnakePart.#ctor(System.Int32,System.Int32,System.Char)">
             <summary>
-            Inicializar propriedades e variáveis.
+            Initialize the properties.
             </summary>
-            <param name="x"> Coordenada X.</param>
-            <param name="y"> Coordenada Y.</param>
-            <param name="part"> Caracter da parte.</param>
+            <param name="x"> Cord X of the Snake's part.</param>
+            <param name="y"> Cord Y of the Snake's part.</param>
+            <param name="part"> Char or the Snake's part.</param>
         </member>
         <member name="T:Projeto2LP2.Program">
             <summary>
-            Classe onde inicia o jogo.
+            Class where game begins.
             </summary>
         </member>
         <member name="M:Projeto2LP2.Program.Main">
             <summary>
-            Começar o jogo.
+            Start the game.
             </summary>
         </member>
     </members>

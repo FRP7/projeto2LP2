@@ -4,12 +4,12 @@ using System.Threading;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe do SplashScreen.
+    /// Class of the SplashScreen.
     /// </summary>
-    class SplashScreen
+    public class SplashScreen
     {
         /// <summary>
-        /// Método da página que aparece antes de entrar para o menu.
+        /// Method of the page that appears before entering the menu.
         /// </summary>
         public void SplashScreenMenu()
         {
@@ -32,31 +32,36 @@ namespace Projeto2LP2
                     "    |   |   |  |  |  |  ||  ||  |  \\     | ");
                 Console.WriteLine("\t\t\t   \\___|__|__|__|__|__|\\_|_____|" +
                     "    |___|___|__|__|__|__|____|__|__|\\____| \n\n");
-                // Enquanto o jogador não clicar
+
+                // While the player doesn't click.
                 while (!Console.KeyAvailable)
                 {
                     Console.WriteLine("\t\t\t\t\t\tPress ENTER to continue.");
                     Thread.Sleep(250);
-                    // Posicionar o cursor na linha anterior
+
+                    // Set the cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    // Apagar a linha anterior
+
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\t\t\t\t\t\tPress       to continue.");
                     Thread.Sleep(250);
-                    // Posicionar o cursor na linha anterior
+
+                    // Set the cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
-                    // Apagar a linha anterior
+
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
-                // Variável que contêm a opção do jogador
+
+                // The player's choice.
                 ConsoleKey key = Console.ReadKey(true).Key;
 
-                if (key == ConsoleKey.Enter) retry = false;
-                else retry = true;
+                retry = key != ConsoleKey.Enter;
             }
-            while (retry == true);
+            while (retry);
         }
     }
 }

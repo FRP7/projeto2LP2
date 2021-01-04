@@ -4,181 +4,243 @@ using System.Collections.Generic;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe que tenta tornar o código menos esparguete.
+    /// Facade class that tries to keep the general code more organized.
     /// </summary>
-    sealed class Facade
+    public class Facade
     {
-        // Aceder à coordenada X do cenário no SceneObject.
+        /// <summary>
+        /// Gets cord x from the game scenario.
+        /// </summary>
         public static int GetSceneX { get => SceneObject.SceneX; }
 
-        // Aceder à coordenada Y do cenário no SceneObject.
+        /// <summary>
+        /// Gets cord y from the game scenario.
+        /// </summary>
         public static int GetSceneY { get => SceneObject.SceneY; }
 
-        // Aceder ao bool que indica se o jogo acabou no GameLoop.
-        public static bool IsGameOver {
-            get {
-                return GameLoop.isGameOver;
+        /// <summary>
+        /// Gets or sets a value indicating whether the game is lost.
+        /// </summary>
+        public static bool IsGameOver
+        {
+            get
+            {
+                return GameLoop.IsGameOver;
             }
-            set {
-                GameLoop.isGameOver = value;
-            }
-        }
-
-
-        // Aceder ao corpo da cobra no SnakeObject.
-        public static List<SnakePart> GetSnakeBody {
-            get {
-                return SnakeObject.snakeBody;
-            }
-            set {
-                SnakeObject.snakeBody = value;
+            set
+            {
+                GameLoop.IsGameOver = value;
             }
         }
 
-        // Aceder à coordenada X da cobra no SnakeObject.
-        public static int GetCordSnakeX {
-            get {
+        /// <summary>
+        /// Gets or sets the body of the Snake.
+        /// </summary>
+        public static List<SnakePart> GetSnakeBody
+        {
+            get
+            {
+                return SnakeObject.SnakeBody;
+            }
+            set
+            {
+                SnakeObject.SnakeBody = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the cord x of the Snake's body.
+        /// </summary>
+        public static int GetCordSnakeX
+        {
+            get
+            {
                 return SnakeObject.SnakeX;
             }
-            set {
+            set
+            {
                 SnakeObject.SnakeX = value;
             }
         }
 
-        // Aceder à coordenada Y da cobra no SnakeObject.
-        public static int GetCordSnakeY {
-            get {
+        /// <summary>
+        /// Gets or sets the cord y of the Snake's body.
+        /// </summary>
+        public static int GetCordSnakeY
+        {
+            get
+            {
                 return SnakeObject.SnakeY;
             }
-            set {
+            set
+            {
                 SnakeObject.SnakeY = value;
             }
         }
 
-        // Aceder à cabeça da cobra no SnakeObject.
-        public static SnakePart GetHead {
-            get {
-                return SnakeObject.Head;
+        /// <summary>
+        /// Gets the Snake's head.
+        /// </summary>
+        public static SnakePart GetHead { get => SnakeObject.Head; }
+
+        /// <summary>
+        /// Gets the Snake's tail.
+        /// </summary>
+        public static SnakePart GetTail { get => SnakeObject.Tail; }
+
+        /// <summary>
+        /// Gets or sets the Snake's current direction.
+        /// </summary>
+        public static Direction GetDirection
+        {
+            get
+            {
+                return SnakeObject.SnakeDirection;
+            }
+            set
+            {
+                SnakeObject.SnakeDirection = value;
             }
         }
 
-        // Aceder à cauda da cobra no SnakePart.
-        public static SnakePart GetTail {
-            get {
-                return SnakeObject.Tail;
-            }
-        }
-
-        // Aceder à direção da cobra no SnakeObject.
-        public static Direction GetDirection {
-            get {
-                return SnakeObject.direction;
-            }
-            set {
-                SnakeObject.direction = value;
-            }
-        }
-
-        // Aceder à coordenada X da comida no FoodObject.
-        public static int GetCordFoodX {
-            get {
+        /// <summary>
+        /// Gets or sets the cord x of the Food.
+        /// </summary>
+        public static int GetCordFoodX
+        {
+            get
+            {
                 return FoodObject.FoodX;
             }
-            set {
+            set
+            {
                 FoodObject.FoodX = value;
             }
         }
 
-        // Aceder à coordenada Y da comida no FoodObject.
-        public static int GetCordFoodY {
-            get {
+        /// <summary>
+        /// Gets or sets the cord y of the Food.
+        /// </summary>
+        public static int GetCordFoodY
+        {
+            get
+            {
                 return FoodObject.FoodY;
             }
-            set {
+            set
+            {
                 FoodObject.FoodY = value;
             }
         }
 
-        // Aceder à contagem do tamanho da cobra no RenderEngine.
-        public static int GetCount {
-            get {
-                return RenderEngine.count;
+        /// <summary>
+        /// Gets or sets the Snake size.
+        /// </summary>
+        public static int GetCount
+        {
+            get
+            {
+                return RenderEngine.Count;
             }
-            set {
-                RenderEngine.count = value;
+            set
+            {
+                RenderEngine.Count = value;
             }
         }
 
-        // Aceder à pontuação no GameLoop.
-        public static int GetScore {
-            get {
+        /// <summary>
+        /// Gets or sets the Score.
+        /// </summary>
+        public static int GetScore
+        {
+            get
+            {
                 return GameLoop.ScoreValue;
             }
-            set {
+            set
+            {
                 GameLoop.ScoreValue = value;
             }
         }
 
-        // Aceder ao UserInput.
+        // Access UserInput.
         private readonly UserInput userInput;
 
-        // Aceder ao GameState.
+        // Access GameState.
         private readonly GameState gameState;
 
-        // Aceder ao RenderEngine.
+        // Access RenderEngine.
         private readonly RenderEngine renderEngine;
 
-        // Aceder ao input do jogador no UserInput.
+        /// <summary>
+        /// Gets the player input.
+        /// </summary>
         public ConsoleKey ConsoleKey { get => userInput.GetKey; }
 
         /// <summary>
-        /// / Chamar o método CheckUserInput no User Input.
+        /// Calls the method CheckUserInput from UserInput class.
         /// </summary>
-        public void CheckUserInput() {
+        public void CheckUserInput()
+        {
             userInput.CheckUserInput();
         }
 
         /// <summary>
-        ///  Chamar o método Update no GameState.
+        /// Calls the Update method from GameState class.
         /// </summary>
-        public void Update() {
+        public void Update()
+        {
             gameState.Update();
         }
 
         /// <summary>
-        /// Chamar o método Render no RenderEngine.
+        /// Calls the Render method from RenderEngine class.
         /// </summary>
-        public void Render() {
+        public void Render()
+        {
             renderEngine.Render();
         }
 
         /// <summary>
-        /// Chamar o método MainMenu no Menu.
+        /// Calls the MainMenu method from Menu class.
         /// </summary>
-        public void Menu(bool x, bool y) {
+        /// <param name="x"> Check if intro can be run. </param>
+        /// <param name="y"> Check if splashscreen can be run. </param>
+        public void Menu(bool x, bool y)
+        {
             Menu menu = new Menu();
             menu.MainMenu(x, y);
         }
 
         /// <summary>
-        /// Chamar o método GameOverMenu no GameOver.
+        /// Call GameOverMenu method from GameOver class.
         /// </summary>
-        public void GameOver() {
+        public void GameOver()
+        {
             GameOver gameOver = new GameOver();
             gameOver.GameOverMenu();
         }
 
-        // Array de GameObjects.
-        public GameObject[] gameObjects = {
+        /// <summary>
+        /// Array of GameObjects.
+        /// </summary>
+        private readonly GameObject[] gameObjects =
+        {
             new FoodObject(),
             new SceneObject(),
             new SnakeObject(),
         };
 
         /// <summary>
-        /// Inicializar as variáveis.
+        /// Gets GameObjects.
         /// </summary>
-        public Facade() {
+        public GameObject[] GameObjects { get => gameObjects; }
+
+        /// <summary>
+        /// Initialize variables.
+        /// </summary>
+        public Facade()
+        {
             userInput = new UserInput();
             gameState = new GameState();
             renderEngine = new RenderEngine();
