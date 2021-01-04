@@ -6,8 +6,6 @@
  `SceneObject`, `SnakeObject`, `SnakePart`, `Direction`, `Facade`.
  - Movimento da cobra.
  - Cenário.
- - Colisões e comida (feito em equipa com o André via *Discord* e depois 
- transformei-os em *GameObject*).
  - *Polishing* e documentação do código.
  - Correção de *bugs*.
  - Relatório.
@@ -19,7 +17,8 @@
  - `SplashScreen`.
 
  **André Cosme a21802129:**
- - Colisões e comida (feito em equipa com o Francisco via *Discord*).
+ - Colisões. 
+ - Comida.
  
  **Repositório**: https://github.com/FRP7/projeto2LP2
 # Arquitetura da solução
