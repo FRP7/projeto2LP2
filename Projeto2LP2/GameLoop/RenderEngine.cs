@@ -4,69 +4,69 @@ using System.Collections.Generic;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe onde é renderizado o jogo.
+    /// Class where the game is rendered.
     /// </summary>
     public class RenderEngine
     {
         /// <summary>
-        /// Gets or sets contar o tamanho da cobra.
+        /// Gets or sets to count the snake's size.
         /// </summary>
         public static int Count { get; set; }
 
         /// <summary>
-        /// Gets coordenada X do cenário no GameLoop.
+        /// Gets cord x of the game's scenario.
         /// </summary>
         public static int GetSceneX { get => Facade.GetSceneX; }
 
         /// <summary>
-        /// Gets coordenada Y do cenário no GameLoop.
+        /// Gets cord y of the game's scenario.
         /// </summary>
         public static int GetSceneY { get => Facade.GetSceneY; }
 
         /// <summary>
-        /// Gets coordenada X da cobra no GameLoop.
+        /// Gets cord x of the snake's body.
         /// </summary>
         public static int GetSnakeX { get => Facade.GetCordSnakeX; }
 
         /// <summary>
-        /// Gets coordenada y da cobra.
+        /// Gets cord y of the snake's body.
         /// </summary>
         public static int GetSnakeY { get => Facade.GetCordSnakeY; }
 
         /// <summary>
-        /// Gets corpo da cobra.
+        /// Gets the snake's body.
         /// </summary>
         public static List<SnakePart> SnakeBody { get => Facade.GetSnakeBody; }
 
         /// <summary>
-        /// Gets cabeça da cobra no GameLoop.
+        /// Gets the snake's head.
         /// </summary>
         public static SnakePart Head { get => Facade.GetHead; }
 
         /// <summary>
-        /// Gets cauda da cobra no GameLoop.
+        /// Gets the snake's tail.
         /// </summary>
         public static SnakePart Tail { get => Facade.GetTail; }
 
         /// <summary>
-        /// Gets coordenada X da comida no GameLoop.
+        /// Gets cord x of the Food.
         /// </summary>
         public static int GetFoodX { get => Facade.GetCordFoodX; }
 
         /// <summary>
-        /// Gets coordenada Y da comida no GameLoop.
+        /// Gets cord y of the Food.
         /// </summary>
         public static int GetFoodY { get => Facade.GetCordFoodY; }
 
         /// <summary>
-        /// Gets pontuação no GameLoop.
+        /// Gets the score.
         /// </summary>
         public static int GetScore { get => Facade.GetScore; }
 
         private Facade facade;
 
         /// <summary>
-        /// Renderizar o jogo.
+        /// Render the game.
         /// </summary>
         public void Render() {
             facade = new Facade();
@@ -76,7 +76,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Renderizar o cenário.
+        /// Render the scenario.
         /// </summary>
         private void RenderScene() {
             facade.GameObjects[1].Render();
@@ -86,14 +86,14 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Renderizar a cobra.
+        /// Render the snake.
         /// </summary>
         private void RenderSnake() {
             facade.GameObjects[2].Render();
         }
 
         /// <summary>
-        /// Renderizar a comida.
+        /// Render the food.
         /// </summary>
         private void RenderFood() {
             facade.GameObjects[0].Render();

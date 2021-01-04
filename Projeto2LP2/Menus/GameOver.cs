@@ -5,12 +5,12 @@ using System.IO;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe de GameOver.
+    /// GameOver class.
     /// </summary>
     public class GameOver
     {
         /// <summary>
-        /// Página do GameOver.
+        /// GameOver page.
         /// </summary>
         public void GameOverMenu()
         {
@@ -24,7 +24,7 @@ namespace Projeto2LP2
             {
                 Console.Clear();
 
-                // Escrever no ficheiro o score adquirido
+                // Write on a file the final score.
                 if (File.Exists(fileName)) {
                     File.AppendAllText(fileName, Environment.NewLine + result);
                 }
@@ -53,24 +53,24 @@ namespace Projeto2LP2
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
 
-                    // Posicionar o cursor na linha anterior
+                    // Set cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
 
-                    // Apagar a linha anterior
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
 
-                    // Posicionar o cursor na linha anterior
+                    // Set cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
 
-                    // Apagar a linha anterior
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                // Variável que contem a opção do jogador
+                // Variable that contains the player's choice.
                 ConsoleKey key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)

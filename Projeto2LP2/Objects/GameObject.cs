@@ -3,22 +3,22 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe abstracta de GameObject.
+    /// GameObject abstract class.
     /// </summary>
     public abstract class GameObject
     {
         /// <summary>
-        /// Método para ser chamado quando o jogo começa.
+        /// Method to be called when the game begins.
         /// </summary>
         public abstract void Start();
 
         /// <summary>
-        /// Método para ser chamado continuamente ao longo do jogo.
+        /// Method to be called the whole time during the game session.
         /// </summary>
         public abstract void Update();
 
         /// <summary>
-        /// Método de renderização.
+        /// Rendering method.
         /// </summary>
         public abstract void Render();
     }

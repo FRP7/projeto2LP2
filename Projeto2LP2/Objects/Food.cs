@@ -3,31 +3,31 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Struct dos stats da comida.
+    /// Struct of the Food's stats.
     /// </summary>
     public struct Food
     {
         /// <summary>
-        /// Gets or sets coordenada x da comida.
+        /// Gets or sets cord x of the Food.
         /// </summary>
         public int CordX { get; set; }
 
         /// <summary>
-        /// Gets or sets coordenada y da comida.
+        /// Gets or sets cord y of the Food.
         /// </summary>
         public int CordY { get; set; }
 
         /// <summary>
-        /// Gets or sets caracter da comida.
+        /// Gets or sets the char of the Food to be shown.
         /// </summary>
         public char FoodChar { get; set; }
 
         /// <summary>
-        /// Inicializar propiedades e variáveis.
+        /// Initialize the properties.
         /// </summary>
-        /// <param name="x"> Coordenada X da comida. </param>
-        /// <param name="y"> Coordenada Y da comida. </param>
-        /// <param name="food"> Caracter da comida. </param>
+        /// <param name="x"> Cord X of the Food. </param>
+        /// <param name="y"> Coord Y of the Food. </param>
+        /// <param name="food"> Char of the Food. </param>
         public Food(int x, int y, char food)
         {
             CordX = x;

@@ -3,32 +3,32 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Enum que indica a direção da cobra.
+    /// Enum that sets the direction of the snake.
     /// </summary>
     public enum Direction
     {
         /// <summary>
-        /// Para cima.
+        /// Go up.
         /// </summary>
         Up,
 
         /// <summary>
-        /// Para baixo.
+        /// Go down.
         /// </summary>
         Down,
 
         /// <summary>
-        /// Para a esquerda.
+        /// Go to the left.
         /// </summary>
         Left,
 
         /// <summary>
-        /// Para a direita.
+        /// Go to the right.
         /// </summary>
         Right,
 
         /// <summary>
-        /// Nenhuma direção definida.
+        /// No direction set.
         /// </summary>
         None,
     }

@@ -3,14 +3,14 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe onde inicia o jogo.
+    /// Class where game begins.
     /// </summary>
     public static class Program
     {
         /// <summary>
-        /// Começar o jogo.
+        /// Start the game.
         /// </summary>
-        private static void Main(/*string[] args*/) {
+        private static void Main() {
             Menu menu = new Menu();
             menu.MainMenu(true, true);
         }

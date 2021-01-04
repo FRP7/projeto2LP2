@@ -6,77 +6,77 @@ using System.Linq;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// GameObject cobra.
+    /// Snake GameObject.
     /// </summary>
     public class SnakeObject : GameObject
     {
         /// <summary>
-        /// Gets or sets Corpo da cobra.
+        /// Gets or sets the snake body.
         /// </summary>
         public static List<SnakePart> SnakeBody { get; set; }
 
         /// <summary>
-        /// Gets rabo da cobra.
+        /// Gets the snake tail.
         /// </summary>
         public static SnakePart Tail { get => SnakeBody[0]; }
 
         /// <summary>
-        /// Gets cabeça da cobra.
+        /// Gets the snake head.
         /// </summary>
         public static SnakePart Head { get => SnakeBody.Last(); }
 
         /// <summary>
-        /// Gets or sets coordenada x da cobra.
+        /// Gets or sets the cord x of snake.
         /// </summary>
         public static int SnakeX { get; set; }
 
         /// <summary>
-        /// Gets or sets coordenada y da cobra.
+        /// Gets or sets the cord y of snake.
         /// </summary>
         public static int SnakeY { get; set; }
 
         /// <summary>
-        /// Gets or sets Direção.
+        /// Gets or sets the current direction..
         /// </summary>
         public static Direction SnakeDirection { get; set; }
 
         /// <summary>
-        /// Método para ser chamado quando o jogo começa.
+        /// Method to be called when the game starts.
         /// </summary>
         public override void Start() {
-            // Definir a posição inicial da cobra.
+            // Sets the initial position of the snake.
             SnakeX = Facade.GetSceneX / 2;
             SnakeY = Facade.GetSceneY / 2;
 
-            // Definir a direção inicial.
-            SnakeDirection = Direction.Up;
+            // Sets the initial direction.
+            SnakeDirection = Direction.None;
             Facade.GetDirection = Direction.None;
 
-            // Definir o tamanho da cobra.
+            // Set the snake body.
             SnakeBody = new List<SnakePart> {
                 new SnakePart(SnakeX, SnakeY, '@'),
             };
         }
 
         /// <summary>
-        /// Método para ser chamado continuamente ao longo do jogo.
+        /// Method to be called all the time during the whole game session.
         /// </summary>
         public override void Update() {
-            // Verificar a posição da cobra.
+            // Check the snake's position.
             SnakePositionCheck();
 
-            // Verificar se a cobra colidiu com a comida.
+            // Check if the snake collided with the food.
             CheckFood();
 
-            // Verificar se a cobra colidiu em si própria.
+            // Check if the snake collided with itself.
             CheckSnakeTouch();
 
-            // Verificar se a cobra colidiu numa parede.
+            // Check if the snake collided with the wall.
             CheckWalls();
         }
 
         /// <summary>
-        /// Método onde é renderizado a cobra.
+        /// Method where the snake is rendered.
         /// </summary>
         public override void Render() {
             if (Facade.GetCordSnakeX >= 0 && Facade.GetCordSnakeY >= 0) {
@@ -105,7 +105,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Verificar e atualizar a posição da cobra de acordo com a direção.
+        /// Check and update the snake's position according to the direction.
         /// </summary>
         private void SnakePositionCheck() {
             if (SnakeDirection == Direction.Up) {
@@ -124,7 +124,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Verificar se a cobra colidiu com a comida.
+        /// Check if the snake collided with the food.
         /// </summary>
         private void CheckFood() {
             if (Facade.GetHead.CordX == Facade.GetCordFoodX &&
@@ -142,7 +142,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        ///  Verificar se a cobra colidiu em si própria.
+        /// Check if the snake collided with itself.
         /// </summary>
         private void CheckSnakeTouch() {
             for (int i = 3; i < Facade.GetSnakeBody.Count; i++) {
@@ -156,7 +156,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Verificar se a cobra colidiu numa parede.
+        /// Check if the snake collided with the wall.
         /// </summary>
         private void CheckWalls() {
             if (Facade.GetCordSnakeX == 0) {

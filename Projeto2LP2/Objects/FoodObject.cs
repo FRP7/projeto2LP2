@@ -3,31 +3,31 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// GameObject da comida.
+    /// Food GameObject.
     /// </summary>
     public class FoodObject : GameObject
     {
         /// <summary>
-        /// Gets or sets coordenada x da comida.
+        /// Gets or sets cord x of the Food.
         /// </summary>
         public static int FoodX { get; set; }
 
         /// <summary>
-        /// Gets or sets coordenada y da comida.
+        /// Gets or sets cord y of the Food.
         /// </summary>
         public static int FoodY { get; set; }
 
         /// <summary>
-        /// Método para ser chamado quando o jogo começa.
+        /// Method to be called when the game begins.
         /// </summary>
         public override void Start() {
-            // Definir a posição da comida inicial.
+            // Set the first Food position.
             FoodX = (Facade.GetSceneX / 2) - 5;
             FoodY = (Facade.GetSceneY / 2) - 5;
         }
 
         /// <summary>
-        /// Método para ser chamado continuamente ao longo do jogo.
+        /// Method to be called the whole time during the game session.
         /// </summary>
         public override void Update() {
             Random random = new Random();
@@ -37,7 +37,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Método de renderização.
+        /// Method where the Food is rendered.
         /// </summary>
         public override void Render() {
             Console.SetCursorPosition(Facade.GetCordFoodX, Facade.GetCordFoodY);

@@ -4,23 +4,22 @@ using System.Collections.Generic;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe que tenta tornar o código menos esparguete.
+    /// Facade class that tries to keep the general code more organized.
     /// </summary>
     public class Facade
     {
         /// <summary>
-        /// Gets (ler) Coordenada X do cenário no SceneObject.
+        /// Gets cord x from the game scenario.
         /// </summary>
         public static int GetSceneX { get => SceneObject.SceneX; }
 
         /// <summary>
-        /// Gets (ler) Coordenada Y do cenário no SceneObject.
+        /// Gets cord y from the game scenario.
         /// </summary>
         public static int GetSceneY { get => SceneObject.SceneY; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether gets (ler) Sets
-        /// (modificar) a indicação se o jogo acabou no GameLoop.
+        /// Gets or sets a value indicating whether the game is lost.
         /// </summary>
         public static bool IsGameOver
         {
@@ -35,8 +34,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) o corpo da cobra no
-        /// SnakeObject.
+        /// Gets or sets the body of the snake.
         /// </summary>
         public static List<SnakePart> GetSnakeBody
         {
@@ -51,8 +49,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) o corpo da cobra do
-        /// SnakeObject.
+        /// Gets or sets the cord x of the snake body.
         /// </summary>
         public static int GetCordSnakeX
         {
@@ -67,8 +64,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets(modificar) a coordenada Y da cobra no
-        /// SnakeObject.
+        /// Gets or sets the cord y of the snake body.
         /// </summary>
         public static int GetCordSnakeY
         {
@@ -83,30 +79,17 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets (ler), Sets (modificar) a cabeça da cobra no SnakeObject.
+        /// Gets the snake head.
         /// </summary>
-        public static SnakePart GetHead
-        {
-            get
-            {
-                return SnakeObject.Head;
-            }
-        }
+        public static SnakePart GetHead { get => SnakeObject.Head; }
 
         /// <summary>
-        /// Gets (ler), Sets (modificar) a cauda da cobra no SnakePart.
+        /// Gets the snake tail.
         /// </summary>
-        public static SnakePart GetTail
-        {
-            get
-            {
-                return SnakeObject.Tail;
-            }
-        }
+        public static SnakePart GetTail { get => SnakeObject.Tail; }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) a direção da cobra no
-        /// SnakeObject.
+        /// Gets or sets the snake current direction.
         /// </summary>
         public static Direction GetDirection
         {
@@ -121,8 +104,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) a coordenada X da comida no
-        /// FoodObject.
+        /// Gets or sets the cord x of the food.
         /// </summary>
         public static int GetCordFoodX
         {
@@ -137,8 +119,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) a coordenada Y da comida no
-        /// FoodObject.
+        /// Gets or sets the cord y of the food.
         /// </summary>
         public static int GetCordFoodY
         {
@@ -153,8 +134,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) o tamanho da cobra no
-        /// RenderEngine.
+        /// Gets or sets the snake size.
         /// </summary>
         public static int GetCount
         {
@@ -169,7 +149,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets (ler), Sets (modificar) a pontuação no GameLoop.
+        /// Gets or sets the score.
         /// </summary>
         public static int GetScore
         {
@@ -183,22 +163,22 @@ namespace Projeto2LP2
             }
         }
 
-        // Aceder ao UserInput.
+        // Access UserInput.
         private readonly UserInput userInput;
 
-        // Aceder ao GameState.
+        // Access GameState.
         private readonly GameState gameState;
 
-        // Aceder ao RenderEngine.
+        // Access RenderEngine.
         private readonly RenderEngine renderEngine;
 
         /// <summary>
-        /// Gets (ler) o input do jogador no UserInput.
+        /// Gets the player input.
         /// </summary>
         public ConsoleKey ConsoleKey { get => userInput.GetKey; }
 
         /// <summary>
-        /// / Chamar o método CheckUserInput no User Input.
+        /// Calls the method CheckUserInput from UserInput class.
         /// </summary>
         public void CheckUserInput()
         {
@@ -206,7 +186,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        ///  Chamar o método Update no GameState.
+        /// Calls the Update method from GameState class.
         /// </summary>
         public void Update()
         {
@@ -214,7 +194,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Chamar o método Render no RenderEngine.
+        /// Calls the Render method from RenderEngine class.
         /// </summary>
         public void Render()
         {
@@ -222,10 +202,10 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Chamar o método MainMenu no Menu.
+        /// Calls the MainMenu method from Menu class.
         /// </summary>
-        /// <param name="x"> Se pode correr a intro. </param>
-        /// <param name="y"> Se pode correr o splashscreen. </param>
+        /// <param name="x"> Check if intro can be run. </param>
+        /// <param name="y"> Check if splashscreen can be run. </param>
         public void Menu(bool x, bool y)
         {
             Menu menu = new Menu();
@@ -233,7 +213,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Chamar o método GameOverMenu no GameOver.
+        /// Call GameOverMenu method from GameOver class.
         /// </summary>
         public void GameOver()
         {
@@ -241,6 +221,9 @@ namespace Projeto2LP2
             gameOver.GameOverMenu();
         }
 
+        /// <summary>
+        /// Array of GameObjects.
+        /// </summary>
         private readonly GameObject[] gameObjects =
         {
             new FoodObject(),
@@ -249,12 +232,12 @@ namespace Projeto2LP2
         };
 
         /// <summary>
-        /// Gets GameObjects.
+        /// Gets gameObjects.
         /// </summary>
         public GameObject[] GameObjects { get => gameObjects; }
 
         /// <summary>
-        /// Inicializar as variáveis.
+        /// Initialize variables.
         /// </summary>
         public Facade()
         {

@@ -3,22 +3,22 @@ using System.Collections.Generic;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe onde é atualizada a lógica do jogo.
+    /// Class where the game logic is updated.
     /// </summary>
     public class GameState
     {
         /// <summary>
-        /// Gets coordenada X do cenário no GameLoop.
+        /// Gets cord x of the game's scenario.
         /// </summary>
         public static int GetSceneX { get => Facade.GetSceneX; }
 
         /// <summary>
-        /// Gets coordenada Y do cenário no GameLoop.
+        /// Gets cord y of the game's scenario.
         /// </summary>
         public static int GetSceneY { get => Facade.GetSceneY; }
 
         /// <summary>
-        /// Gets or sets corpo da cobra.
+        /// Gets or sets the snake's body.
         /// </summary>
         public static List<SnakePart> GetSnakeBody
         {
@@ -33,7 +33,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets coordenada x da cobra.
+        /// Gets or sets the cord x of the snake.
         /// </summary>
         public static int GetCordSnakeX
         {
@@ -48,7 +48,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets coordenada Y da cobra.
+        /// Gets or sets the cord y of the snake.
         /// </summary>
         public static int GetCordSnakeY
         {
@@ -63,7 +63,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets cabeça da cobra.
+        /// Gets the snake's head.
         /// </summary>
         public static SnakePart GetHead {
             get {
@@ -72,7 +72,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets cauda da cobra.
+        /// Gets the snake's tail.
         /// </summary>
         public static SnakePart GetTail {
             get {
@@ -81,12 +81,12 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets direção da cobra.
+        /// Gets the snake's direction.
         /// </summary>
         public static Direction GetDirection { get => Facade.GetDirection; }
 
         /// <summary>
-        /// Gets or sets coordenada x da comida.
+        /// Gets or sets the cord x of the Food.
         /// </summary>
         public static int GetCordFoodX
         {
@@ -101,7 +101,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets or sets coordenada Y da comida.
+        /// Gets or sets the cord y of the Food.
         /// </summary>
         public static int GetCordFoodY
         {
@@ -116,7 +116,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Gets pontuação no GameLoop.
+        /// Gets the score.
         /// </summary>
         public static int GetScore
         {
@@ -127,7 +127,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Verificar a lógica do jogo.
+        /// Update the game logic.
         /// </summary>
         public void Update()
         {
@@ -135,7 +135,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Verificar posição e colisões da cobra.
+        /// Update the snake.
         /// </summary>
         private void SnakeUpdate()
         {

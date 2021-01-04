@@ -5,36 +5,36 @@ using System.IO;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe do menu principal.
+    /// Classe of the main Menu.
     /// </summary>
     public class Menu
     {
         /// <summary>
-        /// Método onde é exposto o menu principal.
+        /// Method where the main Menu is exposed.
         /// </summary>
-        /// <param name="introPlay"> Indicar se pode correr a intro. </param>
-        /// <param name="splashPlay"> Indicar se pode correr o splashscreen.
+        /// <param name="introPlay"> Check if the intro can be played.</param>
+        /// <param name="splashPlay"> Check if the SplashScreen can be shown.
         /// </param>
         public void MainMenu(bool introPlay, bool splashPlay)
         {
             ConsoleKey key;
 
-            // Inicializações necessárias
+            // Required initializations.
             Intro intro = new Intro();
             SplashScreen splash = new SplashScreen();
             GameLoop game = new GameLoop();
 
             bool retry = false;
 
-            // Mostrar a introdução do jogo.
+            // Show the game's intro.
             if (introPlay)
                 intro.IntroMenu();
 
-            // Mostrar o splash do jogo.
+            // Show the SplashScreen.
             if (splashPlay)
                 splash.SplashScreenMenu();
 
-            // Mostrar o menu principal.
+            // Show the main Menu.
             do
             {
                 Console.Clear();
@@ -60,10 +60,10 @@ namespace Projeto2LP2
                 Console.WriteLine("\n\t\t\t\t\t\t      (C)REDITS");
                 Console.WriteLine("\n\t\t\t\t\t\t       (E)XIT");
 
-                // Variável que contem a opção do jogador
+                // Variable that contains the player's choice.
                 key = Console.ReadKey(true).Key;
 
-                // Switch para verificar qual opção foi escolhida
+                // Check which option was chosen.
                 switch (key)
                 {
                     case ConsoleKey.P:
@@ -90,9 +90,9 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Páginas das instruções.
+        /// Instructions page.
         /// </summary>
-        /// <param name="retry"> Indicar se pode voltar atrás. </param>
+        /// <param name="retry"> Check if can return back. </param>
         private void Instructions(bool retry)
         {
             ConsoleKey key;
@@ -107,30 +107,30 @@ namespace Projeto2LP2
                 Console.WriteLine("    Avoid eating yourself, that might kill you too.");
                 Console.WriteLine("\t\t   Good Luck!\n");
 
-                // Enquanto o jogador não clicar
+                // While the player doesn't click.
                 while (!Console.KeyAvailable)
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
 
-                    // Posicionar o cursor na linha anterior
+                    // Position the cursor on the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
 
-                    // Apagar a linha anterior
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
 
-                    // Posicionar o cursor na linha anterior
+                    // Position the cursor on the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
 
-                    // Apagar a linha anterior
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                // Variável que contem a opção do jogador
+                // Variable that contains the player's choice.
                 key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
@@ -142,9 +142,9 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Página da pontuação.
+        /// Page of the score.
         /// </summary>
-        /// <param name="retry"> Indicar se pode voltar atrás. </param>
+        /// <param name="retry"> Check if can return back. </param>
         private void Score(bool retry)
         {
             ConsoleKey key;
@@ -156,30 +156,30 @@ namespace Projeto2LP2
                 ScoreReader();
                 Console.WriteLine(string.Empty);
 
-                // Enquanto o jogador não clicar
+                // While the player doesn't click.
                 while (!Console.KeyAvailable)
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
 
-                    // Posicionar o cursor na linha anterior
+                    // Set cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
 
-                    // Apagar a linha anterior
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
 
-                    // Posicionar o cursor na linha anterior
+                    // Set cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
 
-                    // Apagar a linha anterior
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                // Variável que contem a opção do jogador
+                // Variable that contains the player's choice.
                 key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
@@ -191,9 +191,9 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Página dos créditos.
+        /// Page of the Credits.
         /// </summary>
-        /// <param name="retry"> Indicar se pode voltar atrás. </param>
+        /// <param name="retry"> Check if can return back. </param>
         private void Credits(bool retry)
         {
             ConsoleKey key;
@@ -206,30 +206,30 @@ namespace Projeto2LP2
                 Console.WriteLine("\t\tFrancisco Pires;\n");
                 Console.WriteLine("\t\tNuno Figueiredo.\n\n");
 
-                // Enquanto o jogador não clicar
+                // While the player doesn't click.
                 while (!Console.KeyAvailable)
                 {
                     Console.WriteLine("\tPress ESQ to retreat to the menu.");
                     Thread.Sleep(250);
 
-                    // Posicionar o cursor na linha anterior
+                    // Set cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
 
-                    // Apagar a linha anterior
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                     Console.WriteLine("\tPress     to retreat to the menu.");
                     Thread.Sleep(250);
 
-                    // Posicionar o cursor na linha anterior
+                    // Set cursor in the line before.
                     Console.SetCursorPosition(0, Console.CursorTop - 1);
 
-                    // Apagar a linha anterior
+                    // Delete the line before.
                     Console.Write("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" +
                         "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
                 }
 
-                // Variável que contem a opção do jogador
+                // Variabe that contains the player's choice.
                 key = Console.ReadKey(true).Key;
 
                 if (key == ConsoleKey.Escape)
@@ -241,7 +241,7 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Sair do jogo.
+        /// Exit game.
         /// </summary>
         private void Exit()
         {
@@ -249,17 +249,17 @@ namespace Projeto2LP2
         }
 
         /// <summary>
-        /// Leitura da pontuação.
+        /// Read the score file.
         /// </summary>
         private void ScoreReader()
         {
-            // Variável que contém o ficheiro do score
+            // Variable that contains the file name.
             const string fileName = "Score.txt";
             if (File.Exists(fileName)) {
-                // Ler as linhas do ficheiro
+                // Read the file lines.
                 string[] lines = File.ReadAllLines(fileName);
 
-                // Imprimir as linhas do ficheiro
+                // Print the file lines.
                 foreach (string line in lines) {
                     Console.WriteLine("\t" + line);
                 }

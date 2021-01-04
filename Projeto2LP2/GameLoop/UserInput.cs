@@ -3,17 +3,17 @@
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Classe onde é analisado o input do jogador.
+    /// Classe of the player's input.
     /// </summary>
     public class UserInput
     {
         /// <summary>
-        /// Gets input do user.
+        /// Gets input from the player.
         /// </summary>
         public ConsoleKey GetKey { get; private set; }
 
         /// <summary>
-        /// Verificar o input do user e escolher a direção atual da cobra.
+        /// Check the player's input and set the snake's direction.
         /// </summary>
         public void CheckUserInput() {
             Facade facade = new Facade();

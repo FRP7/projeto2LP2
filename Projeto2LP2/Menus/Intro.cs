@@ -4,12 +4,12 @@ using System.Threading;
 namespace Projeto2LP2
 {
     /// <summary>
-    /// Intro do jogo.
+    /// Game intro class.
     /// </summary>
     public class Intro
     {
         /// <summary>
-        /// Método que reproduz a intro do jogo.
+        /// Method that plays the intro of the game.
         /// </summary>
         public void IntroMenu()
         {
