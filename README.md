@@ -2,7 +2,7 @@
 
  **Francisco Pires a21804873:**
  - Planeamento, estruturação, organização e gestão do projeto.
- - `GameLoop`, `GameState`, `RenderEngine`, `UserInput`, `Food`, `GameObject`,
+ - `GameLoop`, `GameState`, `RenderEngine`, `UserInput`, `Food`, `FoodObject` , `GameObject`,
  `SceneObject`, `SnakeObject`, `SnakePart`, `Direction`, `Facade`.
  - Movimento da cobra.
  - Cenário.
